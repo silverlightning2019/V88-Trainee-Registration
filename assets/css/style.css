@@ -2,15 +2,19 @@
   font-family: Exo2-Bold;
   src: url(../font/Exo2-Bold.otf);
 }
+@font-face {
+  font-family: Exo2-Regular;
+  src: url(../font/Exo2-Regular.otf);
+}
 * {
   margin: 0px;
 }
 * body {
   background: url(../img/background_linear.png), url(../img/background.png) no-repeat top center;
   background-size: cover;
-  height: 10px;
+  height: 1px;
 }
-* body header #navbar_section #navbar_container {
+* body header > section #navbar_container {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
@@ -18,79 +22,109 @@
   max-width: 1440px;
   padding: 0px 115px 0px 87px;
 }
-* body header #navbar_section #navbar_container #navbar_list {
+* body header > section #navbar_container #navbar_list {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin-top: 27px;
   padding: 0px;
 }
-* body header #navbar_section #navbar_container #navbar_list .navbar_item {
+* body header > section #navbar_container #navbar_list .navbar_item {
   font: normal bold 20px/24px 'Exo2-Bold';
-  letter-spacing: 0.6px;
   list-style: none;
 }
-* body header #navbar_section #navbar_container #navbar_list .navbar_item a {
+* body header > section #navbar_container #navbar_list .navbar_item a {
   color: #ffffff;
   text-decoration: none;
 }
-* body header #navbar_section #navbar_container #navbar_list .navbar_item .active {
+* body header > section #navbar_container #navbar_list .navbar_item .active {
   color: #ffeb3c;
-  text-decoration-thickness: 7px;
   text-decoration: underline;
+  text-decoration-thickness: 7px;
 }
-* body header #navbar_section #navbar_container #navbar_list #navbar_home {
+* body header > section #navbar_container #navbar_list #navbar_home {
   margin-right: 38px;
 }
-* body #splash_section #splash_container {
+* body main #banner_section #banner_container {
   margin: 0px auto;
   max-width: 1440px;
-  padding: 93px 115px 225px 0px;
-  text-align: right;
+  padding: 36px 303px 82px 303px;
 }
-* body #splash_section #splash_container h1 {
+* body main #banner_section #banner_container h1 {
   color: #ffffff;
-  font: normal 700 60px/56px 'Exo2-Bold';
-  letter-spacing: 0.6px;
-}
-* body #splash_section #splash_container h1 .yellow_text_highlight {
-  color: #FFEB3C;
-}
-* body #meet_trainees_section #meet_trainees_container {
+  font: normal bold 55px/66px 'Exo2-Bold';
+  letter-spacing: 0.05em;
   margin: 0px auto;
-  max-width: 1440px;
-}
-* body #meet_trainees_section #meet_trainees_container h3 {
-  color: #333333;
-  font: normal 700 40px/48px 'Exo2-Bold';
-  letter-spacing: 0.6px;
   text-align: center;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
 }
-* body #meet_trainees_section #meet_trainees_container h5 {
-  color: #333333;
-  font: normal 400 22px/26px 'Exo2-Bold';
-  letter-spacing: 0.6px;
-  text-align: center;
-}
-* body #meet_trainees_section #meet_trainees_container #trainee_list {
-  padding: 117px 0px;
-  text-align: center;
-}
-* body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
-  display: inline-block;
-  padding: 0px 15px 0px 15px;
-  vertical-align: top;
-}
-* body footer {
-  background-color: #30527E;
-}
-* body footer h3 {
-  color: #ffffff;
-  font: normal 700 40px/48px 'Exo2-Bold';
-  letter-spacing: 0.6px;
-  padding: 148px 0px;
-  text-align: center;
-}
-* body footer h3 .yellow_text_highlight {
+* body main #banner_section #banner_container h1 span {
   color: #ffeb3c;
+}
+* body main #add_trainee_section #add_trainee_container {
+  margin: 0px auto;
+  max-width: 1440px;
+  padding: 0px 168px 78px 168px;
+}
+* body main #add_trainee_section #add_trainee_container button {
+  background-color: #0085ff;
+  border: transparent;
+  border-radius: 3px;
+  color: #ffffff;
+  font: normal bold 20px/24px 'Exo2-Bold';
+  letter-spacing: 0.006em;
+  margin-bottom: 37px;
+  padding: 14px 30px 15px 28px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list {
+  padding: 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+  font: normal 400 20px/24px 'Exo2-Regular';
+  letter-spacing: 0.006em;
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 16px 40px 18px 51px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul {
+  align-items: flex-start;
+  display: flex;
+  padding: 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .add_trainee_item {
+  color: #027abe;
+  list-style: none;
+  padding: 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .name {
+  min-width: 353px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .specialization {
+  min-width: 274px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .recruiter {
+  min-width: 254px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status {
+  min-width: 172px;
+  text-align: center;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:first-child {
+  background-color: transparent;
+  box-shadow: none;
+  font: normal bold 20px/24px 'Exo2-Bold';
+  height: auto;
+  letter-spacing: 0.006em;
+  margin: 0px 59px 39px 50px;
+  padding: 0px;
+  width: auto;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:first-child .add_trainee_item {
+  color: #333333;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:last-child {
+  margin-bottom: 0px;
 }
