@@ -92,14 +92,113 @@
 
                     button{
                         background-color: #0085ff;
-                        border: transparent;
                         border-radius: 3px;
+                        border: transparent;
                         color: #ffffff;
                         font: normal bold 20px/24px 'Exo2-Bold';
                         letter-spacing: 0.006em;
                         margin-bottom: 37px;
                         padding: 14px 30px 15px 28px;
 
+                    }
+
+                    .modal-dialog{
+                        margin-top: 150px;
+                        max-width: 390px;
+
+                        .modal-content{
+
+                            .modal-header{
+                                background-color: #5BA3FF;
+                                height: 115px;
+                            }
+
+                            .modal-body{
+                                padding: 70px 35px 35px 35px;
+                                text-align: justify;
+                                &::after{
+                                    content: "";
+                                    display: inline-block;
+                                    width: 100%;
+                                }
+                                .form_label{
+                                    display: inline-block;
+                                    label{
+                                        display: block;
+                                        font: normal 400 14px/41px 'Exo2-Regular';
+                                        letter-spacing: 0.6px;
+                                    }
+                                }
+                                .form_input{
+                                    display: inline-block;
+                                    vertical-align: top;
+
+                                    input{
+                                        background-color: #EFF7FB;
+                                        border-radius: 2px;
+                                        border: none;
+                                        color: #333333;
+                                        display: block;
+                                        font: normal 400 14px/17px 'Exo2-Regular';
+                                        height: 40px;
+                                        letter-spacing: 0.6px;
+                                        margin-bottom: 10px;
+                                        text-align: left;
+                                        width: 192px;
+                                        padding: 0px 10px;
+                                    }
+
+                                    select{
+                                        background-color: #EFF7FB;
+                                        border-radius: 2px;
+                                        border: none;
+                                        color: #333333;
+                                        display: block;
+                                        font: normal 400 14px/17px 'Exo2-Regular';
+                                        height: 40px;
+                                        letter-spacing: 0.6px;
+                                        margin-bottom: 10px;
+                                        text-align: left;
+                                        width: 192px;
+                                        padding: 0px 10px;
+                                    }
+                                }
+                            }
+
+                            .modal-footer{
+                                padding: 22px 35px 35px 35px;
+                                text-align: justify;
+                                &::after{
+                                    content: "";
+                                    display: inline-block;
+                                    width: 100%;
+                                }
+                                .cancel_btn{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    background-color: #ffffff;
+                                    width: 130px;
+                                    height: 36px;
+                                    color: #EF5353;
+                                    font: normal 400 14px/8px 'Exo2-Regular';
+                                    letter-spacing: 0.6px;
+                                    margin: 0px 50px 0px 0px;
+                                }
+                                .save_btn{
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    background-color: #0085FF;
+                                    width: 130px;
+                                    height: 36px;
+                                    color: #ffffff;
+                                    font: normal 400 14px/8px 'Exo2-Regular';
+                                    letter-spacing: 0.6px;
+                                    border: none;
+                                    border-radius: 2px;
+                                    margin: 0px;
+                                }
+                            }
+                        }
                     }
 
                     #add_trainee_list{
