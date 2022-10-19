@@ -62,56 +62,12 @@
         <section id="add_trainee_section">
             <div id="add_trainee_container">
                 <div>
-                    <button>Add Trainee</button>
+                    <button data-toggle="modal" data-target="#add_trainee_modal">Add Trainee</button>
                     <div id="add_trainee_search" >
                         <input id="add_trainee_search_input" type="search" placeholder="Search"></input>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
-                <button type="button" data-toggle="modal" data-target="#add_trainee_modal">Add Trainee</button>
-                <!--Start Modal -->
-                <div class="modal fade" id="add_trainee_modal" tabindex="-1" aria-labelledby="add_trainee_modal_content" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <form action="">
-                                <div class="modal-header">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form_label">
-                                        <label for="Fullname">Fullname</label>
-                                        <label for="Specialization">Specialization</label>
-                                        <label for="Date Started">Date Started</label>
-                                        <label for="Recruiter">Recruiter</label>    
-                                    </div>
-                                    <div class="form_input">
-                                        <input type="text" name="" id="">
-                                        <select name="recruiter" id="recruiter">
-                                            <option value="" hidden></option>
-                                            <option value="jhaver">Front-End</option>
-                                            <option value="mario">Back-End</option>
-                                            <option value="online">Fullstack</option>
-                                        </select>
-                                        <!-- <input type="text" id="datepicker"> -->
-                                        <p>Date: <input type="text" name="date_picked" id="datepicker"></p>
-                                        <!-- <input type="text" name="date_picked" id="datepicker"> -->
-                                        <select name="recruiter" id="recruiter">
-                                            <option value="" hidden></option>
-                                            <option value="jhaver">Jhaver Jan Gurtiza</option>
-                                            <option value="mario">Mario Narvaez Jr.</option>
-                                            <option value="online">Online</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
-                                    <button class="save_btn" type="button">Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Modal -->
                 <ul id="add_trainee_list">
                     <li class="add_trainee_group">
                         <ul>
@@ -172,5 +128,49 @@
             </div>
         </section>
     </footer>
+
+    <!--Start Modal -->
+    <div class="modal fade" id="add_trainee_modal" tabindex="-1" aria-labelledby="add_trainee_modal_content" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-header">
+                        <img src="" alt="">
+                    </div>
+                    <div class="modal-body">
+                        <div class="form_label">
+                            <label for="Fullname">Fullname</label>
+                            <label for="Specialization">Specialization</label>
+                            <label for="Date Started">Date Started</label>
+                            <label for="Recruiter">Recruiter</label>    
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="" id="">
+                            <select name="recruiter" id="recruiter">
+                                <option value="" hidden></option>
+                                <option value="jhaver">Front-End</option>
+                                <option value="mario">Back-End</option>
+                                <option value="online">Fullstack</option>
+                            </select>
+                            <!-- <input type="text" id="datepicker"> -->
+                            <p>Date: <input type="text" name="date_picked" id="datepicker"></p>
+                            <!-- <input type="text" name="date_picked" id="datepicker"> -->
+                            <select name="recruiter" id="recruiter">
+                                <option value="" hidden></option>
+                                <option value="jhaver">Jhaver Jan Gurtiza</option>
+                                <option value="mario">Mario Narvaez Jr.</option>
+                                <option value="online">Online</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
+                        <button class="save_btn" type="button">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
 </body>
 </html>
