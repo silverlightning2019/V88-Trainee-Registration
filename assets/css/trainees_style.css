@@ -66,7 +66,11 @@
   max-width: 1440px;
   padding: 0px 168px 78px 168px;
 }
-* body main #add_trainee_section #add_trainee_container button {
+* body main #add_trainee_section #add_trainee_container > div {
+  display: flex;
+  justify-content: space-between;
+}
+* body main #add_trainee_section #add_trainee_container > div button {
   background-color: #0085ff;
   border: transparent;
   border-radius: 3px;
@@ -75,6 +79,28 @@
   letter-spacing: 0.006em;
   margin-bottom: 37px;
   padding: 14px 30px 15px 28px;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font: normal bold 20px/24px 'Exo2-Bold';
+  height: 51px;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search input {
+  background-color: transparent;
+  border: transparent;
+  height: 51px;
+  padding: 12px 15px 13px 17px;
+  width: 258px;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search input::placeholder {
+  color: #ffffff;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search #add_trainee_search_input:focus-visible {
+  outline: transparent;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search .fa-magnifying-glass {
+  color: #ffffff;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list {
   padding: 0px;

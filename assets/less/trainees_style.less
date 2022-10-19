@@ -90,16 +90,49 @@
                     max-width: 1440px;
                     padding: 0px 168px 78px 168px;
 
-                    button{
-                        background-color: #0085ff;
-                        border: transparent;
-                        border-radius: 3px;
-                        color: #ffffff;
-                        font: normal bold 20px/24px 'Exo2-Bold';
-                        letter-spacing: 0.006em;
-                        margin-bottom: 37px;
-                        padding: 14px 30px 15px 28px;
+                    >div{
+                        display: flex;
+                        justify-content: space-between;
 
+                        button{
+                            background-color: #0085ff;
+                            border: transparent;
+                            border-radius: 3px;
+                            color: #ffffff;
+                            font: normal bold 20px/24px 'Exo2-Bold';
+                            letter-spacing: 0.006em;
+                            margin-bottom: 37px;
+                            padding: 14px 30px 15px 28px;
+    
+                        }
+
+                        #add_trainee_search{
+                            border: 2px solid #ffffff;
+                            color: #ffffff;
+                            font: normal bold 20px/24px 'Exo2-Bold';
+                            height: 51px;
+                            
+                            input{
+                                background-color: transparent;
+                                border: transparent;
+                                height: 51px;
+                                padding: 12px 15px 13px 17px;
+                                width: 258px;
+                            }
+
+                            input::placeholder{
+                                color: #ffffff;
+                            }
+
+                            #add_trainee_search_input:focus-visible{
+                                outline: transparent;
+                            }
+
+                            .fa-magnifying-glass{
+                                color: #ffffff;
+                            }
+
+                        }
                     }
 
                     #add_trainee_list{

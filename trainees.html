@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Village 88</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/trainees_style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/picker.min.css"> -->
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- <script type="text/javascript" src="./assets/js/picker.min.js"></script> -->
+    <script src="./assets/bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/trainees_script.js"></script>
 </head>
 <body>
     <header>
@@ -27,7 +35,13 @@
         </section>
         <section id="add_trainee_section">
             <div id="add_trainee_container">
-                <button>Add Trainee</button>
+                <div>
+                    <button>Add Trainee</button>
+                    <div id="add_trainee_search" >
+                        <input id="add_trainee_search_input" type="search" placeholder="Search"></input>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
                 <ul id="add_trainee_list">
                     <li class="add_trainee_group">
                         <ul>
