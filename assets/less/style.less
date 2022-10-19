@@ -1,9 +1,45 @@
+@font-face {
+    font-family: Exo2-Bold;
+    src: url(../font/Exo2-Bold.otf);
+}
+
 *{
     margin: 0px;
+    
+    body{
+        background: url(../img/background_linear.png), url(../img/background.png) no-repeat top center;
+        background-size: cover;
 
-    header{
-        // background-color: blue;
-        // height: 250px;
+        header{
 
+            >section{
+
+                #navbar_container{
+                    align-items: flex-start;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0px auto;
+                    max-width: 1440px;
+                    padding: 0px 115px 321px 87px;
+                    
+                    #navbar_list{
+                        align-items: flex-start;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 27px;
+                        padding: 0px;
+        
+                        .navbar_item{
+                            font: normal bold 20px/24px 'Exo2-Bold';
+                            list-style: none;
+                        }
+        
+                        #navbar_home{
+                            margin-right: 38px;
+                        }
+                    }
+                }
+            } 
+        }
     }
 }
