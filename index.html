@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Village 88</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -14,14 +19,43 @@
                 <img src="./assets/img/v88_logo_with_design.png">
                 <ul id="navbar_list">
                     <li class="navbar_item" id="navbar_home"><a href="index.html" class="active">Home</a></li>
-                    <li class="navbar_item"><a href="#">Trainees</a></li>
+                    <!-- <li class="navbar_item"><a href="#">Trainees</a></li> -->
+                    <!-- <li class="navbar_item" data-toggle="modal" data-target="#exampleModal">Trainee</li> -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
+                        Launch demo modal
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              ...
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </ul>
             </div>
         </section>
     </header> 
     <section id="splash_section">
         <div id="splash_container">
-            <h1>STAY <span class="yellow_text_highlight">POSITIVE</span> WORK <span class="yellow_text_highlight">HARD</span> MAKE IT <span class="yellow_text_highlight">HAPPEN</span></h1>
+            <h1>
+                STAY <span class="yellow_text_highlight">POSITIVE</span><br>
+                WORK <span class="yellow_text_highlight">HARD</span><br>
+                MAKE IT <span class="yellow_text_highlight">HAPPEN</span><br>
+            </h1>
         </div>
     </section>
     <section id="meet_trainees_section">

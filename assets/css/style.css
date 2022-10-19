@@ -8,35 +8,89 @@
 * body {
   background: url(../img/background_linear.png), url(../img/background.png) no-repeat top center;
   background-size: cover;
+  height: 10px;
 }
-* body header > section #navbar_container {
+* body header #navbar_section #navbar_container {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin: 0px auto;
   max-width: 1440px;
-  padding: 0px 115px 321px 87px;
+  padding: 0px 115px 0px 87px;
 }
-* body header > section #navbar_container #navbar_list {
+* body header #navbar_section #navbar_container #navbar_list {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin-top: 27px;
   padding: 0px;
 }
-* body header > section #navbar_container #navbar_list .navbar_item {
+* body header #navbar_section #navbar_container #navbar_list .navbar_item {
   font: normal bold 20px/24px 'Exo2-Bold';
+  letter-spacing: 0.6px;
   list-style: none;
 }
-* body header > section #navbar_container #navbar_list .navbar_item a {
+* body header #navbar_section #navbar_container #navbar_list .navbar_item a {
   color: #ffffff;
   text-decoration: none;
 }
-* body header > section #navbar_container #navbar_list .navbar_item .active {
+* body header #navbar_section #navbar_container #navbar_list .navbar_item .active {
   color: #ffeb3c;
-  text-decoration: underline;
   text-decoration-thickness: 7px;
+  text-decoration: underline;
 }
-* body header > section #navbar_container #navbar_list #navbar_home {
+* body header #navbar_section #navbar_container #navbar_list #navbar_home {
   margin-right: 38px;
+}
+* body #splash_section #splash_container {
+  margin: 0px auto;
+  max-width: 1440px;
+  padding: 93px 115px 225px 0px;
+  text-align: right;
+}
+* body #splash_section #splash_container h1 {
+  color: #ffffff;
+  font: normal 700 60px/56px 'Exo2-Bold';
+  letter-spacing: 0.6px;
+}
+* body #splash_section #splash_container h1 .yellow_text_highlight {
+  color: #FFEB3C;
+}
+* body #meet_trainees_section #meet_trainees_container {
+  margin: 0px auto;
+  max-width: 1440px;
+}
+* body #meet_trainees_section #meet_trainees_container h3 {
+  color: #333333;
+  font: normal 700 40px/48px 'Exo2-Bold';
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+* body #meet_trainees_section #meet_trainees_container h5 {
+  color: #333333;
+  font: normal 400 22px/26px 'Exo2-Bold';
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+* body #meet_trainees_section #meet_trainees_container #trainee_list {
+  padding: 117px 0px;
+  text-align: center;
+}
+* body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
+  display: inline-block;
+  padding: 0px 15px 0px 15px;
+  vertical-align: top;
+}
+* body footer {
+  background-color: #30527E;
+}
+* body footer h3 {
+  color: #ffffff;
+  font: normal 700 40px/48px 'Exo2-Bold';
+  letter-spacing: 0.6px;
+  padding: 148px 0px;
+  text-align: center;
+}
+* body footer h3 .yellow_text_highlight {
+  color: #ffeb3c;
 }
