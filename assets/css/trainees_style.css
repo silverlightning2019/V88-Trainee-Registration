@@ -128,3 +128,17 @@
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:last-child {
   margin-bottom: 0px;
 }
+* body footer #footer_section #footer_container {
+  background-color: #30527e;
+  margin: 0px auto;
+  padding: 148px 443px 147px 441px;
+  text-align: center;
+}
+* body footer #footer_section #footer_container h2 {
+  color: #ffffff;
+  font: normal 40px/48px 'Exo2-Bold';
+  letter-spacing: 0.05em;
+}
+* body footer #footer_section #footer_container h2 span {
+  color: #ffeb3c;
+}
