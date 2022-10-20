@@ -350,3 +350,39 @@
   border-radius: 2px;
   margin: 0px;
 }
+* body #delete_trainee_modal .modal-dialog {
+  margin-top: 350px;
+  max-width: 250px;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content {
+  border-radius: 25px;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .modal-body {
+  padding: 0px;
+  text-align: center;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .modal-body p {
+  margin: 0px;
+  padding: 20px 30px;
+  font: normal 400 14px/17px 'Exo2-Regular';
+  letter-spacing: 0.6px;
+  border-bottom: solid 1px #D9D9D9;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer {
+  text-align: center;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_confirm_btn {
+  border: none;
+  background-color: transparent;
+  font: normal 400 14px/17px 'Exo2-Regular';
+  letter-spacing: 0.6px;
+  color: #0ACF83;
+  padding: 20px 0px;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_cancel_btn {
+  border: none;
+  background-color: transparent;
+  font: normal 400 14px/17px 'Exo2-Regular';
+  letter-spacing: 0.6px;
+  color: #EF5353;
+}
