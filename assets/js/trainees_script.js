@@ -31,6 +31,7 @@ $(document).ready(function(){
             trainee_item_clone.find(".specialization").text(trainee_specialization);
             trainee_item_clone.find(".date_started").text(trainee_date_started);
             trainee_item_clone.find(".recruiter").text(trainee_recruiter);
+            trainee_item_clone.find(".status").text("Training");
             $("#add_trainee_list").append(trainee_item_clone);
 
             $("#empty_list_text").hide();   
@@ -38,4 +39,10 @@ $(document).ready(function(){
             // alert(data_id);
         }
     );
+
+    // $("body")
+    //     .on("click", ".edit", function(){
+    //         alert("Edit!")
+    //     }
+    // );
 });

@@ -112,7 +112,7 @@
                     <li class="add_trainee_item name"></li>
                     <li class="add_trainee_item specialization"></li>
                     <li class="add_trainee_item recruiter"></li>
-                    <li class="add_trainee_item status"><span>Training</span></li>
+                    <li class="add_trainee_item status"><span></span></li>
                 </ul>
             </li>
         </div>
@@ -189,30 +189,30 @@
                     <div class="modal-body">
                         <div class="form_container">
                             <div class="form_label">
-                                <label for="Fullname">Fullname</label>
-                                <label for="Specialization">Specialization</label>
-                                <label for="Date Started">Date Started</label>
-                                <label for="Recruiter">Recruiter</label>    
+                                <label for="fullname">Fullname</label>
+                                <label for="specialization">Specialization</label>
+                                <label for="date_started">Date Started</label>
+                                <label for="status">Status</label>    
                             </div>
                             <div class="form_input">
-                                <input type="text" name="" id="">
-                                <select name="recruiter" id="recruiter" class="minimal">
+                                <input type="text" name="fullname" id="">
+                                <select name="specialization" id="recruiter" class="minimal">
                                     <option value="" hidden></option>
-                                    <option value="jhaver">Front-End</option>
-                                    <option value="mario">Back-End</option>
-                                    <option value="online">Fullstack</option>
+                                    <option value="Front-End">Front-End</option>
+                                    <option value="Back-End">Back-End</option>
+                                    <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date">
+                                <input type="date_started">
                                 <select name="status" id="status">
                                     <option value="" hidden></option>
-                                    <option value="jhaver">Trainee</option>
-                                    <option value="mario">Employed</option>
-                                    <option value="online">Unemployed</option>
+                                    <option value="Trainee">Trainee</option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
                                 </select>
                             </div>
                         </div>
                         <div class="redactor">
-                            <textarea placeholder="Note :"></textarea>
+                            <textarea placeholder="Note: "></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
