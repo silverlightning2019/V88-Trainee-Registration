@@ -171,8 +171,11 @@
   min-width: 254px;
   padding: 16px 0px 18px 0px;
 }
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .date {
+  display: none;
+}
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status {
-  background-color: #f6bb2a;
+  background-color: #46a1f4;
   color: #ffffff;
   min-width: 172px;
   padding: 16px 0px 18px 0px;
@@ -361,6 +364,19 @@
   border-radius: 2px;
   margin: 0px;
 }
+* body .modal-dialog .modal-content .modal-footer .edit_save_btn {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #0085FF;
+  width: 130px;
+  height: 36px;
+  color: #ffffff;
+  font: normal 400 14px/8px 'Exo2-Regular';
+  letter-spacing: 0.6px;
+  border: none;
+  border-radius: 2px;
+  margin: 0px;
+}
 * body #delete_trainee_modal .modal-dialog {
   margin-top: 350px;
   max-width: 250px;
@@ -378,6 +394,9 @@
   font: normal 400 14px/17px 'Exo2-Regular';
   letter-spacing: 0.6px;
   border-bottom: solid 1px #D9D9D9;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .modal-body #trainee_id {
+  display: none;
 }
 * body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer {
   text-align: center;

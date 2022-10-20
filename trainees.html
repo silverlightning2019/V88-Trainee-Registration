@@ -109,10 +109,11 @@
         <div class="hidden" id="hidden_trainee_clone">
             <li class="add_trainee_group">
                 <ul>
-                    <li class="add_trainee_item name"></li>
-                    <li class="add_trainee_item specialization"></li>
-                    <li class="add_trainee_item recruiter"></li>
-                    <li class="add_trainee_item status"><span></span></li>
+                    <li class="add_trainee_item name" id="name"></li>
+                    <li class="add_trainee_item specialization" id="specialization"></li>
+                    <li class="add_trainee_item recruiter" id="recruiter"></li>
+                    <li class="add_trainee_item date" id="date"></li>
+                    <li class="add_trainee_item status" id="status"></li>
                 </ul>
             </li>
         </div>
@@ -140,20 +141,20 @@
                     <div class="modal-body">
                         <div class="form_container">
                             <div class="form_label">
-                                <label for="Fullname">Fullname</label>
-                                <label for="Specialization">Specialization</label>
-                                <label for="Date Started">Date Started</label>
-                                <label for="Recruiter">Recruiter</label>    
+                                <label for="fullname">Fullname</label>
+                                <label for="specialization">Specialization</label>
+                                <label for="date">Date Started</label>
+                                <label for="recruiter">Recruiter</label>    
                             </div>
                             <div class="form_input">
-                                <input type="text" name="" id="trainee_fullname">
-                                <select name="recruiter" id="trainee_specialization" class="minimal">
+                                <input type="text" name="fullname" id="trainee_fullname">
+                                <select name="specialization" id="trainee_specialization" class="minimal">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date" id="trainee_date_started">
+                                <input type="date" name="date" id="trainee_date_started">
                                 <select name="recruiter" id="trainee_recruiter">
                                     <option value="" hidden></option>
                                     <option value="Jhaver Jan Gurtiza">Jhaver Jan Gurtiza</option>
@@ -195,15 +196,16 @@
                                 <label for="status">Status</label>    
                             </div>
                             <div class="form_input">
-                                <input type="text" name="fullname" id="">
-                                <select name="specialization" id="recruiter" class="minimal">
+                                <input type="hidden" id="trainee_id">
+                                <input type="text" name="fullname" id="trainee_name">
+                                <select name="specialization" id="trainee_specialization" class="minimal">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date_started">
-                                <select name="status" id="status">
+                                <input type="date" id="trainee_date">
+                                <select name="status" id="trainee_status">
                                     <option value="" hidden></option>
                                     <option value="Trainee">Trainee</option>
                                     <option value="Employed">Employed</option>
@@ -217,7 +219,7 @@
                     </div>
                     <div class="modal-footer">
                         <button class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
-                        <button class="save_btn" data-dismiss="modal" type="button">Save</button>
+                        <button class="edit_save_btn" data-dismiss="modal" type="button">Save</button>
                     </div>
                 </form>
             </div>
@@ -229,6 +231,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
+                    <p id="trainee_id"></p>
                     <p>Are you sure you want to delete this record?</p>
                 </div>
                 <div class="delete-modal-footer">
