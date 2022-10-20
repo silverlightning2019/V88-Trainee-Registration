@@ -190,6 +190,13 @@
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:last-child {
   margin-bottom: 0px;
 }
+* body main #add_trainee_section #add_trainee_container h2 {
+  color: rgba(51, 51, 51, 0.25);
+  font: normal bold 40px/48px 'Exo2-Bold';
+  letter-spacing: 0.006em;
+  margin-top: 92px;
+  text-align: center;
+}
 * body footer #footer_section #footer_container {
   background-color: #30527e;
   margin: 0px auto;
