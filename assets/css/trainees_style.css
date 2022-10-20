@@ -158,6 +158,22 @@
   text-align: center;
   border-radius: 0px 5px 5px 0px;
 }
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  margin-right: 5px;
+  padding: 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button:last-child {
+  margin-right: 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status:hover {
+  background-color: #e26139;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status:hover span {
+  display: none;
+}
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:first-child {
   background-color: transparent;
   box-shadow: none;
