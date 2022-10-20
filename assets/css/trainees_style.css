@@ -113,7 +113,7 @@
   letter-spacing: 0.006em;
   list-style: none;
   margin-bottom: 10px;
-  padding: 16px 40px 18px 51px;
+  padding: 0px 40px 0px 51px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul {
   align-items: flex-start;
@@ -125,18 +125,38 @@
   list-style: none;
   padding: 0px;
 }
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .head_name {
+  min-width: 353px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .head_specialization {
+  min-width: 274px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .head_recruiter {
+  min-width: 254px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .head_status {
+  min-width: 172px;
+  text-align: center;
+}
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .name {
   min-width: 353px;
+  padding: 16px 0px 18px 0px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .specialization {
   min-width: 274px;
+  padding: 16px 0px 18px 0px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .recruiter {
   min-width: 254px;
+  padding: 16px 0px 18px 0px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status {
+  background-color: #f6bb2a;
+  color: #ffffff;
   min-width: 172px;
+  padding: 16px 0px 18px 0px;
   text-align: center;
+  border-radius: 0px 5px 5px 0px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:first-child {
   background-color: transparent;
