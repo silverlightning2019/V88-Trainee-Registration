@@ -197,6 +197,9 @@
   margin-top: 92px;
   text-align: center;
 }
+* body main .hidden {
+  display: none;
+}
 * body footer #footer_section #footer_container {
   background-color: #30527e;
   margin: 0px auto;
