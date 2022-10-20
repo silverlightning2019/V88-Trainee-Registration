@@ -196,28 +196,53 @@
   background-color: #5BA3FF;
   height: 115px;
 }
+* body .modal-dialog .modal-content .modal-header #profile-container {
+  margin: 0px auto;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 10px #5B5B5B ;
+  height: 150px;
+  overflow: hidden;
+  width: 150px;
+}
+* body .modal-dialog .modal-content .modal-header #profile-container img {
+  height: 130px;
+  width: 130px;
+}
+* body .modal-dialog .modal-content .modal-header #profile-container #profile_image {
+  cursor: pointer;
+}
+* body .modal-dialog .modal-content .modal-header #image_upload {
+  display: none;
+}
 * body .modal-dialog .modal-content .modal-body {
-  padding: 70px 35px 35px 35px;
+  padding: 70px 35px 0px 35px;
+}
+* body .modal-dialog .modal-content .modal-body .form_container {
   text-align: justify;
 }
-* body .modal-dialog .modal-content .modal-body::after {
+* body .modal-dialog .modal-content .modal-body .form_container::after {
   content: "";
   display: inline-block;
   width: 100%;
 }
-* body .modal-dialog .modal-content .modal-body .form_label {
+* body .modal-dialog .modal-content .modal-body .form_container .form_label {
   display: inline-block;
 }
-* body .modal-dialog .modal-content .modal-body .form_label label {
+* body .modal-dialog .modal-content .modal-body .form_container .form_label label {
+  color: #7C7D7D;
   display: block;
   font: normal 400 14px/41px 'Exo2-Regular';
   letter-spacing: 0.6px;
 }
-* body .modal-dialog .modal-content .modal-body .form_input {
+* body .modal-dialog .modal-content .modal-body .form_container .form_input {
   display: inline-block;
-  vertical-align: top;
 }
-* body .modal-dialog .modal-content .modal-body .form_input input {
+* body .modal-dialog .modal-content .modal-body .form_container .form_input input {
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
@@ -227,11 +252,14 @@
   height: 40px;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
+  padding: 0px 10px;
   text-align: left;
   width: 192px;
-  padding: 0px 10px;
 }
-* body .modal-dialog .modal-content .modal-body .form_input select {
+* body .modal-dialog .modal-content .modal-body .form_container .form_input #datepicker {
+  background-color: red;
+}
+* body .modal-dialog .modal-content .modal-body .form_container .form_input select {
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
@@ -241,11 +269,31 @@
   height: 40px;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
+  padding: 0px 10px;
   text-align: left;
   width: 192px;
-  padding: 0px 10px;
+}
+* body .modal-dialog .modal-content .modal-body .redactor {
+  display: block;
+}
+* body .modal-dialog .modal-content .modal-body .redactor textarea {
+  background-color: #EFF7FB;
+  border-radius: 2px;
+  border: none;
+  color: #333333;
+  display: block;
+  font: normal 400 14px/17px 'Exo2-Regular';
+  height: 100px;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 10px 10px;
+  resize: none;
+  text-align: left;
+  width: 100%;
 }
 * body .modal-dialog .modal-content .modal-footer {
+  border: none;
   padding: 22px 35px 35px 35px;
   text-align: justify;
 }
