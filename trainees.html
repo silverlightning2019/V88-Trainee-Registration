@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <ul id="add_trainee_list">
-                    <li class="add_trainee_group">
+                    <li id="add_trainee_group_header">
                         <ul>
                             <li class="add_trainee_item head_name">Trainee Name</li>
                             <li class="add_trainee_item head_specialization">Specialization</li>
@@ -103,16 +103,16 @@
                         </ul>
                     </li> -->
                 </ul>
-                <h2>Empty Records</h2>
+                <h2 id="empty_list_text">Empty Records</h2>
             </div>
         </section>
         <div class="hidden" id="hidden_trainee_clone">
             <li class="add_trainee_group">
                 <ul>
-                    <li class="add_trainee_item name">Vince Aromin Gurtiza</li>
-                    <li class="add_trainee_item specialization">Front-End</li>
-                    <li class="add_trainee_item recruiter">Jhaver Jan Gurtiza</li>
-                    <li class="add_trainee_item status"><span>Employed</span></li>
+                    <li class="add_trainee_item name"></li>
+                    <li class="add_trainee_item specialization"></li>
+                    <li class="add_trainee_item recruiter"></li>
+                    <li class="add_trainee_item status"><span>Training</span></li>
                 </ul>
             </li>
         </div>
@@ -146,19 +146,19 @@
                                 <label for="Recruiter">Recruiter</label>    
                             </div>
                             <div class="form_input">
-                                <input type="text" name="" id="">
-                                <select name="recruiter" id="recruiter" class="minimal">
+                                <input type="text" name="" id="trainee_fullname">
+                                <select name="recruiter" id="trainee_specialization" class="minimal">
                                     <option value="" hidden></option>
-                                    <option value="jhaver">Front-End</option>
-                                    <option value="mario">Back-End</option>
-                                    <option value="online">Fullstack</option>
+                                    <option value="Front-End">Front-End</option>
+                                    <option value="Back-End">Back-End</option>
+                                    <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date">
-                                <select name="recruiter" id="recruiter">
+                                <input type="date" id="trainee_date_started">
+                                <select name="recruiter" id="trainee_recruiter">
                                     <option value="" hidden></option>
-                                    <option value="jhaver">Jhaver Jan Gurtiza</option>
-                                    <option value="mario">Mario Narvaez Jr.</option>
-                                    <option value="online">Online</option>
+                                    <option value="Jhaver Jan Gurtiza">Jhaver Jan Gurtiza</option>
+                                    <option value="Mario Narvaez Jr.">Mario Narvaez Jr.</option>
+                                    <option value="Online">Online</option>
                                 </select>
                             </div>
                         </div>
