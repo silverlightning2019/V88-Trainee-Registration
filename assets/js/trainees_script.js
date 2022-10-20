@@ -7,7 +7,7 @@
 $(document).ready(function(){
     $("body")
         .on("mouseenter", ".status", function(){
-            $(this).html('<button class="edit">Edit</button> <button class="delete">Delete</button>');
+            $(this).html('<button class="edit" data-toggle="modal" data-target="#edit_trainee_modal">Edit</button> <button class="delete" data-toggle="modal" data-target="#delete_trainee_modal">Delete</button>');
         }
     );
 
