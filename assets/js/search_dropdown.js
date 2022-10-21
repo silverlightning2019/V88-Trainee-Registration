@@ -3,6 +3,7 @@ $(document).ready(function(){
     //     $("#recruiter_list").slideToggle();
     //     // alert("urgh!")
     // });
-
-    $(".search_dropdown select").selectpicker();
+    $(function () {
+        $('select').selectpicker();
+    });
 }); 
