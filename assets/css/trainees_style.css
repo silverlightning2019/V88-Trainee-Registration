@@ -326,10 +326,9 @@
   text-align: left;
   width: 192px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style,
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style {
-  background-color: #EFF7FB;
-  width: auto;
+* body .modal-dialog .modal-content .modal-body .form_container .form_input select .filter-option-inner-inner,
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .filter-option-inner-inner {
+  color: #999;
 }
 * body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style h3,
 * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style h3 {
