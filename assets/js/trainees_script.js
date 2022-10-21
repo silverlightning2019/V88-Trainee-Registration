@@ -21,10 +21,11 @@ $(document).ready(function(){
 
     $("body")
         .on("click", "#add_trainee_modal", function(){
-            // $("#add_trainee_modal").find("input").val("");    
-            // $("#add_trainee_modal").find("textarea").val("");    
+               
         }
     );
+
+    $("#trainee_date_started").datepicker();
 
     $("body")
         .on("click", ".save_btn", function(){
@@ -50,24 +51,33 @@ $(document).ready(function(){
 
                 $("#empty_list_text").hide(); 
                 $("#add_trainee_modal").find("input, textarea, select").val("");
+                $("#add_trainee_modal").find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
 
                 $("#add_trainee_modal").modal('hide');
             }
             else{
                 if(trainee_name == ""){
-                    $("#trainee_fullname").css("border", "2px solid red")
+                    $("#trainee_fullname").css("border", "2px solid red");
                 }
                 if(trainee_specialization == ""){
-                    $("#trainee_specialization").css("border", "2px solid red")
+                    $(".modal_specialization").css("border", "2px solid red");
                 }
                 if(trainee_date_started == ""){
-                    $("#trainee_date_started").css("border", "2px solid red")
+                    $("#trainee_date_started").css("border", "2px solid red");
                 }
                 if(trainee_recruiter == ""){
-                    $(".recruiter").css("border", "2px solid red")
+                    $(".modal_recruiter").css("border", "2px solid red");
                 }
                 $(".alert").show();
             }
+        }
+    );
+
+    $("body")
+        .on("click", ".cancel_btn", function(){
+            $("#add_trainee_modal").find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
+            $("#add_trainee_modal").modal('hide');
+            $(".alert").hide();
         }
     );
 
