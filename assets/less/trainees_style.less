@@ -221,11 +221,14 @@
 
                                 .status{
                                     background-color: #46a1f4;
+                                    border-radius: 0px 5px 5px 0px;
                                     color: #ffffff;
+                                    min-height: 58px;
                                     min-width: 172px;
                                     padding: 16px 0px 18px 0px;
+                                    position: relative;
                                     text-align: center;
-                                    border-radius: 0px 5px 5px 0px;
+                                    overflow: hidden;
 
                                     button{
                                         background-color: transparent;
@@ -241,11 +244,38 @@
                                 }
 
                                 .status:hover{
-                                    background-color: #e26139;
+                                    transition: 1s;
+                                }
+
+                                .status:hover #edit_delete_icons{
+                                    left: 0px;
                                 }
 
                                 .status:hover span{
                                     display: none;
+                                }
+
+                                #edit_delete_icons{
+                                    align-items: center;
+                                    background-color: #e26139;
+                                    color: #fffffff;
+                                    display: flex;
+                                    height: 100%;
+                                    justify-content: space-around;
+                                    left: 180px;
+                                    list-style-type: none;
+                                    padding: 16px 0px 18px 0px;
+                                    position: absolute;
+                                    top: 0px;
+                                    transition: 1s;
+                                    width: 100%;
+                                    
+                                    button{
+
+                                        i{
+                                            color: #ffffff;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -425,7 +455,7 @@
                     .alert{
                         color: #ff0000;
                         display: none;
-                        font: normal 400 14px/17px 'Exo2-Regular';
+                        font: normal 50 14px/17px 'Exo2-Regular';
                         padding: 0px;	
                     }
 

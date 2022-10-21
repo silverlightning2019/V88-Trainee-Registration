@@ -29,7 +29,9 @@
     <!-- Upload Image Script -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
-    <!-- Select Picker Search -->
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -67,6 +69,22 @@
                             <li class="add_trainee_item head_status">Status</li>
                         </ul>
                     </li>
+
+                    <!-- <li class="add_trainee_group">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Sample Person</li>
+                            <li class="add_trainee_item specialization" id="specialization">Sample Personalization</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Sample Recruiter</li>
+                            <li class="add_trainee_item date" id="date"></li>
+                            <li class="add_trainee_item status" id="status">
+                                <span>Trainee</span>
+                                <ul id="edit_delete_icons">
+                                    <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                    <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> -->
                 </ul>
                 <h2 id="empty_list_text">Empty Records</h2>
             </div>
@@ -78,7 +96,13 @@
                     <li class="add_trainee_item specialization" id="specialization"></li>
                     <li class="add_trainee_item recruiter" id="recruiter"></li>
                     <li class="add_trainee_item date" id="date"></li>
-                    <li class="add_trainee_item status" id="status"></li>
+                    <li class="add_trainee_item status" id="status">
+                        <span>Trainee</span>
+                        <ul id="edit_delete_icons">
+                            <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                            <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </div>
@@ -175,7 +199,7 @@
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date" id="trainee_date" >
+                                <input type="date" id="trainee_date" class="input_style">
                                 <select name="status" id="trainee_status">
                                     <option value="" hidden></option>
                                     <option value="Trainee">Trainee</option>

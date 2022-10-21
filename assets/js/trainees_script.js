@@ -5,19 +5,19 @@
 */
 
 $(document).ready(function(){
-    $("body")
-        .on("mouseenter", ".status", function(){
-            let trainee_status = $(this).text();
-            $(this).html('<button class="edit" data-toggle="modal" data-target="#edit_trainee_modal">Edit</button> <button class="delete" data-toggle="modal" data-target="#delete_trainee_modal">Delete</button>');
-        }
-    );
+    // $("body")
+    //     .on("mouseenter", ".status", function(){
+    //         let trainee_status = $(this).text();
+    //         $(this).html('<button class="edit" data-toggle="modal" data-target="#edit_trainee_modal">Edit</button> <button class="delete" data-toggle="modal" data-target="#delete_trainee_modal">Delete</button>');
+    //     }
+    // );
 
-    $("body")
-        .on("mouseleave", ".status", function(){
-            let trainee_status = $(this).text();
-            $(this).html("Training");
-        }
-    );
+    // $("body")
+    //     .on("mouseleave", ".status", function(){
+    //         let trainee_status = $(this).text();
+    //         $(this).html("Training");
+    //     }
+    // );
 
     $("body")
         .on("click", "#add_trainee_modal", function(){
@@ -44,7 +44,7 @@ $(document).ready(function(){
                 trainee_item_clone.find(".specialization").text(trainee_specialization);
                 trainee_item_clone.find(".date").text(trainee_date_started);
                 trainee_item_clone.find(".recruiter").text(trainee_recruiter);
-                trainee_item_clone.find(".status").text("Training");
+                trainee_item_clone.find(".status span").text("Trainee");
                 $("#add_trainee_list").append(trainee_item_clone);
 
                 trainee_item_clone.attr({'data-id':data_id, 'id':trainee_id});
@@ -57,16 +57,16 @@ $(document).ready(function(){
             }
             else{
                 if(trainee_name == ""){
-                    $("#trainee_fullname").css("border", "2px solid red");
+                    $("#trainee_fullname").css("border", "0.5px solid red");
                 }
                 if(trainee_specialization == ""){
-                    $(".modal_specialization").css("border", "2px solid red");
+                    $(".modal_specialization").css("border", "0.5px solid red");
                 }
                 if(trainee_date_started == ""){
-                    $("#trainee_date_started").css("border", "2px solid red");
+                    $("#trainee_date_started").css("border", "0.5px solid red");
                 }
                 if(trainee_recruiter == ""){
-                    $(".modal_recruiter").css("border", "2px solid red");
+                    $(".modal_recruiter").css("border", "0.5px solid red");
                 }
                 $(".alert").show();
             }
