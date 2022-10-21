@@ -326,6 +326,12 @@
   text-align: left;
   width: 192px;
 }
+* body .modal-dialog .modal-content .modal-body .alert {
+  color: #ff0000;
+  display: none;
+  font: normal 400 14px/17px 'Exo2-Regular';
+  padding: 0px;
+}
 * body .modal-dialog .modal-content .modal-body .redactor {
   display: block;
 }

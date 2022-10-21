@@ -36,19 +36,38 @@ $(document).ready(function(){
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
 
-            trainee_item_clone.find(".name").text(trainee_name);
-            trainee_item_clone.find(".specialization").text(trainee_specialization);
-            trainee_item_clone.find(".date").text(trainee_date_started);
-            trainee_item_clone.find(".recruiter").text(trainee_recruiter);
-            trainee_item_clone.find(".status").text("Training");
-            $("#add_trainee_list").append(trainee_item_clone);
+            $(".alert").hide();
 
-            trainee_item_clone.attr({'data-id':data_id, 'id':trainee_id});
+            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != ""){
+                trainee_item_clone.find(".name").text(trainee_name);
+                trainee_item_clone.find(".specialization").text(trainee_specialization);
+                trainee_item_clone.find(".date").text(trainee_date_started);
+                trainee_item_clone.find(".recruiter").text(trainee_recruiter);
+                trainee_item_clone.find(".status").text("Training");
+                $("#add_trainee_list").append(trainee_item_clone);
 
-            $("#empty_list_text").hide(); 
-            $("#add_trainee_modal").find("input, textarea, select").val("");     
+                trainee_item_clone.attr({'data-id':data_id, 'id':trainee_id});
 
-            // alert(data_id);
+                $("#empty_list_text").hide(); 
+                $("#add_trainee_modal").find("input, textarea, select").val("");
+
+                $("#add_trainee_modal").modal('hide');
+            }
+            else{
+                if(trainee_name == ""){
+                    $("#trainee_fullname").css("border", "2px solid red")
+                }
+                if(trainee_specialization == ""){
+                    $("#trainee_specialization").css("border", "2px solid red")
+                }
+                if(trainee_date_started == ""){
+                    $("#trainee_date_started").css("border", "2px solid red")
+                }
+                if(trainee_recruiter == ""){
+                    $(".recruiter").css("border", "2px solid red")
+                }
+                $(".alert").show();
+            }
         }
     );
 
