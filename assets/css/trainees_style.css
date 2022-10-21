@@ -279,7 +279,7 @@
 * body .modal-dialog .modal-content .modal-body .form_container .form_input {
   display: inline-block;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input input {
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .input_style {
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
@@ -322,8 +322,25 @@
   height: 40px;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
-  padding: 0px 10px;
+  padding: 0px;
   text-align: left;
+  width: 192px;
+}
+* body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style,
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style {
+  background-color: #EFF7FB;
+  width: auto;
+}
+* body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style h3,
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style h3 {
+  display: block;
+}
+* body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style p,
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style p {
+  display: block;
+}
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .btn {
+  background-color: #EFF7FB;
   width: 192px;
 }
 * body .modal-dialog .modal-content .modal-body .redactor {
