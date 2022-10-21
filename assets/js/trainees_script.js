@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
     );
 
-    $("#trainee_date_started").datepicker();
+    // $("#trainee_date_started").datepicker();
 
     $("body")
         .on("click", ".save_btn", function(){
