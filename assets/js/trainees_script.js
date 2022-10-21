@@ -110,7 +110,7 @@ $(document).ready(function(){
         trainee_id_selector.find("#name").text(trainee_name);
         trainee_id_selector.find("#specialization").text(trainee_specialization);
         trainee_id_selector.find("#date").text(trainee_date);
-        trainee_id_selector.find("#status").text(trainee_status);
+        trainee_id_selector.find("span").text(trainee_status);
        
     });
 
