@@ -311,7 +311,8 @@
 * body .modal-dialog .modal-content .modal-body .form_container .form_input #datepicker {
   background-color: red;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input select {
+* body .modal-dialog .modal-content .modal-body .form_container .form_input select,
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker {
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
