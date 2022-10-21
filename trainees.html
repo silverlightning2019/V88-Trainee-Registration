@@ -113,23 +113,23 @@
                             </div>
                             <div class="form_input">
                                 <input type="text" name="fullname" id="trainee_fullname" class="input_style">
-                                <select name="specialization" id="trainee_specialization" class="minimal selectpicker select_picker">
+                                <select name="specialization" id="trainee_specialization" class="minimal selectpicker select_picker modal_specialization">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date" id="trainee_date_started" class="input_style">
+                                <input type="text   " id="trainee_date_started" class="input_style">
 
-                                <select id="trainee_recruiter" class="selectpicker show-trick select_picker recruiter" data-live-search="true" >
-                                    <option data-icon="fa-heart" value="select here" hidden></option>
+                                <select name="recruiter" id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter" data-live-search="true" >
+                                    <option data-icon="fa-heart" value="" hidden></option>
                                     <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
                                     <option value="Mario Narvaez Jr." data-subtext="Mid Software Engineer">Mario Narvaez Jr.</option>
                                     <option value="Demy Balanza" data-subtext="Front-End Developer">Demy Balanza</option>
                                     <option value="Jaybee John Balog" data-subtext="Mid Software Engineer">Jaybee John Balog</option>
                                     <option value="Jerwin Fernandez" data-subtext="Lead Front-End Engineer">Jerwin Fernandez</option>
-                                    <option value="Jan Dreau Ganggangan"data-subtext="Software Engineer">Jan Dreau Ganggangan</option>
-                                    <option value="Online"data-subtext="Online Adverisement">Online</option>
+                                    <option value="Jan Dreau Ganggangan" data-subtext="Software Engineer">Jan Dreau Ganggangan</option>
+                                    <option value="Online" data-subtext="Online Adverisement">Online</option>
                                 </select>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                         <div class="alert" id="fullname_alert">Please fill up all the needed information.</div>
                     </div>
                     <div class="modal-footer">
-                        <button class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
+                        <button class="cancel_btn" type="reset">Cancel</button>
                         <button class="save_btn" type="button">Save</button>
                     </div>
                 </form>
