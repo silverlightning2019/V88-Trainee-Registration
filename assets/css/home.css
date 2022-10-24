@@ -82,7 +82,13 @@
   vertical-align: top;
 }
 * body footer {
-  background-color: #30527E;
+  background-color: #02244F;
+}
+* body footer:hover {
+  background-color: #FFEB3C;
+}
+* body footer:hover .yellow_text_highlight {
+  color: #02244F;
 }
 * body footer h3 {
   color: #ffffff;
@@ -92,5 +98,5 @@
   text-align: center;
 }
 * body footer h3 .yellow_text_highlight {
-  color: #ffeb3c;
+  color: #FFEB3C;
 }

@@ -71,7 +71,7 @@
   justify-content: space-between;
 }
 * body main #add_trainee_section #add_trainee_container > div button {
-  background-color: #0085ff;
+  background-color: #0085FF;
   border-radius: 3px;
   border: transparent;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -258,14 +258,17 @@
   display: none;
 }
 * body footer #footer_section #footer_container {
-  background-color: #30527e;
+  background-color: #02244F;
   margin: 0px auto;
   padding: 148px 443px 147px 441px;
   text-align: center;
 }
 * body footer #footer_section #footer_container:hover {
   transition: 0.3s;
-  background-color: #2635a5;
+  background-color: #FFEB3C;
+}
+* body footer #footer_section #footer_container:hover span {
+  color: #02244F;
 }
 * body footer #footer_section #footer_container h2 {
   color: #ffffff;
@@ -333,7 +336,7 @@
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
-  color: #333333;
+  color: #999;
   display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
   height: 40px;
@@ -343,23 +346,18 @@
   text-align: left;
   width: 192px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input #recruit_list {
-  width: 192px;
-  background-color: red;
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .date_picker_container {
+  position: relative;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input #recruit_list .recruiter_item {
-  list-style: none;
-}
-* body .modal-dialog .modal-content .modal-body .form_container .form_input #recruit_list .recruiter_item h3 {
-  font: normal 400 14px/17px 'Exo2-Regular';
-  color: #30527e;
-}
-* body .modal-dialog .modal-content .modal-body .form_container .form_input #recruit_list .recruiter_item p {
-  font: normal 400 10px/14px 'Exo2-Regular';
-  color: #61748d;
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .date_picker_container .date_icon {
+  color: #999;
+  position: absolute;
+  right: 15px;
+  top: 11px;
+  z-index: 1000;
 }
 * body .modal-dialog .modal-content .modal-body .form_container .form_input #datepicker {
-  background-color: red;
+  color: #999;
 }
 * body .modal-dialog .modal-content .modal-body .form_container .form_input select,
 * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker {
@@ -480,7 +478,7 @@
 }
 * body .modal-dialog .modal-content .modal-footer .edit_save_btn:hover {
   transition: 0.3s;
-  background-color: #00A651;
+  background-color: #0059FF;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 * body #delete_trainee_modal .modal-dialog {

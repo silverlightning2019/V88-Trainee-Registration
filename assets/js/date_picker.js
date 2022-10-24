@@ -1,5 +1,3 @@
 $(document).ready(function(){
-  $('#datepicker').datepicker({
-      uiLibrary: 'bootstrap4'
-  });
+    $( "#trainee_date_started , #trainee_date").datepicker();
 });

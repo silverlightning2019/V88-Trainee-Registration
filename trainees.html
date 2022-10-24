@@ -21,10 +21,8 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     
-    <!-- Modal Script -->
-   
-    
     <!-- Custom Script -->
+    <script src="./assets/js/date_picker.js"></script>
     <script src="./assets/js/profile_image_upload.js"></script>
     <script src="./assets/js/trainees_script.js"></script>
 
@@ -34,6 +32,12 @@
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
     <header>
@@ -76,8 +80,8 @@
 
                     <li class="add_trainee_group" data-id="0" id="trainee_0">
                         <ul>
-                            <li class="add_trainee_item name" id="name">fasdf</li>
-                            <li class="add_trainee_item specialization" id="specialization">Back-End</li>
+                            <li class="add_trainee_item name" id="name">Renz Lester Halagao</li>
+                            <li class="add_trainee_item specialization" id="specialization">Full Stack</li>
                             <li class="add_trainee_item recruiter" id="recruiter">Demy Balanza</li>
                             <li class="add_trainee_item date" id="date">2022-10-19</li>
                             <li class="add_trainee_item status" id="status">
@@ -134,7 +138,7 @@
     <footer>
         <section id="footer_section">
             <div id="footer_container">
-                <h2>“Train with us @ <span>Village88”</span></h2>
+                <h2>“Train with us @ <span>Village88</span>"</h2>
                 <!-- <i class="fa fa-times" aria-hidden="true" style="height: 20px; width: 20px;"></i> -->
             </div>
         </section>
@@ -147,7 +151,7 @@
                 <form action="#">
                     <div class="modal-header">
                         <div id="profile-container">
-                            <image id="profile_image" src="http://lorempixel.com/100/100"/>
+                            <image id="profile_image">
                          </div>
                          <input id="image_upload" type="file" name="profile_photo" placeholder="Photo" required="" capture>                    
                     </div>
@@ -167,8 +171,10 @@
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date" id="trainee_date_started" class="input_style">
-
+                                <div class="date_picker_container">
+                                    <input type="text" id="trainee_date_started" class="input_style" placeholder="mm/dd/yyyy">
+                                    <i class="fa-solid fa-calendar date_icon"></i>
+                                </div>
                                 <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter" data-live-search="true" >
                                     <option data-icon="fa-heart" value="" hidden></option>
                                     <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
@@ -203,8 +209,8 @@
                     <div class="modal-header">
                         <div id="profile-container">
                             <image id="profile_image" src="http://lorempixel.com/100/100"/>
-                         </div>
-                         <input id="image_upload" type="file" name="profile_photo" placeholder="Photo" required="" capture>                    
+                        </div>
+                        <input id="image_upload" type="file" name="profile_photo" placeholder="Photo" required="" capture>                    
                     </div>
                     <div class="modal-body">
                         <div class="form_container">
@@ -223,7 +229,10 @@
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <input type="date" id="trainee_date" class="input_style">
+                                <div class="date_picker_container">
+                                    <input type="text" id="trainee_date" class="input_style">
+                                    <i class="fa-solid fa-calendar date_icon"></i>
+                                </div>
                                 <select name="status" id="trainee_status" class="selectpicker select_picker">
                                     <option value="" hidden></option>
                                     <option value="Trainee">Trainee</option>
