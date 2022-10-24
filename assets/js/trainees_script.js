@@ -5,6 +5,9 @@
 */
 
 $(document).ready(function(){
+    $(function(){
+        $(".add_trainee_group").tooltip();
+    });
     // $("body")
     //     .on("mouseenter", ".status", function(){
     //         let trainee_status = $(this).text();
