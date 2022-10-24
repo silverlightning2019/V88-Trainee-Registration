@@ -326,6 +326,13 @@
 * body .modal-dialog .modal-content .modal-header {
   background-color: #5BA3FF;
   height: 115px;
+  display: block;
+}
+* body .modal-dialog .modal-content .modal-header .drag_drop_profile {
+  background-color: #1E1E1E;
+  border-radius: 200px;
+  height: 150px;
+  width: 150px;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container {
   margin: 0px auto;
@@ -351,7 +358,7 @@
   display: none;
 }
 * body .modal-dialog .modal-content .modal-body {
-  padding: 70px 35px 0px 35px;
+  padding: 66px 35px 0px 35px;
 }
 * body .modal-dialog .modal-content .modal-body .form_container {
   text-align: justify;
