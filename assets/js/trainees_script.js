@@ -5,6 +5,13 @@
 */
 
 $(document).ready(function(){
+    // $(function(){
+    //     $(".add_trainee_group").tooltip();
+    // });
+
+    $(window).on('load', function() {
+        $(".add_trainee_group").tooltip();
+    });
     // $("body")
     //     .on("mouseenter", ".status", function(){
     //         let trainee_status = $(this).text();
@@ -46,10 +53,9 @@ $(document).ready(function(){
                 trainee_item_clone.find(".date").text(trainee_date_started);
                 trainee_item_clone.find(".recruiter").text(trainee_recruiter);
                 trainee_item_clone.find(".status span").text("Trainee");
-                console.log(trainee_note);
                 $("#add_trainee_list").append(trainee_item_clone);
 
-                trainee_item_clone.attr({'data-id':data_id, 'id':trainee_id});
+                trainee_item_clone.attr({'data-tooltip':trainee_note, 'data-id':data_id, 'id':trainee_id});
 
                 $("#empty_list_text").hide(); 
                 $("#add_trainee_modal").find("input, textarea, select").val("");
@@ -91,12 +97,13 @@ $(document).ready(function(){
         let trainee_name = $(full_trainee_id).find("#name").text();
         let trainee_specialization = $(full_trainee_id).find("#specialization").text();
         let trainee_date = $(full_trainee_id).find("#date").text();
+        let trainee_note = $(full_trainee_id).attr("data-tooltip");
 
         $("#edit_trainee_modal").find("#trainee_name").val(trainee_name);
         $("#edit_trainee_modal").find("#trainee_specialization").val(trainee_specialization);
         $("#edit_trainee_modal").find("#trainee_date").val(trainee_date);
         $("#edit_trainee_modal").find("#trainee_status").val("Trainee");
-
+        $("#edit_trainee_modal").find("#trainee_note").val(trainee_note);
     });
 
     $("body").on("click", ".edit_save_btn", function(){
@@ -108,11 +115,13 @@ $(document).ready(function(){
         let trainee_specialization = edit_modal.find("#trainee_specialization").val();
         let trainee_date = edit_modal.find("#trainee_date").val();
         let trainee_status = edit_modal.find("#trainee_status").val();
+        let trainee_note = edit_modal.find("#trainee_note").val();
         
         trainee_id_selector.find("#name").text(trainee_name);
         trainee_id_selector.find("#specialization").text(trainee_specialization);
         trainee_id_selector.find("#date").text(trainee_date);
         trainee_id_selector.find("span").text(trainee_status);
+        trainee_id_selector.attr("data-tooltip", trainee_note);
        
     });
 
