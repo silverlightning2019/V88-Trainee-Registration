@@ -75,23 +75,6 @@
                             <li class="add_trainee_item head_status">Status</li>
                         </ul>
                     </li>
-                    <!-- <li class="add_trainee_group" data-tooltip="example" data-original-title="" title="" data-id="0" id="trainee_0">
-                        <ul>
-                            <li class="add_trainee_item name" id="name">Renz Lester Halagao</li>
-                            <li class="add_trainee_item specialization" id="specialization">Full Stack</li>
-                            <li class="add_trainee_item recruiter" id="recruiter">Demy Balanza</li>
-                            <li class="add_trainee_item date" id="date">2022-10-19</li>
-                            <li class="add_trainee_item status" id="status">
-                                <div class="edit_delete_container">
-                                    <span>Trainee</span>
-                                    <ul id="edit_delete_icons">
-                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
-                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </li> -->
                 </ul>
                 <h2 id="empty_list_text">Empty Records</h2>
             </div>
@@ -214,7 +197,7 @@
                                     <input type="text" id="trainee_date" class="input_style">
                                     <i class="fa-solid fa-calendar date_icon"></i>
                                 </div>
-                                <select name="status" id="trainee_status" class="selectpicker select_picker">
+                                <select name="status" id="trainee_status" class="selectpicker select_picker modal_status">
                                     <option value="" hidden></option>
                                     <option value="Trainee">Trainee</option>
                                     <option value="Employed">Employed</option>
@@ -225,10 +208,11 @@
                         <div class="redactor">
                             <textarea id="trainee_note" placeholder="Note: "></textarea>
                         </div>
+                        <div class="alert" id="fullname_alert">Please fill up all the needed information.</div>
                     </div>
                     <div class="modal-footer">
-                        <button class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
-                        <button class="edit_save_btn" data-dismiss="modal" type="button">Save</button>
+                        <button class="edit_cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
+                        <button class="edit_save_btn" type="button">Save</button>
                     </div>
                 </form>
             </div>

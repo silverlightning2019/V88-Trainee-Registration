@@ -47,7 +47,7 @@ $(document).ready(function(){
 
             $(".alert").hide();
 
-            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != ""){
+            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != "" && trainee_note != ""){
                 trainee_item_clone.find(".name").text(trainee_name);
                 trainee_item_clone.find(".specialization").text(trainee_specialization);
                 trainee_item_clone.find(".date").text(trainee_date_started);
@@ -76,6 +76,9 @@ $(document).ready(function(){
                 if(trainee_recruiter == ""){
                     $(".modal_recruiter").css("border", "0.5px solid red");
                 }
+                if(trainee_note == ""){
+                    $("#trainee_note").css("border", "0.5px solid red");
+                }
                 $(".alert").show();
             }
         }
@@ -101,8 +104,11 @@ $(document).ready(function(){
 
         $("#edit_trainee_modal").find("#trainee_name").val(trainee_name);
         $("#edit_trainee_modal").find("#trainee_specialization").val(trainee_specialization);
+        $("#edit_trainee_modal").find(".modal_specialization button").attr("title", trainee_specialization);
+        $("#edit_trainee_modal").find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
         $("#edit_trainee_modal").find("#trainee_date").val(trainee_date);
-        $("#edit_trainee_modal").find("#trainee_status").val("Trainee");
+        $("#edit_trainee_modal").find("#trainee_status").val(trainee_status);
+        $("#edit_trainee_modal").find(".modal_status .filter-option-inner-inner").text("Trainee");
         $("#edit_trainee_modal").find("#trainee_note").val(trainee_note);
     });
 
@@ -115,17 +121,50 @@ $(document).ready(function(){
         let trainee_specialization = edit_modal.find("#trainee_specialization").val();
         let trainee_date = edit_modal.find("#trainee_date").val();
         let trainee_status = edit_modal.find("#trainee_status").val();
-        let trainee_note = edit_modal.find("#trainee_note").val();
-        
-        trainee_id_selector.find("#name").text(trainee_name);
-        trainee_id_selector.find("#specialization").text(trainee_specialization);
-        trainee_id_selector.find("#date").text(trainee_date);
-        trainee_id_selector.find("span").text(trainee_status);
-        trainee_id_selector.attr("data-tooltip", trainee_note);
+        let trainee_note = edit_modal.find("#trainee_note").val();  
 
-        edit_modal.modal('hide');
+        $(".alert").hide();
+
+        
+
+        if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_status != "" && trainee_note != ""){
+            trainee_id_selector.find("#name").text(trainee_name);
+            trainee_id_selector.find("#specialization").text(trainee_specialization);
+            trainee_id_selector.find("#date").text(trainee_date);
+            trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
+            trainee_id_selector.attr("data-tooltip", trainee_note);
+
+            edit_modal.modal('hide');
+        }
+        else{
+            if(trainee_name == ""){
+                edit_modal.find("#trainee_name").css("border", "0.5px solid red");
+            }
+            if(trainee_specialization == ""){
+                edit_modal.find("#trainee_specialization").css("border", "0.5px solid red");
+            }
+            if(trainee_date == ""){
+                edit_modal.find("#trainee_date").css("border", "0.5px solid red");
+            }
+            if(trainee_recruiter == ""){    
+                edit_modal.find("#trainee_status").css("border", "0.5px solid red");
+            }
+            if(trainee_note == ""){
+                edit_modal.find("#trainee_note").css("border", "0.5px solid red");
+            }
+            $(".alert").show();
+        }
+
        
     });
+
+    $("body")
+        .on("click", ".edit_cancel_btn", function(){
+            $("#edit_trainee_modal").find("#trainee_name, #trainee_date", "#trainee_note").css("border", "transparent");
+            $("#edit_trainee_modal").modal('hide');
+            $(".alert").hide();
+        }
+    );
 
     $("body").on("click", ".delete", function(){
         let trainee_id = $(this).closest(".add_trainee_group").attr("id");
