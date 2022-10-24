@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/trainees_style.css">
-    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     
     <!-- Modal Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+   
     
     <!-- Custom Script -->
     <script src="./assets/js/profile_image_upload.js"></script>
@@ -62,11 +64,31 @@
                 </div>
                 <ul id="add_trainee_list">
                     <li id="add_trainee_group_header">
+
+                        
                         <ul>
                             <li class="add_trainee_item head_name">Trainee Name</li>
                             <li class="add_trainee_item head_specialization">Specialization</li>
                             <li class="add_trainee_item head_recruiter">Recruiter</li>
                             <li class="add_trainee_item head_status">Status</li>
+                        </ul>
+                    </li>
+
+                    <li class="add_trainee_group" data-id="0" id="trainee_0">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">fasdf</li>
+                            <li class="add_trainee_item specialization" id="specialization">Back-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Demy Balanza</li>
+                            <li class="add_trainee_item date" id="date">2022-10-19</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </li>
 
@@ -97,11 +119,13 @@
                     <li class="add_trainee_item recruiter" id="recruiter"></li>
                     <li class="add_trainee_item date" id="date"></li>
                     <li class="add_trainee_item status" id="status">
-                        <span>Trainee</span>
-                        <ul id="edit_delete_icons">
-                            <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
-                            <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
-                        </ul>
+                        <div class="edit_delete_container">
+                            <span>Trainee</span>
+                            <ul id="edit_delete_icons">
+                                <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </li>
@@ -120,7 +144,7 @@
     <div class="modal fade" id="add_trainee_modal" tabindex="-1" aria-labelledby="add_trainee_modal_content" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="">
+                <form action="#">
                     <div class="modal-header">
                         <div id="profile-container">
                             <image id="profile_image" src="http://lorempixel.com/100/100"/>
@@ -175,7 +199,7 @@
     <div class="modal fade" id="edit_trainee_modal" tabindex="-1" aria-labelledby="edit_trainee_modal_content" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="">
+                <form id="save_profile_form" action="#">
                     <div class="modal-header">
                         <div id="profile-container">
                             <image id="profile_image" src="http://lorempixel.com/100/100"/>
@@ -193,6 +217,14 @@
                             <div class="form_input">
                                 <input type="hidden" id="trainee_id">
                                 <input type="text" name="fullname" id="trainee_name" class="input_style">
+
+                                <!-- <select name="specialization" id="trainee_specialization" class="selectpicker minimal">
+                                    <option value="" hidden></option>
+                                    <option value="Front-End">Front-End</option>
+                                    <option value="Back-End">Back-End</option>
+                                    <option value="Fullstack">Fullstack</option>
+                                </select> -->
+
                                 <select name="specialization" id="trainee_specialization" class="minimal">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
@@ -200,7 +232,7 @@
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
                                 <input type="date" id="trainee_date" class="input_style">
-                                <select name="status" id="trainee_status">
+                                <select name="status" id="trainee_status" class="">
                                     <option value="" hidden></option>
                                     <option value="Trainee">Trainee</option>
                                     <option value="Employed">Employed</option>

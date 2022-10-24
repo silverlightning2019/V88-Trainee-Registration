@@ -98,7 +98,7 @@
                             background-color: #0085ff;
                             border-radius: 3px;
                             border: transparent;
-                            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
                             color: #ffffff;
                             font: normal bold 20px/24px 'Exo2-Bold';
                             letter-spacing: 0.006em;
@@ -205,6 +205,7 @@
                                 align-items: flex-start;
                                 display: flex;
                                 padding: 0px;
+                                // overflow: hidden;
 
                                 .add_trainee_item{
                                     color: #027abe;
@@ -241,6 +242,33 @@
                                     position: relative;
                                     text-align: center;
                                     overflow: hidden;
+                                    span{
+                                        display: block;
+                                    }
+
+                                    &#status{
+                                        .edit_delete_container{
+                                            align-items: center;
+                                            display: flex;
+                                            position: absolute;
+                                            transform: translate(0, -16px);
+                                            width: 240px;
+                                            transition: 0.5s;
+                                            #edit_delete_icons{
+                                                min-width: 172px;
+                                                width: 172px;
+                                            }
+                                            &:hover{
+                                                transform: translate(-172px, -16px);
+                                            }
+                                            span{
+                                                min-width: 172px;
+                                                padding: 17px 25px;
+                                                width: 172px;
+                                            }
+                                        }
+                                       
+                                    }
 
                                     button{
                                         background-color: transparent;
@@ -255,17 +283,17 @@
                                     }
                                 }
 
-                                .status:hover{
-                                    transition: 1s;
-                                }
+                                // .status:hover{
+                                //     transition: 1s; 
+                                // }
 
-                                .status:hover #edit_delete_icons{
-                                    left: 0px;
-                                }
+                                // .status:hover #edit_delete_icons{
+                                //     transform: translate(0px, -16px) !important; 
+                                // }
 
-                                .status:hover span{
-                                    display: none;
-                                }
+                                // .status:hover span{
+                                //     display: none;
+                                // }
 
                                 #edit_delete_icons{
                                     align-items: center;
@@ -274,13 +302,15 @@
                                     display: flex;
                                     height: 100%;
                                     justify-content: space-around;
-                                    left: 200px;
                                     list-style-type: none;
                                     padding: 16px 0px 18px 0px;
-                                    position: absolute;
-                                    top: 0px;
+                                    // position: absolute;
+                                    // left: 200px;
+                                    // top: 0px;
                                     transition: 0.5s;
-                                    width: 100%;
+                                    // width: 100%;
+
+
                                     
                                     button{
 
@@ -415,6 +445,7 @@
                             #recruit_list{
                                 width: 192px;
                                 background-color: red;
+                                
                                 .recruiter_item{
                                     list-style: none;
                                     h3{
@@ -515,6 +546,10 @@
                         letter-spacing: 0.6px;
                         margin: 0px 50px 0px 0px;
                         border: none;
+                        transition: 0.5s;
+                        &:hover{
+                            border: solid 0.5px #E26139;
+                        }
                     }
                     .save_btn{
                         display: inline-block;
