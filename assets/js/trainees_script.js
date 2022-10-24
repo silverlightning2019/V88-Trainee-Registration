@@ -122,6 +122,8 @@ $(document).ready(function(){
         trainee_id_selector.find("#date").text(trainee_date);
         trainee_id_selector.find("span").text(trainee_status);
         trainee_id_selector.attr("data-tooltip", trainee_note);
+
+        edit_modal.modal('hide');
        
     });
 
