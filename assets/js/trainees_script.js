@@ -5,7 +5,11 @@
 */
 
 $(document).ready(function(){
-    $(function(){
+    // $(function(){
+    //     $(".add_trainee_group").tooltip();
+    // });
+
+    $(window).on('load', function() {
         $(".add_trainee_group").tooltip();
     });
     // $("body")
@@ -52,7 +56,7 @@ $(document).ready(function(){
                 console.log(trainee_note);
                 $("#add_trainee_list").append(trainee_item_clone);
 
-                trainee_item_clone.attr({'data-id':data_id, 'id':trainee_id});
+                trainee_item_clone.attr({'data-tooltip':trainee_note, 'data-id':data_id, 'id':trainee_id});
 
                 $("#empty_list_text").hide(); 
                 $("#add_trainee_modal").find("input, textarea, select").val("");

@@ -8,6 +8,11 @@
     src: url(../font/Exo2-Regular.otf);
 }
 
+@font-face {
+    font-family: Exo2-Light;
+    src: url(../font/Exo2-Light.otf);
+}
+
 *{
     margin: 0px;
     
@@ -200,6 +205,7 @@
                             list-style: none;
                             margin-bottom: 10px;
                             padding: 0px 40px 0px 51px;
+                            position: relative;
 
                             ul{
                                 align-items: flex-start;
@@ -320,6 +326,27 @@
                                     }
                                 }
                             }
+                        }
+
+                        .add_trainee_group::before{
+                            --scale: 0;
+                            background: #faff00;
+                            border-radius: 10px;
+                            color: #333333;
+                            content: attr(data-tooltip);
+                            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.09));
+                            font: normal 300 12px/14px 'Exo2-Light';
+                            padding: 15px;
+                            position: absolute;
+                            top: -25px;
+                            transform-origin: bottom center;
+                            transform: translateX(205px) translateY(-12px) scale(var(--scale));
+                            transition: 150ms transform;
+                            width: max-content;
+                        }
+
+                        .add_trainee_group:hover::before{
+                            --scale: 1;
                         }
                         
                         .add_trainee_group:last-child{
