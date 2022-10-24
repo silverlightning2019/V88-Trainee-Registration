@@ -33,6 +33,7 @@ $(document).ready(function(){
             let trainee_specialization = $("#trainee_specialization").val();
             let trainee_date_started = $("#trainee_date_started").val();
             let trainee_recruiter = $("#trainee_recruiter").val();
+            let trainee_note = $("#trainee_note").val();
             let data_id = $("#add_trainee_list .add_trainee_group").length;
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
@@ -45,6 +46,7 @@ $(document).ready(function(){
                 trainee_item_clone.find(".date").text(trainee_date_started);
                 trainee_item_clone.find(".recruiter").text(trainee_recruiter);
                 trainee_item_clone.find(".status span").text("Trainee");
+                console.log(trainee_note);
                 $("#add_trainee_list").append(trainee_item_clone);
 
                 trainee_item_clone.attr({'data-id':data_id, 'id':trainee_id});
