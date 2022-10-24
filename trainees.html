@@ -28,7 +28,8 @@
     <script src="./assets/js/trainees_script.js"></script>
 
     <!-- Upload Image Script -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="./assets/css/vendor/UnoDropZone.css">
+    <script src="./assets/js/vendor/UnoDropZone.js"></script>
 
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -54,7 +55,7 @@
     <main>
         <section id="banner_section">
             <div id="banner_container">
-                <h1>“Survive with us @ <span>Village88"</span></h1>
+                <h1>“Survive with us @ <span>Village88</span>"</h1>
             </div>
         </section>
         <section id="add_trainee_section">
@@ -131,10 +132,11 @@
             <div class="modal-content">
                 <form action="#">
                     <div class="modal-header">
-                        <div id="profile-container">
+                        <div id="profile-container" class="file-upload" data-input-name="input1"></div>
+                        <!-- <div id="profile-container">
                             <image id="profile_image">
                          </div>
-                         <input id="image_upload" type="file" name="profile_photo" placeholder="Photo" required="" capture>                    
+                         <input id="image_upload" type="file" name="profile_photo" placeholder="Photo" required="" capture>                     -->
                     </div>
                     <div class="modal-body">
                         <div class="form_container">

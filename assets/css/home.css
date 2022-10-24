@@ -86,6 +86,7 @@
 }
 * body footer:hover {
   background-color: #FFEB3C;
+  transition: 0.3s;
 }
 * body footer:hover .yellow_text_highlight {
   color: #02244F;
