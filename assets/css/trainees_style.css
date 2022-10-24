@@ -238,7 +238,7 @@
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul #edit_delete_icons {
   align-items: center;
   background-color: #e26139;
-  color: #ffffff;
+  color: #fffffff;
   display: flex;
   height: 100%;
   justify-content: space-around;
@@ -275,6 +275,7 @@
   padding: 15px;
   text-align: center;
   width: max-content;
+  max-width: 100%;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::after {
   content: '';
@@ -526,6 +527,25 @@
 * body .modal-dialog .modal-content .modal-footer .edit_save_btn:hover {
   transition: 0.3s;
   background-color: #0059FF;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+* body .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  width: 130px;
+  height: 36px;
+  color: #EF5353;
+  font: normal 400 14px/8px 'Exo2-Regular';
+  letter-spacing: 0.6px;
+  margin: 0px 50px 0px 0px;
+  border: none;
+  transition: 0.3s;
+}
+* body .modal-dialog .modal-content .modal-footer .edit_cancel_btn:hover {
+  color: #ffffff;
+  background-color: #E26139;
+  border-radius: 2px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 * body #delete_trainee_modal .modal-dialog {

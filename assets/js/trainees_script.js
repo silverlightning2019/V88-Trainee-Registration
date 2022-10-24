@@ -100,6 +100,7 @@ $(document).ready(function(){
         let trainee_name = $(full_trainee_id).find("#name").text();
         let trainee_specialization = $(full_trainee_id).find("#specialization").text();
         let trainee_date = $(full_trainee_id).find("#date").text();
+        let trainee_status = $(full_trainee_id).find("#status .edit_delete_container span").text();
         let trainee_note = $(full_trainee_id).attr("data-tooltip");
 
         $("#edit_trainee_modal").find("#trainee_name").val(trainee_name);
@@ -134,6 +135,7 @@ $(document).ready(function(){
             trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
             trainee_id_selector.attr("data-tooltip", trainee_note);
 
+            edit_modal.find("#trainee_name, #trainee_date, #trainee_note").css("border", "transparent");
             edit_modal.modal('hide');
         }
         else{
