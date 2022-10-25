@@ -81,6 +81,10 @@
   padding: 0px 15px 0px 15px;
   vertical-align: top;
 }
+* body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item:hover {
+  transition: 0.32s;
+  transform: rotate(6.27rad);
+}
 * body footer {
   background-color: #02244F;
 }
