@@ -113,7 +113,20 @@
 * body main #add_trainee_section #add_trainee_container > div #add_trainee_search #add_trainee_search_input:focus-visible {
   outline: transparent;
 }
-* body main #add_trainee_section #add_trainee_container > div #add_trainee_search .fa-magnifying-glass {
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search button {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+  color: #ffffff;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search button:hover {
+  background-color: #8db5ff;
+  height: 48px;
+  transition: 0.5s;
+}
+* body main #add_trainee_section #add_trainee_container > div #add_trainee_search button .fa-magnifying-glass {
   color: #ffffff;
   padding: 0px 17px;
   border-left: solid 0.5px #ffffff;
