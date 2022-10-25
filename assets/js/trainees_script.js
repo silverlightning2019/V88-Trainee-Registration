@@ -28,9 +28,19 @@ $(document).ready(function(){
 
     $("#add_trainee_search_input")
         .on("input", function(){
-            let value = $(this).val().toLowerCase();
-            $("#add_trainee_list .add_trainee_group ul").filter(function(){
-                $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+            // let value = $(this).val().toLowerCase;
+            // $("#add_trainee_list .add_trainee_group ul").filter(function(){
+            //     $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+            // });
+            
+            let value = $(this).val();
+            $("#search_icon").on("click", function (){
+                let selector_value = $("#add_trainee_list .add_trainee_group ul li").text();
+                console.log(value);
+                console.log("li :contains('"+value+"')");
+                $("html, body").animate({
+                    scrollTop: $("li:contains("+value+")")?.offset()?.top
+                }, 1);
             });
         }
     );
