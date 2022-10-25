@@ -35,7 +35,9 @@ $(document).ready(function(){
     // $("#trainee_date_started").datepicker();
 
     $("body")
-        .on("click", ".save_btn", function(){
+        .on("click", ".save_btn", function(e){
+            e.preventDefault();
+
             let trainee_name = $("#trainee_fullname").val();
             let trainee_specialization = $("#trainee_specialization").val();
             let trainee_date_started = $("#trainee_date_started").val();
