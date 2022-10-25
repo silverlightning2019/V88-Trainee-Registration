@@ -1,4 +1,4 @@
-<li class="add_trainee_group" data-tooltip="example">
+ <li class="add_trainee_group" data-tooltip="example" data-id="0" id="trainee_0">
                         <ul>
                             <li class="add_trainee_item name" id="name">Silver Roi Valdez Ramos</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -15,7 +15,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="1" id="trainee_1">
                         <ul>
                             <li class="add_trainee_item name" id="name">Vince Aromin Gurtiza</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -32,7 +32,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="2" id="trainee_2">
                         <ul>
                             <li class="add_trainee_item name" id="name">Jeroin</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -49,7 +49,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="3" id="trainee_3">
                         <ul>
                             <li class="add_trainee_item name" id="name">Renz</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -66,7 +66,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="4" id="trainee_4">
                         <ul>
                             <li class="add_trainee_item name" id="name">Daniel</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -83,7 +83,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="5" id="trainee_5">
                         <ul>
                             <li class="add_trainee_item name" id="name">Jerum</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -100,7 +100,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="6" id="trainee_6">
                         <ul>
                             <li class="add_trainee_item name" id="name">Jericho</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -117,7 +117,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="7" id="trainee_7">
                         <ul>
                             <li class="add_trainee_item name" id="name">Jason</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -134,7 +134,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="8" id="trainee_8">
                         <ul>
                             <li class="add_trainee_item name" id="name">Kenneth</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
@@ -151,7 +151,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="add_trainee_group" data-tooltip="example">
+                    <li class="add_trainee_group" data-tooltip="example" data-id="9" id="trainee_9">
                         <ul>
                             <li class="add_trainee_item name" id="name">Aurelin</li>
                             <li class="add_trainee_item specialization" id="specialization">Front-End</li>
