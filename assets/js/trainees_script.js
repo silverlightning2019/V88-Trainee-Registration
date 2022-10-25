@@ -26,6 +26,15 @@ $(document).ready(function(){
     //     }
     // );
 
+    $("#add_trainee_search_input")
+        .on("input", function(){
+            let value = $(this).val().toLowerCase();
+            $("#add_trainee_list .add_trainee_group ul").filter(function(){
+                $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+            });
+        }
+    );
+
     $("body")
         .on("click", "#add_trainee_modal", function(){
                

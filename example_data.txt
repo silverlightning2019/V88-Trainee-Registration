@@ -1,0 +1,170 @@
+<li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Silver Roi Valdez Ramos</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Vince Aromin Gurtiza</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Jeroin</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Renz</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Daniel</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Jerum</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Jericho</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Jason</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Kenneth</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="add_trainee_group" data-tooltip="example">
+                        <ul>
+                            <li class="add_trainee_item name" id="name">Aurelin</li>
+                            <li class="add_trainee_item specialization" id="specialization">Front-End</li>
+                            <li class="add_trainee_item recruiter" id="recruiter">Mario Narvaez Jr</li>
+                            <li class="add_trainee_item date" id="date">10/25/2022</li>
+                            <li class="add_trainee_item status" id="status">
+                                <div class="edit_delete_container">
+                                    <span>Trainee</span>
+                                    <ul id="edit_delete_icons">
+                                        <li><button class="edit" data-toggle="modal" data-target="#edit_trainee_modal"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                        <li><button class="delete" data-toggle="modal" data-target="#delete_trainee_modal"><i class="fa-solid fa-trash"></i></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
