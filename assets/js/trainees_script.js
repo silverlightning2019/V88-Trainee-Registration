@@ -5,9 +5,83 @@
 */
 
 $(document).ready(function(){
-    // $(function(){
-    //     $(".add_trainee_group").tooltip();
-    // });
+    let number_of_groups = $("#add_trainee_list .add_trainee_group").length;
+    let limit_per_page = 10;
+    let total_pages = Math.round(number_of_groups / limit_per_page);
+    $(".pagination").append("<li class='page-item current_page active'><a class='page-link' href='#'>"+ 1 +"</a></li>");
+    for(let i=2; i<=total_pages; i++){
+        $(".pagination").append("<li class='page-item current_page'><a class='page-link' href='#'>"+ i +"</a></li>");
+    }
+    $(".pagination").append("<li id='next_page' class='page-item'><a class='page-link' href='#'>Next</a></li>");
+
+    $(".pagination li.current_page").on("click", function(){
+        if($(this).hasClass("active")){
+            return false;   
+        }
+        else{
+            let current_page = $(this).index();
+            let total_groups = limit_per_page * current_page;
+            $(".pagination li").removeClass("disabled");
+            $(".pagination li").removeClass("active");
+            $(this).addClass("active");
+            $("#add_trainee_list .add_trainee_group").hide();
+            
+            for (let i = total_groups - limit_per_page; i < total_groups; i++){
+                $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
+            }
+        }
+    });
+
+    $("#next_page").on("click", function(){
+        let current_page = $(".pagination li.active").index();
+        if (current_page === total_pages){
+            // $(this).addClass("disabled");
+            return false;
+        }
+        else{
+            current_page++;
+            let total_groups = limit_per_page * current_page;
+            $(".pagination li").removeClass("disabled");
+            $(".pagination li").removeClass("active");
+            $("#add_trainee_list .add_trainee_group").hide();
+
+            for (let i = total_groups - limit_per_page; i < total_groups; i++){
+                $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
+            }
+
+            $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
+        }
+    });
+    
+    $("#prev_page").on("click", function(){
+        let current_page = $(".pagination li.active").index();
+        if (current_page === 1){
+            // $(this).addClass("disabled");
+            return false;
+        }
+        else{
+            current_page--;
+            let total_groups = limit_per_page * current_page;
+            $(".pagination li").removeClass("disabled");
+            $(".pagination li").removeClass("active");
+            $("#add_trainee_list .add_trainee_group").hide();
+
+            for (let i = total_groups - limit_per_page; i < total_groups; i++){
+                $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
+            }
+
+            $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
+        }
+    });
+
+
+
+
+
+
+
+    $("#add_trainee_list .add_trainee_group:gt("+ (limit_per_page-1) +")").hide();
+    // alert(number_of_groups);
 
     $(window).on('load', function() {
         $(".add_trainee_group").tooltip();
@@ -86,7 +160,6 @@ $(document).ready(function(){
                 $("#add_trainee_modal").modal('hide');
 
                 $("#saved_toast").toast('show');
-                
             }
             else{
                 if(trainee_name == ""){
@@ -163,6 +236,13 @@ $(document).ready(function(){
             edit_modal.find("#trainee_name, #trainee_date, #trainee_note").css("border", "transparent");
             edit_modal.modal('hide');
             $("#saved_toast").toast('show');
+
+            if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
+                trainee_id_selector.find("#status").css("background-color","#f6bb2a");
+            }
+            if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Unemployed"){
+                trainee_id_selector.find("#status").css("background-color","#c5c5c5", "color", "#333333");
+            }
         }
         else{
             if(trainee_name == ""){
