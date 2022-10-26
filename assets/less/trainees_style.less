@@ -1088,7 +1088,239 @@
         }
 
         @media only screen and (max-width: 1439px){
+            .modal-dialog{
+                margin-top: 150px;
+                max-width: 352px;
 
+                .modal-content{
+    
+                    .modal-header{
+                        background-color: #5BA3FF;
+                        height: 104px;
+    
+                        #profileImage {
+                            width: 134px;
+                            height: 134px;
+                        }
+    
+                        #profile-container{
+                            height: 134px;
+                            width: 134px;
+                        }
+                    }
+    
+                    .modal-body{
+                        padding: 62px 31px 31px 30px;
+
+                        .form_container{
+                            text-align: justify;
+                            
+                            &::after{
+                                content: "";
+                                display: inline-block;
+                                width: 100%;
+                            }
+    
+                            .form_label{
+                                display: inline-block;
+    
+                                label{
+                                    color: #7C7D7D;
+                                    display: block;
+                                    font: normal 400 12px/14px 'Exo2-Regular';
+                                    // margin-bottom: 29px;
+                                }
+                            }
+                            .form_input{
+                                display: inline-block;
+    
+                                .input_style{
+                                    background-color: #EFF7FB;
+                                    border-radius: 2px;
+                                    border: none;
+                                    color: #999;
+                                    display: block;
+                                    font: normal 400 14px/17px 'Exo2-Regular';
+                                    height: 40px;
+                                    letter-spacing: 0.6px;
+                                    margin-bottom: 10px;
+                                    padding: 0px 10px;
+                                    text-align: left;
+                                    width: 192px;
+                                }
+                                
+                                .date_picker_container{
+                                    position: relative;
+    
+                                    .date_icon{
+                                        color: #999;
+                                        position: absolute;
+                                        right: 15px;
+                                        top: 11px;
+                                    }
+                                }
+    
+        
+                                #datepicker{
+                                    color: #999;
+                                }
+        
+                                select, .select_picker{
+                                    background-color: #EFF7FB;
+                                    border-radius: 2px;
+                                    border: none;
+                                    color: #333333;
+                                    display: block;
+                                    font: normal 400 14px/17px 'Exo2-Regular';
+                                    height: 40px;
+                                    letter-spacing: 0.6px;
+                                    margin-bottom: 10px;
+                                    padding: 0px;
+                                    text-align: left;
+                                    width: 192px;
+                                    .filter-option-inner-inner{
+                                        // visibility: hidden;
+                                        color: #999;
+                                    }
+                                    .option_style{
+                                        h3{
+                                            display: block;
+                                        }
+                                        p{
+                                            display: block;
+                                        }
+                                    }
+                                }
+                                .btn{
+                                    background-color: #EFF7FB;
+                                    width: 188px;
+                                    height: 36px;
+                                }
+                            }
+                        }
+    
+                        .alert{
+                            color: #ff0000;
+                            display: none;
+                            font: normal 50 14px/17px 'Exo2-Regular';
+                            padding: 0px;	
+                        }
+    
+                        .redactor{
+                            display: block;
+    
+                            textarea{
+                                background-color: #EFF7FB;
+                                border-radius: 2px;
+                                border: none;
+                                color: #333333;
+                                display: block;
+                                font: normal 400 14px/17px 'Exo2-Regular';
+                                height: 100px;
+                                letter-spacing: 0.6px;
+                                margin-bottom: 10px;
+                                overflow: auto;
+                                padding: 10px 10px;
+                                resize: none;
+                                text-align: left;
+                                width: 100%;
+                            }
+                        }
+                    }
+    
+                    .modal-footer{
+                        border: none;
+                        padding: 22px 35px 35px 35px;
+                        text-align: justify;
+                        &::after{
+                            content: "";
+                            display: inline-block;
+                            width: 100%;
+                        }
+                        .cancel_btn{
+                            display: inline-block;
+                            vertical-align: top;
+                            background-color: #ffffff;
+                            width: 130px;
+                            height: 36px;
+                            color: #EF5353;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            letter-spacing: 0.6px;
+                            margin: 0px 50px 0px 0px;
+                            border: none;
+                            transition: 0.3s;
+                            &:hover{
+                                // border: solid 0.5px #E26139;
+                                color: #ffffff;
+                                background-color: #E26139;
+                                border-radius: 2px;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            }
+                        }
+                        .save_btn{
+                            display: inline-block;
+                            vertical-align: top;
+                            background-color: #0085FF;
+                            width: 130px;
+                            height: 36px;
+                            color: #ffffff;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            letter-spacing: 0.6px;
+                            border: none;
+                            border-radius: 2px;
+                            margin: 0px;
+    
+                            &:hover{
+                                transition: 0.3s;
+                                background-color: #0059FF;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            }
+                        }
+    
+                        .edit_save_btn{
+                            display: inline-block;
+                            vertical-align: top;
+                            background-color: #0085FF;
+                            width: 130px;
+                            height: 36px;
+                            color: #ffffff;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            letter-spacing: 0.6px;
+                            border: none;
+                            border-radius: 2px;
+                            margin: 0px;
+    
+                            &:hover{
+                                transition: 0.3s;
+                                background-color: #0059FF;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            }
+                        }
+    
+                        .edit_cancel_btn{
+                            display: inline-block;
+                            vertical-align: top;
+                            background-color: #ffffff;
+                            width: 130px;
+                            height: 36px;
+                            color: #EF5353;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            letter-spacing: 0.6px;
+                            margin: 0px 50px 0px 0px;
+                            border: none;
+                            transition: 0.3s;
+    
+                            &:hover{
+                                // border: solid 0.5px #E26139;
+                                color: #ffffff;
+                                background-color: #E26139;
+                                border-radius: 2px;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         // DELETE MODAL 

@@ -5,109 +5,93 @@
 */
 
 $(document).ready(function(){
-    let number_of_groups = $("#add_trainee_list .add_trainee_group").length;
-    let limit_per_page = 10;
-    let total_pages = Math.round(number_of_groups / limit_per_page);
-    $(".pagination").append("<li class='page-item current_page active'><a class='page-link' href='#'>"+ 1 +"</a></li>");
-    for(let i=2; i<=total_pages; i++){
-        $(".pagination").append("<li class='page-item current_page'><a class='page-link' href='#'>"+ i +"</a></li>");
-    }
-    $(".pagination").append("<li id='next_page' class='page-item'><a class='page-link' href='#'>Next</a></li>");
 
-    $(".pagination li.current_page").on("click", function(){
-        if($(this).hasClass("active")){
-            return false;   
-        }
-        else{
-            let current_page = $(this).index();
-            let total_groups = limit_per_page * current_page;
-            $(".pagination li").removeClass("disabled");
-            $(".pagination li").removeClass("active");
-            $(this).addClass("active");
-            $("#add_trainee_list .add_trainee_group").hide();
-            
-            for (let i = total_groups - limit_per_page; i < total_groups; i++){
-                $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
-            }
-        }
-    });
-
-    $("#next_page").on("click", function(){
-        let current_page = $(".pagination li.active").index();
-        if (current_page === total_pages){
-            // $(this).addClass("disabled");
-            return false;
-        }
-        else{
-            current_page++;
-            let total_groups = limit_per_page * current_page;
-            $(".pagination li").removeClass("disabled");
-            $(".pagination li").removeClass("active");
-            $("#add_trainee_list .add_trainee_group").hide();
-
-            for (let i = total_groups - limit_per_page; i < total_groups; i++){
-                $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
-            }
-
-            $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
-        }
-    });
+    // //Pagination
+    // let number_of_groups = $("#add_trainee_list .add_trainee_group").length;
+    // let limit_per_page = 10;
+    // let total_pages = Math.round(number_of_groups / limit_per_page);
+    // $(".pagination").append("<li id='prev_page' class='page-item'><a class='page-link' href='#'>Prev</a></li>");
+    // $(".pagination").append("<li class='page-item current_page active'><a class='page-link' href='#'>"+ 1 +"</a></li>");
+    // for(let i=2; i<=total_pages; i++){
+    //     $(".pagination").append("<li class='page-item current_page'><a class='page-link' href='#'>"+ i +"</a></li>");
+    // }
     
-    $("#prev_page").on("click", function(){
-        let current_page = $(".pagination li.active").index();
-        if (current_page === 1){
-            // $(this).addClass("disabled");
-            return false;
-        }
-        else{
-            current_page--;
-            let total_groups = limit_per_page * current_page;
-            $(".pagination li").removeClass("disabled");
-            $(".pagination li").removeClass("active");
-            $("#add_trainee_list .add_trainee_group").hide();
+    // $(".pagination").append("<li id='next_page' class='page-item'><a class='page-link' href='#'>Next</a></li>");
 
-            for (let i = total_groups - limit_per_page; i < total_groups; i++){
-                $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
-            }
-
-            $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
-        }
-    });
-
-
-
-
-
-
-
-    $("#add_trainee_list .add_trainee_group:gt("+ (limit_per_page-1) +")").hide();
-    // alert(number_of_groups);
-
-    $(window).on('load', function() {
-        $(".add_trainee_group").tooltip();
-        $("#saved_toast").toast('show');
-    });
-    // $("body")
-    //     .on("mouseenter", ".status", function(){
-    //         let trainee_status = $(this).text();
-    //         $(this).html('<button class="edit" data-toggle="modal" data-target="#edit_trainee_modal">Edit</button> <button class="delete" data-toggle="modal" data-target="#delete_trainee_modal">Delete</button>');
+    // $(".pagination li.current_page")
+    //     .on("click", function(){
+    //         if($(this).hasClass("active")){
+    //             return false;   
+    //         }
+    //         else{
+    //             let current_page = $(this).index();
+    //             let total_groups = limit_per_page * current_page;
+    //             $(".pagination li").removeClass("active");
+    //             $(this).addClass("active");
+    //             $("#add_trainee_list .add_trainee_group").hide();
+                
+    //             for (let i = total_groups - limit_per_page; i < total_groups; i++){
+    //                 $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
+    //             }
+    //         }
     //     }
     // );
 
-    // $("body")
-    //     .on("mouseleave", ".status", function(){
-    //         let trainee_status = $(this).text();
-    //         $(this).html("Training");
+    // $("#next_page")
+    //     .on("click", function(){
+    //         let current_page = $(".pagination li.active").index();
+    //         if (current_page === total_pages){
+    //             return false;
+    //         }
+    //         else{
+    //             current_page++;
+    //             let total_groups = limit_per_page * current_page;
+    //             $(".pagination li").removeClass("active");
+    //             $("#add_trainee_list .add_trainee_group").hide();
+
+    //             for (let i = total_groups - limit_per_page; i < total_groups; i++){
+    //                 $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
+    //             }
+
+    //             $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
+    //         }
     //     }
     // );
+    
+    // $("#prev_page")
+    //     .on("click", function(){
+    //         let current_page = $(".pagination li.active").index();
+    //         if (current_page === 1){
+    //             return false;
+    //         }
+    //         else{
+    //             current_page--;
+    //             let total_groups = limit_per_page * current_page;
+    //             $(".pagination li").removeClass("disabled");
+    //             $(".pagination li").removeClass("active");
+    //             $("#add_trainee_list .add_trainee_group").hide();
+
+    //             for (let i = total_groups - limit_per_page; i < total_groups; i++){
+    //                 $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
+    //             }
+
+    //             $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
+    //         }
+    //     }
+    // );
+
+    // $("#add_trainee_list .add_trainee_group:gt("+ (limit_per_page-1) +")").hide();
+    // //
+
+    $(window)
+        .on('load', function() {
+            $(".add_trainee_group").tooltip();
+            $("#saved_toast").toast('show');
+        }
+    );
 
     $("#add_trainee_search_input")
         .on("input", function(){
-            // let value = $(this).val().toLowerCase;
-            // $("#add_trainee_list .add_trainee_group ul").filter(function(){
-            //     $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
-            // });
-            
             let value = $(this).val();
             $("#search_icon").on("click", function (){
                 let selector_value = $("#add_trainee_list .add_trainee_group ul li").text();
@@ -119,14 +103,6 @@ $(document).ready(function(){
             });
         }
     );
-
-    $("body")
-        .on("click", "#add_trainee_modal", function(){
-               
-        }
-    );
-
-    // $("#trainee_date_started").datepicker();
 
     $("body")
         .on("click", ".save_btn", function(e){
@@ -190,81 +166,88 @@ $(document).ready(function(){
         }
     );
 
-    $("body").on("click", ".edit", function(){
-        let trainee_id = $(this).closest(".add_trainee_group").attr("id");
-        let full_trainee_id = "#"+trainee_id;
+    $("body")
+        .on("click", ".edit", function(){
+            let trainee_id = $(this).closest(".add_trainee_group").attr("id");
+            let full_trainee_id = "#"+trainee_id;
 
-        $("#edit_trainee_modal").find("#trainee_id").text(trainee_id);
-        let trainee_name = $(full_trainee_id).find("#name").text();
-        let trainee_specialization = $(full_trainee_id).find("#specialization").text();
-        let trainee_date = $(full_trainee_id).find("#date").text();
-        let trainee_status = $(full_trainee_id).find("#status .edit_delete_container span").text();
-        let trainee_note = $(full_trainee_id).attr("data-tooltip");
+            $("#edit_trainee_modal").find("#trainee_id").text(trainee_id);
+            let trainee_name = $(full_trainee_id).find("#name").text();
+            let trainee_specialization = $(full_trainee_id).find("#specialization").text();
+            let trainee_date = $(full_trainee_id).find("#date").text();
+            let trainee_status = $(full_trainee_id).find("#status .edit_delete_container span").text();
+            let trainee_note = $(full_trainee_id).attr("data-tooltip");
 
-        $("#edit_trainee_modal").find("#trainee_name").val(trainee_name);
-        $("#edit_trainee_modal").find("#trainee_specialization").val(trainee_specialization);
-        $("#edit_trainee_modal").find(".modal_specialization button").attr("title", trainee_specialization);
-        $("#edit_trainee_modal").find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
-        $("#edit_trainee_modal").find("#trainee_date").val(trainee_date);
-        $("#edit_trainee_modal").find("#trainee_status").val(trainee_status);
-        $("#edit_trainee_modal").find(".modal_status .filter-option-inner-inner").text("Trainee");
-        $("#edit_trainee_modal").find("#trainee_note").val(trainee_note);
-    });
+            $("#edit_trainee_modal").find("#trainee_name").val(trainee_name);
+            $("#edit_trainee_modal").find("#trainee_specialization").val(trainee_specialization);
+            $("#edit_trainee_modal").find(".modal_specialization button").attr("title", trainee_specialization);
+            $("#edit_trainee_modal").find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
+            $("#edit_trainee_modal").find("#trainee_date").val(trainee_date);
+            $("#edit_trainee_modal").find("#trainee_status").val(trainee_status);
+            $("#edit_trainee_modal").find(".modal_status .filter-option-inner-inner").text("Trainee");
+            $("#edit_trainee_modal").find("#trainee_note").val(trainee_note);
+        }
+    );
 
-    $("body").on("click", ".edit_save_btn", function(){
-        let edit_modal = $("#edit_trainee_modal");
-        let trainee_id = edit_modal.find("#trainee_id").text();
-        let trainee_id_selector = $('#' +trainee_id);
+    $("body")
+        .on("click", ".edit_save_btn", function(){
+            let edit_modal = $("#edit_trainee_modal");
+            let trainee_id = edit_modal.find("#trainee_id").text();
+            let trainee_id_selector = $('#' +trainee_id);
 
-        let trainee_name = edit_modal.find("#trainee_name").val();
-        let trainee_specialization = edit_modal.find("#trainee_specialization").val();
-        let trainee_date = edit_modal.find("#trainee_date").val();
-        let trainee_status = edit_modal.find("#trainee_status").val();
-        let trainee_note = edit_modal.find("#trainee_note").val();  
+            let trainee_name = edit_modal.find("#trainee_name").val();
+            let trainee_specialization = edit_modal.find("#trainee_specialization").val();
+            let trainee_date = edit_modal.find("#trainee_date").val();
+            let trainee_status = edit_modal.find("#trainee_status").val();
+            let trainee_note = edit_modal.find("#trainee_note").val();  
 
-        $(".alert").hide();
+            $(".alert").hide();
 
-        
+            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_status != "" && trainee_note != ""){
+                trainee_id_selector.find("#name").text(trainee_name);
+                trainee_id_selector.find("#specialization").text(trainee_specialization);
+                trainee_id_selector.find("#date").text(trainee_date);
+                trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
+                trainee_id_selector.attr("data-tooltip", trainee_note);
 
-        if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_status != "" && trainee_note != ""){
-            trainee_id_selector.find("#name").text(trainee_name);
-            trainee_id_selector.find("#specialization").text(trainee_specialization);
-            trainee_id_selector.find("#date").text(trainee_date);
-            trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
-            trainee_id_selector.attr("data-tooltip", trainee_note);
+                edit_modal.find("#trainee_name, #trainee_date, #trainee_note").css("border", "transparent");
+                edit_modal.modal('hide');
+                $("#saved_toast").toast('show');
 
-            edit_modal.find("#trainee_name, #trainee_date, #trainee_note").css("border", "transparent");
-            edit_modal.modal('hide');
-            $("#saved_toast").toast('show');
+                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
+                    trainee_id_selector.find("#status").css("background-color","#f6bb2a");
+                }
 
-            if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
-                trainee_id_selector.find("#status").css("background-color","#f6bb2a");
+                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Unemployed"){
+                    trainee_id_selector.find("#status").css("background-color","#c5c5c5", "color", "#333333");
+                }
             }
-            if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Unemployed"){
-                trainee_id_selector.find("#status").css("background-color","#c5c5c5", "color", "#333333");
+            else{
+
+                if(trainee_name == ""){
+                    edit_modal.find("#trainee_name").css("border", "0.5px solid red");
+                }
+
+                if(trainee_specialization == ""){
+                    edit_modal.find("#trainee_specialization").css("border", "0.5px solid red");
+                }
+
+                if(trainee_date == ""){
+                    edit_modal.find("#trainee_date").css("border", "0.5px solid red");
+                }
+
+                if(trainee_recruiter == ""){    
+                    edit_modal.find("#trainee_status").css("border", "0.5px solid red");
+                }
+
+                if(trainee_note == ""){
+                    edit_modal.find("#trainee_note").css("border", "0.5px solid red");
+                }
+
+                $(".alert").show();
             }
         }
-        else{
-            if(trainee_name == ""){
-                edit_modal.find("#trainee_name").css("border", "0.5px solid red");
-            }
-            if(trainee_specialization == ""){
-                edit_modal.find("#trainee_specialization").css("border", "0.5px solid red");
-            }
-            if(trainee_date == ""){
-                edit_modal.find("#trainee_date").css("border", "0.5px solid red");
-            }
-            if(trainee_recruiter == ""){    
-                edit_modal.find("#trainee_status").css("border", "0.5px solid red");
-            }
-            if(trainee_note == ""){
-                edit_modal.find("#trainee_note").css("border", "0.5px solid red");
-            }
-            $(".alert").show();
-        }
-
-       
-    });
+    );
 
     $("body")
         .on("click", ".edit_cancel_btn", function(){
@@ -274,15 +257,19 @@ $(document).ready(function(){
         }
     );
 
-    $("body").on("click", ".delete", function(){
-        let trainee_id = $(this).closest(".add_trainee_group").attr("id");
-        $("#trainee_id").text(trainee_id);
-    });
+    $("body")
+        .on("click", ".delete", function(){
+            let trainee_id = $(this).closest(".add_trainee_group").attr("id");
+            $("#trainee_id").text(trainee_id);
+        }
+    );
 
-    $("body").on("click", ".dm_confirm_btn", function(){
-        let trainee_list = $("#add_trainee_list");
-        let trainee_id = $("#trainee_id").text();
-        trainee_list.find('li[id ='+trainee_id+']').remove();
-        $("#deleted_toast").toast('show');
-    });
+    $("body")
+        .on("click", ".dm_confirm_btn", function(){
+            let trainee_list = $("#add_trainee_list");
+            let trainee_id = $("#trainee_id").text();
+            trainee_list.find('li[id ='+trainee_id+']').remove();
+            $("#deleted_toast").toast('show');
+        }
+    );
 });
