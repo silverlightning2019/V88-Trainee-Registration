@@ -433,7 +433,7 @@
 * body footer #footer_section #footer_container {
   background-color: #02244F;
   margin: 0px auto;
-  padding: 148px 443px 147px 441px;
+  padding: 148px 0px 147px 0px;
   text-align: center;
 }
 * body footer #footer_section #footer_container:hover {
@@ -450,10 +450,19 @@
 }
 @media only screen and (max-width: 1439px) {
   * body footer #footer_section #footer_container {
-    padding: 121px 190px 117px 190px;
+    padding: 121px 0px 117px 0px;
   }
   * body footer #footer_section #footer_container h2 {
     font: normal 32px/38px 'Exo2-Bold';
+  }
+}
+@media only screen and (max-width: 480px) {
+  * body footer #footer_section #footer_container {
+    padding: 0px;
+  }
+  * body footer #footer_section #footer_container h2 {
+    font: normal 700 12px/14px 'Exo2-Bold';
+    padding: 10px 0px;
   }
 }
 * body .modal-dialog {
