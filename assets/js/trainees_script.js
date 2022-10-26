@@ -1,6 +1,6 @@
 /** 
 *   DOCU: Trainees Page Script
-*   Last updated at: October 20, 2022
+*   Last updated at: October 26, 2022
 *   @author Silver
 */
 
@@ -86,7 +86,7 @@ $(document).ready(function(){
     $(window)
         .on('load', function() {
             $(".add_trainee_group").tooltip();
-            $("#saved_toast").toast('show');
+            // $("#saved_toast").toast('show');
         }
     );
 
@@ -94,9 +94,6 @@ $(document).ready(function(){
         .on("input", function(){
             let value = $(this).val();
             $("#search_icon").on("click", function (){
-                let selector_value = $("#add_trainee_list .add_trainee_group ul li").text();
-                console.log(value);
-                console.log("li :contains('"+value+"')");
                 $("html, body").animate({
                     scrollTop: $("li:contains("+value+")")?.offset()?.top
                 }, 1);
@@ -116,6 +113,7 @@ $(document).ready(function(){
             let data_id = $("#add_trainee_list .add_trainee_group").length;
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
+            let add_trainee_modal = $("#add_trainee_modal");
 
             $(".alert").hide();
 
@@ -130,10 +128,10 @@ $(document).ready(function(){
                 trainee_item_clone.attr({'data-tooltip':trainee_note, 'data-id':data_id, 'id':trainee_id});
 
                 $("#empty_list_text").hide(); 
-                $("#add_trainee_modal").find("input, textarea, select").val("");
-                $("#add_trainee_modal").find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
 
-                $("#add_trainee_modal").modal('hide');
+                add_trainee_modal.find("input, textarea, select").val("");
+                add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
+                add_trainee_modal.modal('hide');
 
                 $("#saved_toast").toast('show');
             }
