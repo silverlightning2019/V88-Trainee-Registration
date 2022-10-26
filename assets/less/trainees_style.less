@@ -63,6 +63,35 @@
                         }
                     }
                 }
+
+                @media only screen and (max-width: 1439px){
+                
+                    #navbar_container{
+                        max-width: 834px;
+                        padding: 0px 63px 0px 65px;
+
+                        img{
+                            height: 129px;
+                            width: 203px;
+                        }
+                        
+                        #navbar_list{
+                            margin-top: 25px;
+            
+                            .navbar_item{
+                                font: normal bold 18px/22px 'Exo2-Bold';
+
+                                .active{
+                                    text-decoration-thickness: 3px;
+                                }
+                            }
+            
+                            #navbar_home{
+                                margin-right: 38px;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -85,6 +114,18 @@
 
                         span{
                             color: #ffeb3c;
+                        }
+                    }
+                }
+
+                @media only screen and (max-width: 1439px){
+                
+                    #banner_container{
+                        max-width: 834px;
+                        padding: 28px 114px 56px 114px;
+    
+                        h1{
+                            font: normal bold 40px/48px 'Exo2-Bold';
                         }
                     }
                 }
@@ -402,6 +443,129 @@
                         text-align: center;
                     }
                 }
+
+                @media only screen and (max-width: 1439px){
+
+                    #add_trainee_container{
+                        max-width: 834px;
+                        padding: 0px 65px 49px 64px;
+    
+                        >div{
+    
+                            button{
+                                font: normal bold 18px/22px 'Exo2-Bold';
+                                margin-bottom: 29px;
+                                padding: 14px 36px 17px 33px;
+                            }
+    
+                            #add_trainee_search{
+                                border: 2px solid #ffffff;
+                                font: normal 400 18px/22px 'Exo2-Regular';
+                                
+                                input{
+                                    padding: 12px 13px 17px 19px;
+                                }
+                            }
+                        }
+    
+                        #add_trainee_list{
+    
+                            #add_trainee_group_header{
+                                font: normal bold 20px/24px 'Exo2-Bold';
+                                margin: 0px 57px 35px 30px;
+    
+                                ul{
+    
+                                    .head_name{
+                                        min-width: 291px;
+                                    }
+    
+                                    .head_specialization{
+                                        min-width: 215px;
+                                    }
+    
+                                    .head_recruiter{
+                                        display: none;
+                                    }
+    
+                                    .head_status{
+                                        min-width: 172px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+    
+                            .add_trainee_group{
+                                font: normal 400 18px/22px 'Exo2-Regular';
+                                margin-bottom: 15px;
+                                padding: 0px 0px 0px 30px;
+    
+                                ul{
+    
+                                    .name{
+                                        min-width: 291px;
+                                        padding: 24px 0px 16px 0px;
+                                    }
+    
+                                    .specialization{
+                                        min-width: 215px;
+                                        padding: 24px 0px 16px 0px;
+                                    }
+    
+                                    .recruiter{
+                                        display: none;
+                                    }
+    
+                                    .date{
+                                        display: none;
+                                    }
+    
+                                    .status{
+                                        min-height: 62px;
+                                        min-width: 172px;
+                                        padding: 24px 0px 16px 0px;
+    
+                                        &#status{
+
+                                            .edit_delete_container{
+                                                transform: translate(0, -24px);
+                                                width: 240px;
+                                                height: 100%;
+                                                // transition: 0.5s;
+
+                                                #edit_delete_icons{
+                                                    min-width: 172px;
+                                                    width: 172px;
+                                                }
+                                                &:hover{
+                                                    transform: translate(-172px, -24px);
+                                                    height: 100%;
+                                                }
+                                                span{
+                                                    min-width: 172px;
+                                                    padding: 0px;
+                                                    width: 172px;
+                                                }
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .add_trainee_group::before{
+                                transform: translateX(150px) translateY(-10px) scale(var(--scale)); 
+                            }
+    
+                            .add_trainee_group::after{
+                                transform: translateX(150px) translateY(20px) scale(var(--scale));
+                            }  
+                        }
+    
+                        h2{
+                            margin-top: 90px;
+                        }
+                    }
+                }
             }
 
             .hidden{
@@ -410,7 +574,9 @@
         }
 
         footer{
+
             #footer_section{
+
                 #footer_container{
                     background-color: #02244F;
                     margin: 0px auto;
@@ -431,21 +597,32 @@
                         }
                     }
                 }
+
+                @media only screen and (max-width: 1439px){
+
+                    #footer_container{
+                        padding: 121px 190px 117px 190px;
+                        
+                        h2{
+                            font: normal 32px/38px 'Exo2-Bold';
+                        }
+                    }
+                }
             }
         }
 
         // ADD & EDIT MODAL //
         .modal-dialog{
-            margin-top: 150px;
-            max-width: 390px;
+            // margin-top: 150px;
+            max-width: 352px;
 
             .modal-content{
+
                 .modal-header{
                     background-color: #5BA3FF;
                     height: 115px;
                     display: block;
-                    // text-align: center;
-                    // margin: 0px auto;
+
                     #profileImage {
                         width: 150px;
                         height: 150px;
@@ -654,6 +831,7 @@
                         border: none;
                         border-radius: 2px;
                         margin: 0px;
+
                         &:hover{
                             transition: 0.3s;
                             background-color: #0059FF;
@@ -673,6 +851,7 @@
                         border: none;
                         border-radius: 2px;
                         margin: 0px;
+
                         &:hover{
                             transition: 0.3s;
                             background-color: #0059FF;
@@ -692,6 +871,7 @@
                         margin: 0px 50px 0px 0px;
                         border: none;
                         transition: 0.3s;
+
                         &:hover{
                             // border: solid 0.5px #E26139;
                             color: #ffffff;
@@ -704,16 +884,24 @@
             }
         }
 
+        @media only screen and (max-width: 1439px){
+
+        }
+
         // DELETE MODAL 
         #delete_trainee_modal{
+
             .modal-dialog{
                 margin-top: 350px;
                 max-width: 250px;
+
                 .modal-content{
                     border-radius: 25px;
+
                     .modal-body{
                         padding: 0px;
                         text-align: center;
+
                         p{
                             margin: 0px;
                             padding: 20px 30px;
@@ -729,6 +917,7 @@
                     }
                     .delete-modal-footer{
                         margin: 0px 47px;
+
                         .dm_confirm_btn{
                             border: none;
                             background-color: transparent;
@@ -737,6 +926,7 @@
                             color: #0ACF83;
                             padding: 20px 36px 20px 0px;
                         }
+
                         .dm_cancel_btn{
                             border: none;
                             background-color: transparent;
@@ -744,7 +934,6 @@
                             letter-spacing: 0.6px;
                             color: #EF5353;
                         }      
-
                     }
                 }
             }
