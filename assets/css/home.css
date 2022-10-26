@@ -2,6 +2,14 @@
   font-family: Exo2-Bold;
   src: url(../font/Exo2-Bold.otf);
 }
+@font-face {
+  font-family: Exo2-Regular;
+  src: url(../font/Exo2-Regular.otf);
+}
+@font-face {
+  font-family: Exo2-Light;
+  src: url(../font/Exo2-Light.otf);
+}
 * {
   margin: 0px;
 }
@@ -43,6 +51,51 @@
 * body header #navbar_section #navbar_container #navbar_list #navbar_home {
   margin-right: 38px;
 }
+@media screen and (max-width: 834px) {
+  * body header #navbar_section #navbar_container {
+    margin: 0px 65px;
+    padding: 0px;
+  }
+  * body header #navbar_section #navbar_container img {
+    width: 203px;
+  }
+  * body header #navbar_section #navbar_container #navbar_list {
+    margin-top: 20px;
+  }
+  * body header #navbar_section #navbar_container #navbar_list .navbar_item a {
+    font: normal bold 18px/22px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 570px) {
+  * body header #navbar_section #navbar_container {
+    margin: 0px 23px;
+  }
+}
+@media screen and (max-width: 480px) {
+  * body header #navbar_section #navbar_container img {
+    width: 113px;
+  }
+  * body header #navbar_section #navbar_container #navbar_list {
+    margin-top: 0px;
+  }
+  * body header #navbar_section #navbar_container #navbar_list .navbar_item a {
+    font: normal bold 10px/12px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 290px) {
+  * body header #navbar_section #navbar_container {
+    display: block;
+  }
+  * body header #navbar_section #navbar_container img {
+    display: none;
+  }
+  * body header #navbar_section #navbar_container #navbar_list {
+    margin-top: 0px;
+  }
+  * body header #navbar_section #navbar_container #navbar_list .navbar_item a {
+    font: normal bold 10px/12px 'Exo2-Bold';
+  }
+}
 * body #splash_section #splash_container {
   margin: 0px auto;
   max-width: 1440px;
@@ -56,6 +109,29 @@
 }
 * body #splash_section #splash_container h1 .yellow_text_highlight {
   color: #FFEB3C;
+}
+@media screen and (max-width: 834px) {
+  * body #splash_section #splash_container {
+    padding: 0px 115px 100px 0px;
+  }
+  * body #splash_section #splash_container h1 {
+    font: normal 700 42px/40px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 570px) {
+  * body #splash_section #splash_container {
+    padding: 0px 0px 100px 0px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  * body #splash_section #splash_container {
+    padding: 0px 22px 26px 0px;
+  }
+  * body #splash_section #splash_container h1 {
+    font: normal 700 14px/15px 'Exo2-Bold';
+    text-align: right;
+  }
 }
 * body #meet_trainees_section #meet_trainees_container {
   margin: 0px auto;
@@ -86,6 +162,79 @@
   transition: 0.32s;
   transform: rotate(6.27rad);
 }
+@media screen and (max-width: 1300px) {
+  * body #meet_trainees_section #meet_trainees_container {
+    max-width: 1300px;
+    margin: 0px auto;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list {
+    padding: 117px 0px;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
+    padding: 26px 73px 26px 73px;
+  }
+}
+@media screen and (max-width: 1128px) {
+  * body #meet_trainees_section #meet_trainees_container {
+    max-width: 1300px;
+    margin: 0px auto;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list {
+    padding: 117px 0px;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
+    padding: 26px 10% 26px 10%;
+  }
+}
+@media screen and (max-width: 834px) {
+  * body #meet_trainees_section #meet_trainees_container h3 {
+    font: normal 700 32px/38px 'Exo2-Bold';
+  }
+  * body #meet_trainees_section #meet_trainees_container h5 {
+    font: normal 400 20px/24px 'Exo2-Regular';
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list {
+    padding: 66px 0px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 761px) {
+  * body #meet_trainees_section #meet_trainees_container #trainee_list {
+    padding: 117px 0px;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
+    padding: 26px 50px 26px 50px;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 664px) {
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
+    display: inline-block;
+    padding: 26px 0% 26px 0%;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  * body #meet_trainees_section #meet_trainees_container h3 {
+    font: normal 700 14px/17px 'Exo2-Bold';
+  }
+  * body #meet_trainees_section #meet_trainees_container h5 {
+    font: normal 400 12px/14px 'Exo2-Regular';
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list {
+    padding: 11px 0px;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item {
+    padding: 8px 10% 8px 10%;
+  }
+  * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item img {
+    width: 79px;
+  }
+}
 * body footer {
   background-color: #02244F;
 }
@@ -102,4 +251,16 @@
 }
 * body footer h3 .yellow_text_highlight {
   color: #FFEB3C;
+}
+@media screen and (max-width: 834px) {
+  * body footer h3 {
+    font: normal 700 32px/38px 'Exo2-Bold';
+    padding: 121px 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  * body footer h3 {
+    font: normal 700 12px/14px 'Exo2-Bold';
+    padding: 10px 0px;
+  }
 }
