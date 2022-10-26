@@ -72,6 +72,31 @@
     margin-right: 38px;
   }
 }
+@media screen and (max-width: 568px) {
+  * body header > section #navbar_container {
+    padding: 0px 23px;
+  }
+}
+@media screen and (max-width: 480px) {
+  * body header > section #navbar_container img {
+    width: 113px;
+    height: 72.34px;
+  }
+  * body header > section #navbar_container #navbar_list {
+    margin-top: 12px;
+  }
+  * body header > section #navbar_container #navbar_list .navbar_item {
+    font: normal bold 10px/12px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 302px) {
+  * body header > section #navbar_container {
+    display: block;
+  }
+  * body header > section #navbar_container img {
+    display: none;
+  }
+}
 * body main #banner_section #banner_container {
   margin: 0px auto;
   max-width: 1440px;
@@ -95,6 +120,27 @@
   }
   * body main #banner_section #banner_container h1 {
     font: normal bold 40px/48px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 860px) {
+  * body main #banner_section #banner_container {
+    padding: 28px 0px 56px 0px;
+  }
+  * body main #banner_section #banner_container h1 {
+    font: normal bold 40px/48px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 480px) {
+  * body main #banner_section #banner_container {
+    padding: 42px 0px 24px 0px;
+  }
+  * body main #banner_section #banner_container h1 {
+    font: normal bold 14px/17px 'Exo2-Bold';
+  }
+}
+@media screen and (max-width: 302px) {
+  * body main #banner_section #banner_container {
+    padding: 24px 0px 24px 0px;
   }
 }
 * body main #add_trainee_section #add_trainee_container {
@@ -349,7 +395,7 @@
   * body main #add_trainee_section #add_trainee_container > div button {
     font: normal bold 18px/22px 'Exo2-Bold';
     margin-bottom: 29px;
-    padding: 14px 36px 17px 33px;
+    padding: 14px 36px 14px 33px;
   }
   * body main #add_trainee_section #add_trainee_container > div #add_trainee_search {
     border: 2px solid #ffffff;
@@ -386,6 +432,92 @@
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .specialization {
     min-width: 215px;
+    padding: 24px 0px 16px 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .recruiter {
+    display: none;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .date {
+    display: none;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status {
+    min-height: 62px;
+    min-width: 172px;
+    padding: 24px 0px 16px 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+    transform: translate(0, -24px);
+    width: 240px;
+    height: 100%;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+    min-width: 172px;
+    width: 172px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+    transform: translate(-172px, -24px);
+    height: 100%;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+    min-width: 172px;
+    padding: 0px;
+    width: 172px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::before {
+    transform: translateX(150px) translateY(-10px) scale(var(--scale));
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::after {
+    transform: translateX(150px) translateY(20px) scale(var(--scale));
+  }
+  * body main #add_trainee_section #add_trainee_container h2 {
+    margin-top: 90px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  * body main #add_trainee_section #add_trainee_container {
+    max-width: 834px;
+    padding: 0px 65px 49px 64px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div button {
+    font: normal bold 18px/22px 'Exo2-Bold';
+    margin-bottom: 29px;
+    padding: 14px 36px 14px 33px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search {
+    border: 2px solid #ffffff;
+    font: normal 400 18px/22px 'Exo2-Regular';
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search input {
+    padding: 12px 13px 17px 19px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header {
+    font: normal bold 20px/24px 'Exo2-Bold';
+    margin: 0px 57px 35px 30px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_name {
+    min-width: 48%;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_specialization {
+    min-width: 35%;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_recruiter {
+    display: none;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_status {
+    min-width: 172px;
+    text-align: center;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    margin-bottom: 15px;
+    padding: 0px 0px 0px 30px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .name {
+    min-width: 43.1%;
+    padding: 24px 0px 16px 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .specialization {
+    min-width: 31.5%;
     padding: 24px 0px 16px 0px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .recruiter {
@@ -466,7 +598,8 @@
   }
 }
 * body .modal-dialog {
-  max-width: 352px;
+  margin-top: 150px;
+  max-width: 390px;
 }
 * body .modal-dialog .modal-content .modal-header {
   background-color: #5BA3FF;

@@ -65,6 +65,9 @@
   * body header #navbar_section #navbar_container #navbar_list .navbar_item a {
     font: normal bold 18px/22px 'Exo2-Bold';
   }
+  * body header #navbar_section #navbar_container #navbar_list .navbar_item .active {
+    text-decoration-thickness: 3px;
+  }
 }
 @media screen and (max-width: 570px) {
   * body header #navbar_section #navbar_container {
@@ -112,7 +115,7 @@
 }
 @media screen and (max-width: 834px) {
   * body #splash_section #splash_container {
-    padding: 0px 115px 100px 0px;
+    padding: 0px 64px 100px 0px;
   }
   * body #splash_section #splash_container h1 {
     font: normal 700 42px/40px 'Exo2-Bold';
