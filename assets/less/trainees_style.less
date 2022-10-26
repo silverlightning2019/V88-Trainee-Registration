@@ -750,4 +750,35 @@
             }
         }
     }
+
+    //Toast
+    .toast{
+        // bottom: 0px;
+        align-items: center;
+        border-radius: 7px;
+        color: #ffffff;
+        display: flex;
+        padding: 20px;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        transition: 0.5s;
+        width: max-content;
+        
+        .toast_body{
+
+            span{
+                font: normal bold 20px/24px 'Exo2-Bold';
+                vertical-align: middle;
+            }
+        }
+    }
+
+    #saved_toast{
+        background-color: #00a86b;
+    }
+
+    #deleted_toast{
+        background-color: #E26139;
+    }
 }

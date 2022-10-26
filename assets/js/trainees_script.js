@@ -11,6 +11,7 @@ $(document).ready(function(){
 
     $(window).on('load', function() {
         $(".add_trainee_group").tooltip();
+        $("#saved_toast").toast('show');
     });
     // $("body")
     //     .on("mouseenter", ".status", function(){
@@ -83,6 +84,9 @@ $(document).ready(function(){
                 $("#add_trainee_modal").find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
 
                 $("#add_trainee_modal").modal('hide');
+
+                $("#saved_toast").toast('show');
+                
             }
             else{
                 if(trainee_name == ""){
@@ -158,6 +162,7 @@ $(document).ready(function(){
 
             edit_modal.find("#trainee_name, #trainee_date, #trainee_note").css("border", "transparent");
             edit_modal.modal('hide');
+            $("#saved_toast").toast('show');
         }
         else{
             if(trainee_name == ""){
@@ -192,12 +197,12 @@ $(document).ready(function(){
     $("body").on("click", ".delete", function(){
         let trainee_id = $(this).closest(".add_trainee_group").attr("id");
         $("#trainee_id").text(trainee_id);
-        console.log(trainee_id);
     });
 
     $("body").on("click", ".dm_confirm_btn", function(){
         let trainee_list = $("#add_trainee_list");
         let trainee_id = $("#trainee_id").text();
         trainee_list.find('li[id ='+trainee_id+']').remove();
+        $("#deleted_toast").toast('show');
     });
 });
