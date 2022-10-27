@@ -291,7 +291,7 @@
   padding: 16px 0px 18px 0px;
   position: relative;
   text-align: center;
-  overflow: hidden;
+  overflow: clip;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status span {
   display: block;
@@ -643,7 +643,7 @@
   border-radius: 50%;
   border: solid 10px #5B5B5B ;
   height: 150px;
-  overflow: hidden;
+  overflow: clip;
   width: 150px;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .message {
