@@ -734,7 +734,7 @@
   width: 188px;
   height: 36px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .error {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .error {
   border: 0.5px solid red;
 }
 * body .modal-dialog .modal-content .modal-body .alert {
