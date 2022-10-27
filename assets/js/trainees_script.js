@@ -6,87 +6,13 @@
 
 $(document).ready(function(){
 
+    /* Sets contains() to be case insensitive.  */
     jQuery.expr[':'].contains = function(a, i, m) {
         return jQuery(a).text().toUpperCase()
             .indexOf(m[3].toUpperCase()) >= 0;
     };
 
-    // //Pagination
-    // let number_of_groups = $("#add_trainee_list .add_trainee_group").length;
-    // let limit_per_page = 10;
-    // let total_pages = Math.round(number_of_groups / limit_per_page);
-    // $(".pagination").append("<li id='prev_page' class='page-item'><a class='page-link' href='#'>Prev</a></li>");
-    // $(".pagination").append("<li class='page-item current_page active'><a class='page-link' href='#'>"+ 1 +"</a></li>");
-    // for(let i=2; i<=total_pages; i++){
-    //     $(".pagination").append("<li class='page-item current_page'><a class='page-link' href='#'>"+ i +"</a></li>");
-    // }
-    
-    // $(".pagination").append("<li id='next_page' class='page-item'><a class='page-link' href='#'>Next</a></li>");
-
-    // $(".pagination li.current_page")
-    //     .on("click", function(){
-    //         if($(this).hasClass("active")){
-    //             return false;   
-    //         }
-    //         else{
-    //             let current_page = $(this).index();
-    //             let total_groups = limit_per_page * current_page;
-    //             $(".pagination li").removeClass("active");
-    //             $(this).addClass("active");
-    //             $("#add_trainee_list .add_trainee_group").hide();
-                
-    //             for (let i = total_groups - limit_per_page; i < total_groups; i++){
-    //                 $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
-    //             }
-    //         }
-    //     }
-    // );
-
-    // $("#next_page")
-    //     .on("click", function(){
-    //         let current_page = $(".pagination li.active").index();
-    //         if (current_page === total_pages){
-    //             return false;
-    //         }
-    //         else{
-    //             current_page++;
-    //             let total_groups = limit_per_page * current_page;
-    //             $(".pagination li").removeClass("active");
-    //             $("#add_trainee_list .add_trainee_group").hide();
-
-    //             for (let i = total_groups - limit_per_page; i < total_groups; i++){
-    //                 $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
-    //             }
-
-    //             $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
-    //         }
-    //     }
-    // );
-    
-    // $("#prev_page")
-    //     .on("click", function(){
-    //         let current_page = $(".pagination li.active").index();
-    //         if (current_page === 1){
-    //             return false;
-    //         }
-    //         else{
-    //             current_page--;
-    //             let total_groups = limit_per_page * current_page;
-    //             $(".pagination li").removeClass("disabled");
-    //             $(".pagination li").removeClass("active");
-    //             $("#add_trainee_list .add_trainee_group").hide();
-
-    //             for (let i = total_groups - limit_per_page; i < total_groups; i++){
-    //                 $("#add_trainee_list .add_trainee_group:eq("+ i +")").show();
-    //             }
-
-    //             $(".pagination li.current_page:eq("+ (current_page - 1) + ")").addClass("active");
-    //         }
-    //     }
-    // );
-
-    // $("#add_trainee_list .add_trainee_group:gt("+ (limit_per_page-1) +")").hide();
-    // //
+    /* Adds keypress event on search bar  */
     $("#add_trainee_search_input").on("keypress", function(event){
         let keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == '13'){
@@ -97,24 +23,21 @@ $(document).ready(function(){
         }
     });
     
+    /* Adds auto scroll search feature on search bar.  */
     $("#add_trainee_search_input")
         .on("input", function(){
             let value = $(this).val();
-
-            // Auto Filter Search
-            // $("#add_trainee_list .add_trainee_group ul").filter(function(){
-            //     $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
-            // });
-
-            // Auto Scroll Search
-            $("#search_icon").on("click", function (){
-                $("html, body").animate({
-                    scrollTop: $("li:contains("+value+")")?.offset()?.top
-                }, 1);
-            });
+            $("#search_icon")
+                .on("click", function (){
+                    $("html, body").animate({
+                        scrollTop: $("li:contains("+value+")")?.offset()?.top
+                    }, 1);
+                }
+            );
         }
     );
 
+    /* Adds a new trainee to the trainee list */
     $("body")
         .on("click", ".save_btn", function(e){
             e.preventDefault();
@@ -128,8 +51,6 @@ $(document).ready(function(){
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
             let add_trainee_modal = $("#add_trainee_modal");
-
-            // console.log($(".form_input_item").index(".form_input_item"));
 
             $(".alert").hide();
 
@@ -172,7 +93,8 @@ $(document).ready(function(){
             }
         }
     );
-
+    
+    /* Closes Add Trainee Modal */
     $("body")
         .on("click", "#add_cancel_btn", function(){
             let add_trainee_modal = $("#add_trainee_modal");
@@ -182,6 +104,7 @@ $(document).ready(function(){
         }
     );
 
+    /* Opens Edit Trainee Modal */
     $("body")
         .on("click", ".edit", function(){
             let edit_trainee_modal = $("#edit_trainee_modal");
@@ -206,7 +129,8 @@ $(document).ready(function(){
             edit_trainee_modal.find("#trainee_note").val(trainee_note);
         }
     );
-
+    
+    /* Saves new data on Edit Trainee Modal */
     $("body")
         .on("click", "#edit_save_btn", function(){
             let edit_modal = $("#edit_trainee_modal");
@@ -266,7 +190,8 @@ $(document).ready(function(){
             }
         }
     );
-
+    
+    /* Closes Edit Trainee Modal */
     $("body")
         .on("click", "#edit_cancel_btn", function(){
             $("#edit_trainee_modal").find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
@@ -274,7 +199,8 @@ $(document).ready(function(){
             $(".alert").hide();
         }
     );
-
+    
+    /* Opens Delete Trainee Modal */
     $("body")
         .on("click", ".delete", function(){
             let trainee_id = $(this).closest(".add_trainee_group").attr("id");
@@ -282,6 +208,7 @@ $(document).ready(function(){
         }
     );
 
+    /* Confirms deleting trainee and closes delete trainee modal */
     $("body")
         .on("click", ".dm_confirm_btn", function(){
             let trainee_list = $("#add_trainee_list");

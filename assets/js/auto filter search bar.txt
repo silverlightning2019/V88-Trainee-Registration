@@ -1,0 +1,3 @@
+// $("#add_trainee_list .add_trainee_group ul").filter(function(){
+            //     $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+            // });
