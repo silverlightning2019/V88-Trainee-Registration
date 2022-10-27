@@ -804,31 +804,31 @@
                 <form action="#">
                     <div class="modal-header">
                         <div id="profile-container" class="file-upload" data-input-name="input1"></div>
-                        <!-- <div id="profile-container">
-                            <image id="profile_image">
-                         </div>
-                         <input id="image_upload" type="file" name="profile_photo" placeholder="Photo" required="" capture>                     -->
                     </div>
                     <div class="modal-body">
                         <div class="form_container">
-                            <div class="form_label">
+                            <div class="form_block">
                                 <label for="fullname">Fullname</label>
-                                <label for="specialization">Specialization</label>
-                                <label for="date">Date Started</label>
-                                <label for="recruiter">Recruiter</label>    
-                            </div>
-                            <div class="form_input">
                                 <input type="text" name="fullname" id="trainee_fullname" class="input_style">
+                            </div>
+                            <div class="form_block">
+                                <label for="specialization">Specialization</label>
                                 <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
+                            </div>
+                            <div class="form_block">
+                                <label for="date">Date Started</label>
                                 <div class="date_picker_container">
                                     <input type="text" id="trainee_date_started" class="input_style" placeholder="mm/dd/yyyy">
                                     <i class="fa-solid fa-calendar date_icon"></i>
                                 </div>
+                            </div>
+                            <div class="form_block">
+                                <label for="recruiter">Recruiter</label>
                                 <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter" data-live-search="true" >
                                     <option data-icon="fa-heart" value="" hidden></option>
                                     <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
@@ -861,7 +861,6 @@
             <div class="modal-content">
                 <form id="save_profile_form" action="#">
                     <div class="modal-header">
-                        <!-- <div id="profile-container" class="file-upload" data-input-name="input1"></div> -->
                         <div id="profile-container" class="file-upload" data-input-name="input1"></div>
                     </div>
                     <div class="modal-body">

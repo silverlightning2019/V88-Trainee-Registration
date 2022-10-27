@@ -566,59 +566,48 @@
 * body .modal-dialog .modal-content .modal-body {
   padding: 66px 35px 0px 35px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container {
-  text-align: justify;
+* body .modal-dialog .modal-content .modal-body .form_container .form_block {
+  display: flex;
+  justify-content: space-between;
 }
-* body .modal-dialog .modal-content .modal-body .form_container::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-* body .modal-dialog .modal-content .modal-body .form_container .form_label {
-  display: inline-block;
-}
-* body .modal-dialog .modal-content .modal-body .form_container .form_label label {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block label {
   color: #7C7D7D;
-  display: block;
   font: normal 400 14px/41px 'Exo2-Regular';
   letter-spacing: 0.6px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input {
-  display: inline-block;
-}
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .input_style {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .input_style {
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
   color: #999;
-  display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
   height: 40px;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
   padding: 0px 10px;
-  text-align: left;
   width: 192px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .date_picker_container {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container {
   position: relative;
+  display: inline-block;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .date_picker_container .date_icon {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon {
   color: #999;
-  position: absolute;
   right: 15px;
   top: 11px;
+  width: 5px;
+  height: 5px;
+  font-size: 10px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input #datepicker {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker {
   color: #999;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input select,
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block select,
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker {
   background-color: #EFF7FB;
   border-radius: 2px;
   border: none;
   color: #333333;
-  display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
   height: 40px;
   letter-spacing: 0.6px;
@@ -627,19 +616,20 @@
   text-align: left;
   width: 192px;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input select .filter-option-inner-inner,
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .filter-option-inner-inner {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner {
   color: #999;
+  font: normal 400 14px/17px 'Exo2-Regular';
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style h3,
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style h3 {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block select .option_style h3,
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .option_style h3 {
   display: block;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style p,
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style p {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block select .option_style p,
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .option_style p {
   display: block;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_input .btn {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .btn {
   background-color: #EFF7FB;
   width: 188px;
   height: 36px;
@@ -672,23 +662,17 @@
 * body .modal-dialog .modal-content .modal-footer {
   border: none;
   padding: 22px 35px 35px 35px;
-  text-align: justify;
-}
-* body .modal-dialog .modal-content .modal-footer::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 * body .modal-dialog .modal-content .modal-footer .cancel_btn {
-  display: inline-block;
-  vertical-align: top;
   background-color: #ffffff;
   width: 130px;
   height: 36px;
   color: #EF5353;
   font: normal 400 14px/8px 'Exo2-Regular';
   letter-spacing: 0.6px;
-  margin: 0px 50px 0px 0px;
+  margin: 0px;
   border: none;
   transition: 0.3s;
 }
@@ -699,8 +683,6 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 * body .modal-dialog .modal-content .modal-footer .save_btn {
-  display: inline-block;
-  vertical-align: top;
   background-color: #0085FF;
   width: 130px;
   height: 36px;
@@ -753,211 +735,334 @@
   border-radius: 2px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 860px) {
   * body .modal-dialog {
-    margin-top: 150px;
-    max-width: 352px;
+    max-width: 352.91px;
   }
   * body .modal-dialog .modal-content .modal-header {
     background-color: #5BA3FF;
-    height: 104px;
+    height: 104.06px;
+    display: block;
   }
   * body .modal-dialog .modal-content .modal-header #profileImage {
-    width: 134px;
-    height: 134px;
+    width: 134.49px;
+    height: 134.49px;
   }
   * body .modal-dialog .modal-content .modal-header #profile-container {
-    height: 134px;
-    width: 134px;
+    margin: 0px auto;
+    font-size: 35px;
+    color: #5B5B5B;
+    text-align: center;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 10px #5B5B5B ;
+    overflow: hidden;
+    width: 134.49px;
+    height: 134.49px;
+  }
+  * body .modal-dialog .modal-content .modal-header #profile-container .message {
+    display: none;
+  }
+  * body .modal-dialog .modal-content .modal-header #profile-container img {
+    height: 130px;
+    width: 130px;
+  }
+  * body .modal-dialog .modal-content .modal-header #profile-container #profile_image {
+    cursor: pointer;
+  }
+  * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
+    font: normal 700 80px/105px 'Exo2-Bold';
+    background-color: #fff;
+  }
+  * body .modal-dialog .modal-content .modal-header #image_upload {
+    display: none;
   }
   * body .modal-dialog .modal-content .modal-body {
-    padding: 62px 31px 31px 30px;
+    padding: 62px 31px 0px 31px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container {
-    text-align: justify;
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block label {
+    font: normal 400 12px/41px 'Exo2-Regular';
   }
-  * body .modal-dialog .modal-content .modal-body .form_container::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_label {
-    display: inline-block;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_label label {
-    color: #7C7D7D;
-    display: block;
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block .input_style {
     font: normal 400 12px/14px 'Exo2-Regular';
+    width: 173px;
+    height: 36.2px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input {
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container {
+    position: relative;
     display: inline-block;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .input_style {
-    background-color: #EFF7FB;
-    border-radius: 2px;
-    border: none;
-    color: #999;
-    display: block;
-    font: normal 400 14px/17px 'Exo2-Regular';
-    height: 40px;
-    letter-spacing: 0.6px;
-    margin-bottom: 10px;
-    padding: 0px 10px;
-    text-align: left;
-    width: 192px;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .date_picker_container {
-    position: relative;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .date_picker_container .date_icon {
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon {
     color: #999;
     position: absolute;
     right: 15px;
     top: 11px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input #datepicker {
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker {
     color: #999;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input select,
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker {
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block select,
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker {
+    font: normal 400 12px/14px 'Exo2-Regular';
+    width: 173.74px;
+    height: 36.2px;
+  }
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner {
+    font: normal 400 12px/14px 'Exo2-Regular';
+  }
+  * body .modal-dialog .modal-content .modal-body .form_container .form_block .btn {
     background-color: #EFF7FB;
-    border-radius: 2px;
-    border: none;
-    color: #333333;
-    display: block;
-    font: normal 400 14px/17px 'Exo2-Regular';
-    height: 40px;
-    letter-spacing: 0.6px;
-    margin-bottom: 10px;
-    padding: 0px;
-    text-align: left;
-    width: 192px;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input select .filter-option-inner-inner,
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .filter-option-inner-inner {
-    color: #999;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style h3,
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style h3 {
-    display: block;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input select .option_style p,
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker .option_style p {
-    display: block;
-  }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_input .btn {
-    background-color: #EFF7FB;
-    width: 188px;
-    height: 36px;
+    width: 173.74px;
+    height: 36.2px;
   }
   * body .modal-dialog .modal-content .modal-body .alert {
-    color: #ff0000;
-    display: none;
-    font: normal 50 14px/17px 'Exo2-Regular';
-    padding: 0px;
+    font: normal 50 12px/14px 'Exo2-Regular';
   }
   * body .modal-dialog .modal-content .modal-body .redactor {
     display: block;
   }
   * body .modal-dialog .modal-content .modal-body .redactor textarea {
-    background-color: #EFF7FB;
-    border-radius: 2px;
-    border: none;
-    color: #333333;
-    display: block;
-    font: normal 400 14px/17px 'Exo2-Regular';
-    height: 100px;
-    letter-spacing: 0.6px;
-    margin-bottom: 10px;
-    overflow: auto;
-    padding: 10px 10px;
-    resize: none;
-    text-align: left;
-    width: 100%;
+    font: normal 400 12px/14px 'Exo2-Regular';
+    height: 80px;
   }
   * body .modal-dialog .modal-content .modal-footer {
     border: none;
-    padding: 22px 35px 35px 35px;
-    text-align: justify;
+    padding: 18px 31px 32px 31px;
+    display: flex;
+    justify-content: space-between;
   }
-  * body .modal-dialog .modal-content .modal-footer::after {
-    content: "";
+  * body .modal-dialog .modal-content .modal-footer .cancel_btn {
+    width: 117.64px;
+    height: 32.58px;
+    font: normal 400 12px/8px 'Exo2-Regular';
+  }
+  * body .modal-dialog .modal-content .modal-footer .save_btn {
+    width: 117.64px;
+    height: 32.58px;
+    font: normal 400 12px/8px 'Exo2-Regular';
+  }
+  * body .modal-dialog .modal-content .modal-footer .edit_save_btn {
+    width: 117.64px;
+    height: 32.58px;
+    font: normal 400 12px/8px 'Exo2-Regular';
+  }
+  * body .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
+    width: 117.64px;
+    height: 32.58px;
+    font: normal 400 12px/8px 'Exo2-Regular';
+  }
+}
+@media only screen and (max-width: 576px) {
+  * body #delete_trainee_modal,
+  * body .modal,
+  * body .fade,
+  * body .show {
+    padding-right: 0px;
+  }
+  * body #delete_trainee_modal .modal-dialog,
+  * body .modal .modal-dialog,
+  * body .fade .modal-dialog,
+  * body .show .modal-dialog {
+    padding-top: 150px;
+    margin: 0px auto;
+    max-width: 262px;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header,
+  * body .modal .modal-dialog .modal-content .modal-header,
+  * body .fade .modal-dialog .modal-content .modal-header,
+  * body .show .modal-dialog .modal-content .modal-header {
+    height: 46px;
+    display: block;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profileImage,
+  * body .modal .modal-dialog .modal-content .modal-header #profileImage,
+  * body .fade .modal-dialog .modal-content .modal-header #profileImage,
+  * body .show .modal-dialog .modal-content .modal-header #profileImage {
+    width: 58px;
+    height: 58px;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container,
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container,
+  * body .fade .modal-dialog .modal-content .modal-header #profile-container,
+  * body .show .modal-dialog .modal-content .modal-header #profile-container {
+    font-size: 35px;
+    width: 58px;
+    height: 58px;
+    border: solid 4px #5B5B5B;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container .message,
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container .message,
+  * body .fade .modal-dialog .modal-content .modal-header #profile-container .message,
+  * body .show .modal-dialog .modal-content .modal-header #profile-container .message {
+    display: none;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container img,
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container img,
+  * body .fade .modal-dialog .modal-content .modal-header #profile-container img,
+  * body .show .modal-dialog .modal-content .modal-header #profile-container img {
+    height: 130px;
+    width: 130px;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container #profile_image,
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container #profile_image,
+  * body .fade .modal-dialog .modal-content .modal-header #profile-container #profile_image,
+  * body .show .modal-dialog .modal-content .modal-header #profile-container #profile_image {
+    cursor: pointer;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
+  * body .fade .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
+  * body .show .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
+    font: normal 700 80px/105px 'Exo2-Bold';
+    background-color: #fff;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #image_upload,
+  * body .modal .modal-dialog .modal-content .modal-header #image_upload,
+  * body .fade .modal-dialog .modal-content .modal-header #image_upload,
+  * body .show .modal-dialog .modal-content .modal-header #image_upload {
+    display: none;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body,
+  * body .modal .modal-dialog .modal-content .modal-body,
+  * body .fade .modal-dialog .modal-content .modal-body,
+  * body .show .modal-dialog .modal-content .modal-body {
+    padding: 28px 35px 0px 35px;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block {
+    display: block;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block label,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block label,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block label,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block label {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    display: block;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block .input_style,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .input_style,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block .input_style,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block .input_style {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    width: 100%;
+    height: 25px;
+    display: block;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container {
+    position: relative;
     display: inline-block;
     width: 100%;
   }
-  * body .modal-dialog .modal-content .modal-footer .cancel_btn {
-    display: inline-block;
-    vertical-align: top;
-    background-color: #ffffff;
-    width: 130px;
-    height: 36px;
-    color: #EF5353;
-    font: normal 400 14px/8px 'Exo2-Regular';
-    letter-spacing: 0.6px;
-    margin: 0px 50px 0px 0px;
-    border: none;
-    transition: 0.3s;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon {
+    color: #999;
+    position: absolute;
+    right: 15px;
+    top: 7px;
   }
-  * body .modal-dialog .modal-content .modal-footer .cancel_btn:hover {
-    color: #ffffff;
-    background-color: #E26139;
-    border-radius: 2px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker {
+    color: #999;
   }
-  * body .modal-dialog .modal-content .modal-footer .save_btn {
-    display: inline-block;
-    vertical-align: top;
-    background-color: #0085FF;
-    width: 130px;
-    height: 36px;
-    color: #ffffff;
-    font: normal 400 14px/8px 'Exo2-Regular';
-    letter-spacing: 0.6px;
-    border: none;
-    border-radius: 2px;
-    margin: 0px;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block select,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block select,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block select,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block select,
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    width: 100%;
+    height: 25px;
   }
-  * body .modal-dialog .modal-content .modal-footer .save_btn:hover {
-    transition: 0.3s;
-    background-color: #0059FF;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner {
+    font: normal 400 10px/12px 'Exo2-Regular';
   }
-  * body .modal-dialog .modal-content .modal-footer .edit_save_btn {
-    display: inline-block;
-    vertical-align: top;
-    background-color: #0085FF;
-    width: 130px;
-    height: 36px;
-    color: #ffffff;
-    font: normal 400 14px/8px 'Exo2-Regular';
-    letter-spacing: 0.6px;
-    border: none;
-    border-radius: 2px;
-    margin: 0px;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .form_container .form_block .btn,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .btn,
+  * body .fade .modal-dialog .modal-content .modal-body .form_container .form_block .btn,
+  * body .show .modal-dialog .modal-content .modal-body .form_container .form_block .btn {
+    background-color: #EFF7FB;
+    width: 100%;
+    height: 25px;
   }
-  * body .modal-dialog .modal-content .modal-footer .edit_save_btn:hover {
-    transition: 0.3s;
-    background-color: #0059FF;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .alert,
+  * body .modal .modal-dialog .modal-content .modal-body .alert,
+  * body .fade .modal-dialog .modal-content .modal-body .alert,
+  * body .show .modal-dialog .modal-content .modal-body .alert {
+    font: normal 400 10px/12px 'Exo2-Regular';
   }
-  * body .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
-    display: inline-block;
-    vertical-align: top;
-    background-color: #ffffff;
-    width: 130px;
-    height: 36px;
-    color: #EF5353;
-    font: normal 400 14px/8px 'Exo2-Regular';
-    letter-spacing: 0.6px;
-    margin: 0px 50px 0px 0px;
-    border: none;
-    transition: 0.3s;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .redactor,
+  * body .modal .modal-dialog .modal-content .modal-body .redactor,
+  * body .fade .modal-dialog .modal-content .modal-body .redactor,
+  * body .show .modal-dialog .modal-content .modal-body .redactor {
+    display: block;
   }
-  * body .modal-dialog .modal-content .modal-footer .edit_cancel_btn:hover {
-    color: #ffffff;
-    background-color: #E26139;
-    border-radius: 2px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-body .redactor textarea,
+  * body .modal .modal-dialog .modal-content .modal-body .redactor textarea,
+  * body .fade .modal-dialog .modal-content .modal-body .redactor textarea,
+  * body .show .modal-dialog .modal-content .modal-body .redactor textarea {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    height: 77px;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer,
+  * body .modal .modal-dialog .modal-content .modal-footer,
+  * body .fade .modal-dialog .modal-content .modal-footer,
+  * body .show .modal-dialog .modal-content .modal-footer {
+    padding: 18px 36px 32px 36px;
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .cancel_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .cancel_btn,
+  * body .fade .modal-dialog .modal-content .modal-footer .cancel_btn,
+  * body .show .modal-dialog .modal-content .modal-footer .cancel_btn {
+    width: 69px;
+    height: 25px;
+    font: normal 400 10px/12px 'Exo2-Regular';
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .save_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .save_btn,
+  * body .fade .modal-dialog .modal-content .modal-footer .save_btn,
+  * body .show .modal-dialog .modal-content .modal-footer .save_btn {
+    width: 69px;
+    height: 25px;
+    font: normal 400 10px/12px 'Exo2-Regular';
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .edit_save_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .edit_save_btn,
+  * body .fade .modal-dialog .modal-content .modal-footer .edit_save_btn,
+  * body .show .modal-dialog .modal-content .modal-footer .edit_save_btn {
+    width: 69px;
+    height: 25px;
+    font: normal 400 10px/12px 'Exo2-Regular';
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .edit_cancel_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .edit_cancel_btn,
+  * body .fade .modal-dialog .modal-content .modal-footer .edit_cancel_btn,
+  * body .show .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
+    width: 69px;
+    height: 25px;
+    font: normal 400 10px/12px 'Exo2-Regular';
   }
 }
 * body #delete_trainee_modal .modal-dialog {
