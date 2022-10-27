@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20221027T020000Z
+DTEND:20221027T030000Z
+DTSTAMP:20221022T070214Z
+ORGANIZER;CN=KB Tonel:mailto:ktonel@village88.com
+UID:ic71sgkuceqt51kcgt3uqa5lv0@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=KB Tonel;X-NUM-GUESTS=0:mailto:ktonel@village88.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=vincearomingurtiza@gmail.com;X-NUM-GUESTS=0:mailto:vincearomingurtiza@g
+ mail.com
+X-MICROSOFT-CDO-OWNERAPPTID:-1549317750
+CREATED:20221022T070211Z
+DESCRIPTION:Event Name: Top Grading Interview with KB\n\nWe'd like to learn
+  more about your experiences and skills through a video conference call. Th
+ is interview will take around 30mins to 1hr via Zoom.\n\n\nZoom Link: https
+ ://us02web.zoom.us/j/9228468664\n\n\nPlease confirm your availability by ch
+ oosing your preferred interview schedule.\n\n\nNOTE:\n\n* Please book a sch
+ edule only if you are SURE to attend the appointment. Please respect our ti
+ me and schedule.\n* Once a schedule is clicked\, consider the appointment c
+ onfirmed. A google calendar reminder will be sent to you.\n* Should you nee
+ d to cancel the schedule\, please communicate 1 day before the scheduled in
+ terview.\n\nNeed to make changes to this event?\nCancel: https://calendly.c
+ om/cancellations/df61ff9f-62bf-4384-9904-04b16acdfab9\nReschedule: https://
+ calendly.com/reschedulings/df61ff9f-62bf-4384-9904-04b16acdfab9\n\nPowered 
+ by Calendly.com\n
+LAST-MODIFIED:20221022T070211Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Vince Aromin Gurtiza and Village 88
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

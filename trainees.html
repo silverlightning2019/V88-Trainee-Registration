@@ -792,25 +792,29 @@
                     </div>
                     <div class="modal-body">
                         <div class="form_container">
-                            <div class="form_label">
+                            <div class="form_block">
                                 <label for="fullname">Fullname</label>
-                                <label for="specialization">Specialization</label>
-                                <label for="date">Date Started</label>
-                                <label for="recruiter">Recruiter</label>    
+                                <input type="text" name="fullname" id="trainee_fullname" class="input_style">
                             </div>
-                            <div class="form_input">
-                                <input type="text" name="fullname" id="trainee_fullname" class="input_style form_input_item">
-                                <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization form_input_item">
+                            <div class="form_block">
+                                <label for="specialization">Specialization</label>
+                                <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <div class="date_picker_container form_input_item">
+                            </div>
+                            <div class="form_block">
+                                <label for="date">Date Started</label>
+                                <div class="date_picker_container">
                                     <input type="text" id="trainee_date_started" class="input_style" placeholder="mm/dd/yyyy">
                                     <i class="fa-solid fa-calendar date_icon"></i>
                                 </div>
-                                <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter form_input_item" data-live-search="true" >
+                            </div>
+                            <div class="form_block">
+                                <label for="recruiter">Recruiter</label>
+                                <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter" data-live-search="true" >
                                     <option data-icon="fa-heart" value="" hidden></option>
                                     <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
                                     <option value="Mario Narvaez Jr." data-subtext="Mid Software Engineer">Mario Narvaez Jr.</option>
@@ -846,25 +850,28 @@
                     </div>
                     <div class="modal-body">
                         <div class="form_container">
-                            <div class="form_label">
+                            <div class="form_block">
                                 <label for="fullname">Fullname</label>
-                                <label for="specialization">Specialization</label>
-                                <label for="date_started">Date Started</label>
-                                <label for="status">Status</label>    
-                            </div>
-                            <div class="form_input">
-                                <input type="hidden" id="trainee_id">
                                 <input type="text" name="fullname" id="trainee_name" class="input_style">
+                            </div>
+                            <div class="form_block">
+                                <label for="specialization">Specialization</label>
                                 <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
+                            </div>
+                            <div class="form_block">
+                                <label for="date_started">Date Started</label>
                                 <div class="date_picker_container">
                                     <input type="text" id="trainee_date" class="input_style">
                                     <i class="fa-solid fa-calendar date_icon"></i>
                                 </div>
+                            </div>
+                            <div class="form_block">
+                                <label for="status">Status</label> 
                                 <select name="status" id="trainee_status" class="selectpicker select_picker modal_status">
                                     <option value="" hidden></option>
                                     <option value="Trainee">Trainee</option>

@@ -17,9 +17,9 @@
     margin: 0px;
     
     body{
+        // background: url(../img/background_linear.png), url(../img/background.png) no-repeat top center;
         background-image: url("../img/full_background.png");
         background-repeat: no-repeat;
-        // background: url(../img/background_linear.png), url(../img/background.png) no-repeat top center;
         background-size: cover;
         height: 1px;
 
@@ -125,6 +125,7 @@
                     
                     #navbar_container{
                         display: block;
+
                         img{
                             display: none;
                         }
@@ -218,6 +219,7 @@
                             letter-spacing: 0.006em;
                             margin-bottom: 37px;
                             padding: 14px 30px 15px 28px;
+
                             &:hover{
                                 background-color: #0059ff;
                                 transition: 0.5s;
@@ -247,6 +249,7 @@
                             #add_trainee_search_input{
                                 color: #ffffff;
                             }
+
                             #add_trainee_search_input:focus-visible{
                                 outline: transparent;
                             }
@@ -258,6 +261,7 @@
                                 color: #ffffff;
                                 margin-bottom: 0px;
                                 padding: 0px;
+
                                 &:hover{
                                     background-color: #8db5ff;
                                     height: 48px;
@@ -265,9 +269,9 @@
                                 }
 
                                 .fa-magnifying-glass{
+                                    border-left: solid 0.5px #ffffff;
                                     color: #ffffff;
                                     padding: 0px 17px;
-                                    border-left: solid 0.5px #ffffff;
                                 }
     
                             }
@@ -366,29 +370,34 @@
                                     color: #ffffff;
                                     min-height: 58px;
                                     min-width: 172px;
+                                    overflow: clip;
                                     padding: 16px 0px 18px 0px;
                                     position: relative;
                                     text-align: center;
-                                    overflow: clip;
+
                                     span{
                                         display: block;
                                     }
 
                                     &#status{
+
                                         .edit_delete_container{
                                             align-items: center;
                                             display: flex;
                                             position: absolute;
                                             transform: translate(0, -16px);
-                                            width: 240px;
                                             transition: 0.5s;
+                                            width: 240px;
+                                            
+                                            &:hover{
+                                                transform: translate(-172px, -16px);
+                                            }
+
                                             #edit_delete_icons{
                                                 min-width: 172px;
                                                 width: 172px;
                                             }
-                                            &:hover{
-                                                transform: translate(-172px, -16px);
-                                            }
+                                            
                                             span{
                                                 min-width: 172px;
                                                 padding: 17px 25px;
@@ -433,6 +442,10 @@
                                 // }
 
                                 #edit_delete_icons{
+                                    // left: 200px;
+                                    // position: absolute;
+                                    // top: 0px;
+                                    // width: 100%;
                                     align-items: center;
                                     background-color: #e26139;
                                     color: #fffffff;
@@ -441,14 +454,8 @@
                                     justify-content: space-around;
                                     list-style-type: none;
                                     padding: 16px 0px 18px 0px;
-                                    // position: absolute;
-                                    // left: 200px;
-                                    // top: 0px;
                                     transition: 0.5s;
-                                    // width: 100%;
 
-
-                                    
                                     button{
 
                                         i{
@@ -466,7 +473,6 @@
                             transform-origin: bottom left;
                             transform: translateX(205px) translateY(-25px) scale(var(--scale));
                             transition: 200ms transform;
-                            
                         }
 
                         .add_trainee_group::after{
@@ -476,7 +482,6 @@
                             transform-origin: bottom left;
                             transform: translateX(205px) translateY(5px) scale(var(--scale));
                             transition: 200ms transform;
-                            
                         }
 
                         .add_trainee_group::before{
@@ -486,18 +491,18 @@
                             content: attr(data-tooltip);
                             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.09));
                             font: normal 300 12px/14px 'Exo2-Light';
+                            max-width: 100%;
                             padding: 15px;
                             text-align: center;
                             width: max-content; 
-                            max-width: 100%;
                         }
 
                         .add_trainee_group::after{
-                            content: '';
-                            // width: 10px;
                             // height: 10px;
-                            border: 10px solid transparent;
+                            // width: 10px;
                             border-left-color: #faff00;
+                            border: 10px solid transparent;
+                            content: '';
                         }   
 
                         .add_trainee_group:hover::before,
@@ -603,18 +608,18 @@
                                         &#status{
 
                                             .edit_delete_container{
+                                                // transition: 0.5s;
+                                                height: 100%;
                                                 transform: translate(0, -24px);
                                                 width: 240px;
-                                                height: 100%;
-                                                // transition: 0.5s;
 
                                                 #edit_delete_icons{
                                                     min-width: 172px;
                                                     width: 172px;
                                                 }
                                                 &:hover{
-                                                    transform: translate(-172px, -24px);
                                                     height: 100%;
+                                                    transform: translate(-172px, -24px);
                                                 }
                                                 span{
                                                     min-width: 172px;
@@ -653,17 +658,17 @@
                             button{
                                 font: normal bold 10px/12px 'Exo2-Bold';
                                 margin-bottom: 14px;
-                                padding: 4px;
                                 max-width: 78px;
+                                padding: 4px;
                             }
     
                             #add_trainee_search{
                                 // border-radius: 2px;
-                                border: 2px solid #ffffff;
                                 // color: #ffffff;
+                                // letter-spacing: 0.6px;
+                                border: 2px solid #ffffff;
                                 font: normal 400 10px/12px 'Exo2-Regular';
                                 height: 20px;
-                                // letter-spacing: 0.6px;
                                 max-width: 96px;
                                 
                                 input{
@@ -769,8 +774,7 @@
                             }
     
                             .add_trainee_group::after{
-                                transform: translateX(75
-                                px) translateY(20px) scale(var(--scale));
+                                transform: translateX(75px) translateY(20px) scale(var(--scale));
                             }  
                         }
     
@@ -805,8 +809,8 @@
                     padding: 148px 0px 147px 0px;
                     text-align: center;
                     &:hover{
-                        transition: 0.3s;
                         background-color: #303878;
+                        transition: 0.3s;
                     }
                     
                     h2{
@@ -854,34 +858,34 @@
 
                 .modal-header{
                     background-color: #5BA3FF;
-                    height: 115px;
                     display: block;
+                    height: 115px;
 
                     #profileImage {
-                        width: 150px;
-                        height: 150px;
-                        border-radius: 50%;
                         background: #512DA8;
-                        font-size: 35px;
+                        border-radius: 50%;
                         color: #fff;
-                        text-align: center;
+                        font-size: 35px;
+                        height: 150px;
                         line-height: 150px;
                         margin: 0px auto;
+                        text-align: center;
+                        width: 150px;
                     }
 
                     #profile-container{
-                        margin: 0px auto;
-                        font-size: 35px;
-                        color: #5B5B5B;
-                        text-align: center;
                         -moz-border-radius: 50%;
                         -ms-border-radius: 50%;
                         -o-border-radius: 50%;
                         -webkit-border-radius: 50%;
                         border-radius: 50%;
                         border: solid 10px #5B5B5B ;
+                        color: #5B5B5B;
+                        font-size: 35px;
                         height: 150px;
+                        margin: 0px auto;
                         overflow: clip;
+                        text-align: center;
                         width: 150px;
 
                         .message{
@@ -896,9 +900,10 @@
                         #profile_image{
                             cursor: pointer;
                         }
+
                         .filethumbnail{
-                            font: normal 700 80px/105px 'Exo2-Bold';
                             background-color: #fff;
+                            font: normal 700 80px/105px 'Exo2-Bold';
                         }
                     }
 
@@ -909,51 +914,45 @@
 
                 .modal-body{
                     padding: 66px 35px 0px 35px;
-                    .form_container{
-                        text-align: justify;
-                        &::after{
-                            content: "";
-                            display: inline-block;
-                            width: 100%;
-                        }
 
-                        .form_label{
-                            display: inline-block;
+                    .form_container{
+                        
+                        .form_block{
+                            display: flex;
+                            justify-content: space-between;
 
                             label{
                                 color: #7C7D7D;
-                                display: block;
                                 font: normal 400 14px/41px 'Exo2-Regular';
                                 letter-spacing: 0.6px;
                             }
-                        }
-                        .form_input{
-                            display: inline-block;
 
                             .input_style{
                                 background-color: #EFF7FB;
                                 border-radius: 2px;
                                 border: transparent;
                                 color: #999;
-                                display: block;
                                 font: normal 400 14px/17px 'Exo2-Regular';
                                 height: 40px;
                                 letter-spacing: 0.6px;
                                 margin-bottom: 10px;
                                 padding: 0px 10px;
-                                text-align: left;
                                 width: 192px;
                             }
                             
                             
                             .date_picker_container{
+                                display: inline-block;
                                 position: relative;
 
                                 .date_icon{
                                     color: #999;
+                                    font-size: 10px;
+                                    height: 5px;
                                     position: absolute;
-                                    right: 15px;
+                                    right: 21px;
                                     top: 11px;
+                                    width: 5px;
                                 }
                             }
 
@@ -967,7 +966,6 @@
                                 border-radius: 2px;
                                 border: transparent;
                                 color: #333333;
-                                display: block;
                                 font: normal 400 14px/17px 'Exo2-Regular';
                                 height: 40px;
                                 letter-spacing: 0.6px;
@@ -975,24 +973,17 @@
                                 padding: 0px;
                                 text-align: left;
                                 width: 192px;
+
                                 .filter-option-inner-inner{
-                                    // visibility: hidden;
                                     color: #999;
-                                }
-                                .option_style{
-                                    h3{
-                                        display: block;
-                                    }
-                                    p{
-                                        display: block;
-                                    }
+                                    font: normal 400 14px/17px 'Exo2-Regular';
                                 }
                             }
                             
                             .btn{
                                 background-color: #EFF7FB;
-                                width: 188px;
                                 height: 36px;
+                                width: 188px;
                             }
 
                             .error{
@@ -1036,161 +1027,163 @@
 
                 .modal-footer{
                     border: none;
+                    display: flex;
+                    justify-content: space-between;
                     padding: 22px 35px 35px 35px;
-                    text-align: justify;
-                    &::after{
-                        content: "";
-                        display: inline-block;
-                        width: 100%;
-                    }
+
                     .cancel_btn{
-                        display: inline-block;
-                        vertical-align: top;
                         background-color: #ffffff;
-                        width: 130px;
-                        height: 36px;
+                        border: none;
                         color: #EF5353;
                         font: normal 400 14px/8px 'Exo2-Regular';
+                        height: 36px;
                         letter-spacing: 0.6px;
-                        margin: 0px 50px 0px 0px;
-                        border: none;
+                        margin: 0px;
                         transition: 0.3s;
+                        width: 130px;
+
                         &:hover{
-                            // border: solid 0.5px #E26139;
-                            color: #ffffff;
                             background-color: #E26139;
                             border-radius: 2px;
                             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            color: #ffffff;
                         }
                     }
+
                     .save_btn{
-                        display: inline-block;
-                        vertical-align: top;
                         background-color: #0085FF;
-                        width: 130px;
-                        height: 36px;
+                        border-radius: 2px;
+                        border: none;
                         color: #ffffff;
                         font: normal 400 14px/8px 'Exo2-Regular';
+                        height: 36px;
                         letter-spacing: 0.6px;
-                        border: none;
-                        border-radius: 2px;
                         margin: 0px;
+                        width: 130px;
 
                         &:hover{
-                            transition: 0.3s;
                             background-color: #0059FF;
                             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            transition: 0.3s;
                         }
                     }
 
                     .edit_save_btn{
-                        display: inline-block;
-                        vertical-align: top;
                         background-color: #0085FF;
-                        width: 130px;
-                        height: 36px;
+                        border-radius: 2px;
+                        border: none;
                         color: #ffffff;
                         font: normal 400 14px/8px 'Exo2-Regular';
+                        height: 36px;
                         letter-spacing: 0.6px;
-                        border: none;
-                        border-radius: 2px;
                         margin: 0px;
+                        width: 130px;
 
                         &:hover{
-                            transition: 0.3s;
                             background-color: #0059FF;
                             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            transition: 0.3s;
                         }
                     }
 
                     .edit_cancel_btn{
-                        display: inline-block;
-                        vertical-align: top;
                         background-color: #ffffff;
-                        width: 130px;
-                        height: 36px;
+                        border: none;
                         color: #EF5353;
                         font: normal 400 14px/8px 'Exo2-Regular';
+                        height: 36px;
                         letter-spacing: 0.6px;
                         margin: 0px 50px 0px 0px;
-                        border: none;
                         transition: 0.3s;
+                        width: 130px;
 
                         &:hover{
                             // border: solid 0.5px #E26139;
-                            color: #ffffff;
                             background-color: #E26139;
                             border-radius: 2px;
                             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            color: #ffffff;
                         }
                     }
                 }
             }
         }
 
-        @media only screen and (max-width: 1439px){
-            .modal-dialog{
-                margin-top: 150px;
-                max-width: 352px;
+        @media screen and (max-width: 860px){
 
-                .modal-content{
+            .modal-dialog{
+                max-width: 352.91px;
     
+                .modal-content{
+
                     .modal-header{
                         background-color: #5BA3FF;
-                        height: 104px;
+                        display: block;
+                        height: 104.06px;
     
                         #profileImage {
-                            width: 134px;
-                            height: 134px;
+                            height: 134.49px;
+                            width: 134.49px;
                         }
     
                         #profile-container{
-                            height: 134px;
-                            width: 134px;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            border-radius: 50%;
+                            border: solid 10px #5B5B5B ;
+                            color: #5B5B5B;
+                            font-size: 35px;
+                            height: 134.49px;
+                            margin: 0px auto;
+                            overflow: hidden;
+                            text-align: center;
+                            width: 134.49px;
+    
+                            .message{
+                                display: none;
+                            }
+    
+                            img{
+                                height: 114.49px;
+                                width: 114.49px;
+                            }
+    
+                            #profile_image{
+                                cursor: pointer;
+                            }
+
+                            .filethumbnail{
+                                background-color: #fff;
+                                font: normal 700 60px/95px 'Exo2-Bold';
+                            }
+                        }
+    
+                        #image_upload{
+                            display: none;
                         }
                     }
     
                     .modal-body{
-                        padding: 62px 31px 31px 30px;
-
+                        padding: 62px 31px 0px 31px;
+     
                         .form_container{
-                            text-align: justify;
                             
-                            &::after{
-                                content: "";
-                                display: inline-block;
-                                width: 100%;
-                            }
-    
-                            .form_label{
-                                display: inline-block;
-    
+                            .form_block{
+
                                 label{
-                                    color: #7C7D7D;
-                                    display: block;
-                                    font: normal 400 12px/14px 'Exo2-Regular';
-                                    // margin-bottom: 29px;
+                                    font: normal 400 12px/41px 'Exo2-Regular';
                                 }
-                            }
-                            .form_input{
-                                display: inline-block;
     
                                 .input_style{
-                                    background-color: #EFF7FB;
-                                    border-radius: 2px;
-                                    border: none;
-                                    color: #999;
-                                    display: block;
-                                    font: normal 400 14px/17px 'Exo2-Regular';
-                                    height: 40px;
-                                    letter-spacing: 0.6px;
-                                    margin-bottom: 10px;
-                                    padding: 0px 10px;
-                                    text-align: left;
-                                    width: 192px;
+                                    font: normal 400 12px/14px 'Exo2-Regular';
+                                    height: 36.2px;
+                                    width: 173px;
                                 }
                                 
                                 .date_picker_container{
+                                    display: inline-block;
                                     position: relative;
     
                                     .date_icon{
@@ -1207,157 +1200,263 @@
                                 }
         
                                 select, .select_picker{
-                                    background-color: #EFF7FB;
-                                    border-radius: 2px;
-                                    border: none;
-                                    color: #333333;
-                                    display: block;
-                                    font: normal 400 14px/17px 'Exo2-Regular';
-                                    height: 40px;
-                                    letter-spacing: 0.6px;
-                                    margin-bottom: 10px;
-                                    padding: 0px;
-                                    text-align: left;
-                                    width: 192px;
+                                    font: normal 400 12px/14px 'Exo2-Regular';
+                                    height: 36.2px;
+                                    width: 173.74px;
+
                                     .filter-option-inner-inner{
-                                        // visibility: hidden;
-                                        color: #999;
-                                    }
-                                    .option_style{
-                                        h3{
-                                            display: block;
-                                        }
-                                        p{
-                                            display: block;
-                                        }
+                                        font: normal 400 12px/14px 'Exo2-Regular';
                                     }
                                 }
+
                                 .btn{
                                     background-color: #EFF7FB;
-                                    width: 188px;
-                                    height: 36px;
+                                    height: 36.2px;
+                                    width: 173.74px;
                                 }
+    
                             }
                         }
     
                         .alert{
-                            color: #ff0000;
-                            display: none;
-                            font: normal 50 14px/17px 'Exo2-Regular';
-                            padding: 0px;	
+                            font: normal 50 12px/14px 'Exo2-Regular';
                         }
     
                         .redactor{
                             display: block;
     
                             textarea{
-                                background-color: #EFF7FB;
-                                border-radius: 2px;
-                                border: none;
-                                color: #333333;
-                                display: block;
-                                font: normal 400 14px/17px 'Exo2-Regular';
-                                height: 100px;
-                                letter-spacing: 0.6px;
-                                margin-bottom: 10px;
-                                overflow: auto;
-                                padding: 10px 10px;
-                                resize: none;
-                                text-align: left;
-                                width: 100%;
+                                font: normal 400 12px/14px 'Exo2-Regular';
+                                height: 80px;
                             }
                         }
                     }
     
                     .modal-footer{
                         border: none;
-                        padding: 22px 35px 35px 35px;
-                        text-align: justify;
-                        &::after{
-                            content: "";
-                            display: inline-block;
-                            width: 100%;
-                        }
+                        display: flex; 
+                        justify-content: space-between;
+                        padding: 18px 31px 32px 31px;
+
                         .cancel_btn{
-                            display: inline-block;
-                            vertical-align: top;
-                            background-color: #ffffff;
-                            width: 130px;
-                            height: 36px;
-                            color: #EF5353;
-                            font: normal 400 14px/8px 'Exo2-Regular';
-                            letter-spacing: 0.6px;
-                            margin: 0px 50px 0px 0px;
-                            border: none;
-                            transition: 0.3s;
-                            &:hover{
-                                // border: solid 0.5px #E26139;
-                                color: #ffffff;
-                                background-color: #E26139;
-                                border-radius: 2px;
-                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                            }
+                            font: normal 400 12px/8px 'Exo2-Regular';
+                            height: 32.58px;
+                            width: 117.64px;
                         }
+                        
                         .save_btn{
-                            display: inline-block;
-                            vertical-align: top;
-                            background-color: #0085FF;
-                            width: 130px;
-                            height: 36px;
-                            color: #ffffff;
-                            font: normal 400 14px/8px 'Exo2-Regular';
-                            letter-spacing: 0.6px;
-                            border: none;
-                            border-radius: 2px;
-                            margin: 0px;
-    
-                            &:hover{
-                                transition: 0.3s;
-                                background-color: #0059FF;
-                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                            }
+                            font: normal 400 12px/8px 'Exo2-Regular';
+                            height: 32.58px;
+                            width: 117.64px;
                         }
     
                         .edit_save_btn{
-                            display: inline-block;
-                            vertical-align: top;
-                            background-color: #0085FF;
-                            width: 130px;
-                            height: 36px;
-                            color: #ffffff;
-                            font: normal 400 14px/8px 'Exo2-Regular';
-                            letter-spacing: 0.6px;
-                            border: none;
-                            border-radius: 2px;
-                            margin: 0px;
-    
-                            &:hover{
-                                transition: 0.3s;
-                                background-color: #0059FF;
-                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                            }
+                            font: normal 400 12px/8px 'Exo2-Regular';
+                            height: 32.58px;
+                            width: 117.64px;
                         }
     
                         .edit_cancel_btn{
-                            display: inline-block;
-                            vertical-align: top;
-                            background-color: #ffffff;
-                            width: 130px;
-                            height: 36px;
-                            color: #EF5353;
-                            font: normal 400 14px/8px 'Exo2-Regular';
-                            letter-spacing: 0.6px;
-                            margin: 0px 50px 0px 0px;
-                            border: none;
-                            transition: 0.3s;
+                            font: normal 400 12px/8px 'Exo2-Regular';
+                            height: 32.58px;
+                            width: 117.64px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 576px){
+
+            #delete_trainee_modal, .modal, .fade, .show{
+                padding-right: 0px;
+                
+                .modal-dialog{
+                    margin: 0px auto;
+                    max-width: 262px;
+                    padding-top: 150px;
+        
+                    .modal-content{
     
-                            &:hover{
-                                // border: solid 0.5px #E26139;
-                                color: #ffffff;
-                                background-color: #E26139;
-                                border-radius: 2px;
-                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                        .modal-header{
+                            display: block;
+                            height: 46px;
+        
+                            #profileImage {
+                                height: 58px;
+                                width: 58px;
                             }
+        
+                            #profile-container{
+                                border: solid 4px #5B5B5B;
+                                font-size: 35px;
+                                height: 58px;
+                                width: 58px;
+        
+                                .message{
+                                    display: none;
+                                }
+        
+                                img{
+                                    height: 50px;
+                                    width: 50px;
+                                }
+        
+                                #profile_image{
+                                    cursor: pointer;
+                                }
+
+                                .filethumbnail{
+                                    background-color: #fff;
+                                    font: normal 700 30px/41px 'Exo2-Bold';
+                                }
+                            }
+        
+                            #image_upload{
+                                display: none;
+                            }
+                        }
+        
+                        .modal-body{
+                            padding: 28px 35px 0px 35px;
+         
+                            .form_container{
+
+                                .form_block{
+                                    display: block;
+
+                                    label{
+                                        display: block;
+                                        font: normal 400 10px/12px 'Exo2-Regular';
+                                    }
+        
+                                    .input_style{
+                                        display: block;
+                                        font: normal 400 10px/12px 'Exo2-Regular';
+                                        height: 25px;
+                                        width: 100%;
+                                    }
+                                    
+                                    .date_picker_container{
+                                        display: inline-block;
+                                        position: relative;
+                                        width: 100%;
+        
+                                        .date_icon{
+                                            color: #999;
+                                            position: absolute;
+                                            right: 15px;
+                                            top: 7px;
+                                        }
+                                    }
+            
+                                    #datepicker{
+                                        color: #999;
+                                    }
+            
+                                    select, .select_picker{
+                                        font: normal 400 10px/12px 'Exo2-Regular';
+                                        height: 25px;
+                                        width: 100%;
+    
+                                        .filter-option-inner-inner{
+                                            font: normal 400 10px/12px 'Exo2-Regular';
+                                        }
+                                    }
+
+                                    .btn{
+                                        background-color: #EFF7FB;
+                                        height: 25px;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+        
+                            .alert{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                            }
+        
+                            .redactor{
+                                display: block;
+        
+                                textarea{
+                                    font: normal 400 10px/12px 'Exo2-Regular';
+                                    height: 77px;
+                                }
+                            }
+                        }
+        
+                        .modal-footer{
+                            padding: 18px 36px 32px 36px;
+    
+                            .cancel_btn{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                height: 25px;
+                                width: 69px;
+                            }
+                            .save_btn{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                height: 25px;
+                                width: 69px;
+                            }
+        
+                            .edit_save_btn{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                height: 25px;
+                                width: 69px;
+                            }
+        
+                            .edit_cancel_btn{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                height: 25px;
+                                width: 69px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media screen and (max-width: 230px){
+                
+            .modal-dialog{
+                margin: 0px auto;
+                max-width: 262px;
+                padding-top: 150px;
+    
+                .modal-content{
+
+                    .modal-footer{
+                        display: block;
+                        padding: 18px 36px 32px 36px;
+
+                        .cancel_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
+                        }
+
+                        .save_btn{
+                            background-color: greenyellow;
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
+                        }
+    
+                        .edit_save_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
+                        }
+    
+                        .edit_cancel_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
                         }
                     }
                 }
@@ -1379,11 +1478,11 @@
                         text-align: center;
 
                         p{
-                            margin: 0px;
-                            padding: 20px 30px;
+                            border-bottom: solid 1px #D9D9D9;
                             font: normal 400 14px/17px 'Exo2-Regular';
                             letter-spacing: 0.6px;
-                            border-bottom: solid 1px #D9D9D9;
+                            margin: 0px;
+                            padding: 20px 30px;
                         }
 
                         #trainee_id{
@@ -1395,20 +1494,20 @@
                         margin: 0px 47px;
 
                         .dm_confirm_btn{
-                            border: none;
                             background-color: transparent;
+                            border: none;
+                            color: #0ACF83;
                             font: normal 400 14px/17px 'Exo2-Regular';
                             letter-spacing: 0.6px;
-                            color: #0ACF83;
                             padding: 20px 36px 20px 0px;
                         }
 
                         .dm_cancel_btn{
-                            border: none;
                             background-color: transparent;
+                            border: none;
+                            color: #EF5353;
                             font: normal 400 14px/17px 'Exo2-Regular';
                             letter-spacing: 0.6px;
-                            color: #EF5353;
                         }      
                     }
                 }
