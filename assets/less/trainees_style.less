@@ -935,8 +935,8 @@
 
                                 .date_icon{
                                     color: #999;
-                                    // position: absolute;
-                                    right: 15px;
+                                    position: absolute;
+                                    right: 21px;
                                     top: 11px;
                                     width: 5px;
                                     height: 5px;
@@ -1063,8 +1063,6 @@
                     }
 
                     .edit_save_btn{
-                        display: inline-block;
-                        vertical-align: top;
                         background-color: #0085FF;
                         width: 130px;
                         height: 36px;
@@ -1083,8 +1081,6 @@
                     }
 
                     .edit_cancel_btn{
-                        display: inline-block;
-                        vertical-align: top;
                         background-color: #ffffff;
                         width: 130px;
                         height: 36px;
@@ -1107,7 +1103,7 @@
             }
         }
 
-        @media only screen and (max-width: 860px){
+        @media screen and (max-width: 860px){
             .modal-dialog{
                 max-width: 352.91px;
     
@@ -1143,15 +1139,15 @@
                             }
     
                             img{
-                                height: 130px;
-                                width: 130px;
+                                height: 114.49px;
+                                width: 114.49px;
                             }
     
                             #profile_image{
                                 cursor: pointer;
                             }
                             .filethumbnail{
-                                font: normal 700 80px/105px 'Exo2-Bold';
+                                font: normal 700 60px/95px 'Exo2-Bold';
                                 background-color: #fff;
                             }
                         }
@@ -1259,7 +1255,7 @@
             }
         }
 
-        @media only screen and (max-width: 576px){
+        @media screen and (max-width: 576px){
             #delete_trainee_modal, .modal, .fade, .show{
                 padding-right: 0px;
                 
@@ -1290,15 +1286,15 @@
                                 }
         
                                 img{
-                                    height: 130px;
-                                    width: 130px;
+                                    height: 50px;
+                                    width: 50px;
                                 }
         
                                 #profile_image{
                                     cursor: pointer;
                                 }
                                 .filethumbnail{
-                                    font: normal 700 80px/105px 'Exo2-Bold';
+                                    font: normal 700 30px/41px 'Exo2-Bold';
                                     background-color: #fff;
                                 }
                             }
@@ -1401,6 +1397,51 @@
                                 height: 25px;
                                 font: normal 400 10px/12px 'Exo2-Regular';
                             }
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media screen and (max-width: 230px){
+                
+            .modal-dialog{
+                padding-top: 150px;
+                margin: 0px auto;
+                max-width: 262px;
+    
+                .modal-content{
+
+                    .modal-footer{
+                        padding: 18px 36px 32px 36px;
+                        display: block;
+
+                        .cancel_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
+                        }
+                        .save_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
+                            background-color: greenyellow;
+                        }
+    
+                        .edit_save_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
+                        }
+    
+                        .edit_cancel_btn{
+                            display: block;
+                            font: normal 400 10px/12px 'Exo2-Regular';
+                            height: 25px;
+                            width: 100%;
                         }
                     }
                 }
