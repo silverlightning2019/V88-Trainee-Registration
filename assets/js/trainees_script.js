@@ -12,6 +12,7 @@ $(document).ready(function(){
             .indexOf(m[3].toUpperCase()) >= 0;
     };
 
+    /* Shows button at lower right side when window is scrolled at 20px and above  */
     $(window).scroll(function () {
         if($(this).scrollTop()>20){
             $("#back_to_top_button").removeClass("hidden");
@@ -21,6 +22,7 @@ $(document).ready(function(){
         }
     });
 
+    /* Scrolls back to the top  */
     $("body")
         .on("click", "#back_to_top_button", function(e){
             $("html, body").animate({
@@ -28,6 +30,7 @@ $(document).ready(function(){
             }, 1);
         }
     );
+
     /* Adds keypress event on search bar  */
     $("#add_trainee_search_input").on("keypress", function(event){
         let keycode = (event.keyCode ? event.keyCode : event.which);
