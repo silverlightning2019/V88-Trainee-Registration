@@ -12,6 +12,22 @@ $(document).ready(function(){
             .indexOf(m[3].toUpperCase()) >= 0;
     };
 
+    $(window).scroll(function () {
+        if($(this).scrollTop()>20){
+            $("#back_to_top_button").removeClass("hidden");
+        }
+        else{
+            $("#back_to_top_button").addClass("hidden");
+        }
+    });
+
+    $("body")
+        .on("click", "#back_to_top_button", function(e){
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1);
+        }
+    );
     /* Adds keypress event on search bar  */
     $("#add_trainee_search_input").on("keypress", function(event){
         let keycode = (event.keyCode ? event.keyCode : event.which);
@@ -67,27 +83,29 @@ $(document).ready(function(){
                 $("#empty_list_text").hide(); 
 
                 add_trainee_modal.find("input, textarea, select").val("");
-                add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").removeClass("error");
+                add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter, #trainee_note").removeClass("error");
                 add_trainee_modal.modal('hide');
 
                 $("#saved_toast").toast('show');
+
+                $(document).scrollTop($(document).height());
             }
             else{
                 
                 if(trainee_name == ""){
-                    $("#trainee_fullname").addClass("error");
+                    add_trainee_modal.find("#trainee_fullname").addClass("error");
                 }
                 if(trainee_specialization == ""){
-                    $(".modal_specialization").addClass("error");
+                    add_trainee_modal.find(".modal_specialization").addClass("error");
                 }
                 if(trainee_date_started == ""){
-                    $("#trainee_date_started").addClass("error");
+                    add_trainee_modal.find("#trainee_date_started").addClass("error");
                 }
                 if(trainee_recruiter == ""){
-                    $(".modal_recruiter").addClass("error");
+                    add_trainee_modal.find(".modal_recruiter").addClass("error");
                 }
                 if(trainee_note == ""){
-                    $("#trainee_note").addClass("error");
+                    add_trainee_modal.find("#trainee_note").addClass("error");
                 }
                 $(".alert").show();
             }
@@ -99,6 +117,7 @@ $(document).ready(function(){
         .on("click", "#add_cancel_btn", function(){
             let add_trainee_modal = $("#add_trainee_modal");
             add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter, #trainee_note").removeClass("error");
+            add_trainee_modal.find("input, textarea, select").val("");
             add_trainee_modal.modal('hide');
             $(".alert").hide();
         }

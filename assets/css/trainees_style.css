@@ -576,6 +576,11 @@
 * body main .hidden {
   display: none;
 }
+* body main #back_to_top_button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
 * body footer #footer_section #footer_container {
   background-color: #02244F;
   margin: 0px auto;

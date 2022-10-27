@@ -41,8 +41,6 @@ var UnoDropZone = {
         });
     },
     initSingleFileZone: function (e, uploadMessage) {
-        console.log('initSingleFileZone:');
-        console.log(e);
         $(e).html('');       
 
         //create input area 
