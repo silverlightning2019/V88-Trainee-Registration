@@ -818,18 +818,18 @@
                                 <label for="recruiter">Recruiter</label>    
                             </div>
                             <div class="form_input">
-                                <input type="text" name="fullname" id="trainee_fullname" class="input_style">
-                                <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization">
+                                <input type="text" name="fullname" id="trainee_fullname" class="input_style form_input_item">
+                                <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization form_input_item">
                                     <option value="" hidden></option>
                                     <option value="Front-End">Front-End</option>
                                     <option value="Back-End">Back-End</option>
                                     <option value="Fullstack">Fullstack</option>
                                 </select>
-                                <div class="date_picker_container">
+                                <div class="date_picker_container form_input_item">
                                     <input type="text" id="trainee_date_started" class="input_style" placeholder="mm/dd/yyyy">
                                     <i class="fa-solid fa-calendar date_icon"></i>
                                 </div>
-                                <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter" data-live-search="true" >
+                                <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter form_input_item" data-live-search="true" >
                                     <option data-icon="fa-heart" value="" hidden></option>
                                     <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
                                     <option value="Mario Narvaez Jr." data-subtext="Mid Software Engineer">Mario Narvaez Jr.</option>
@@ -842,12 +842,12 @@
                             </div>
                         </div>
                         <div class="redactor">
-                            <textarea placeholder="Note :" maxlength="150" id="trainee_note"></textarea>
+                            <textarea placeholder="Note :" maxlength="150" id="trainee_note" class=" "></textarea>
                         </div>
                         <div class="alert" id="fullname_alert">Please fill up all the needed information.</div>
                     </div>
                     <div class="modal-footer">
-                        <button class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
+                        <button id="add_cancel_btn" class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
                         <button type="submit" class="save_btn" type="button">Save</button>
                     </div>
                 </form>
@@ -899,8 +899,8 @@
                         <div class="alert" id="fullname_alert">Please fill up all the needed information.</div>
                     </div>
                     <div class="modal-footer">
-                        <button class="edit_cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
-                        <button class="edit_save_btn" type="button">Save</button>
+                        <button id="edit_cancel_btn" class="edit_cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
+                        <button id="edit_save_btn" class="edit_save_btn" type="button">Save</button>
                     </div>
                 </form>
             </div>

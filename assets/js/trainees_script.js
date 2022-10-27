@@ -1,6 +1,6 @@
 /** 
 *   DOCU: Trainees Page Script
-*   Last updated at: October 26, 2022
+*   Last updated at: October 27, 2022
 *   @author Silver
 */
 
@@ -86,7 +86,6 @@ $(document).ready(function(){
     $(window)
         .on('load', function() {
             $(".add_trainee_group").tooltip();
-            // $("#saved_toast").toast('show');
         }
     );
 
@@ -115,6 +114,8 @@ $(document).ready(function(){
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
             let add_trainee_modal = $("#add_trainee_modal");
 
+            // console.log($(".form_input_item").index(".form_input_item"));
+
             $(".alert").hide();
 
             if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != "" && trainee_note != ""){
@@ -130,26 +131,27 @@ $(document).ready(function(){
                 $("#empty_list_text").hide(); 
 
                 add_trainee_modal.find("input, textarea, select").val("");
-                add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
+                add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").removeClass("error");
                 add_trainee_modal.modal('hide');
 
                 $("#saved_toast").toast('show');
             }
             else{
+                
                 if(trainee_name == ""){
-                    $("#trainee_fullname").css("border", "0.5px solid red");
+                    $("#trainee_fullname").addClass("error");
                 }
                 if(trainee_specialization == ""){
-                    $(".modal_specialization").css("border", "0.5px solid red");
+                    $(".modal_specialization").addClass("error");
                 }
                 if(trainee_date_started == ""){
-                    $("#trainee_date_started").css("border", "0.5px solid red");
+                    $("#trainee_date_started").addClass("error");
                 }
                 if(trainee_recruiter == ""){
-                    $(".modal_recruiter").css("border", "0.5px solid red");
+                    $(".modal_recruiter").addClass("error");
                 }
                 if(trainee_note == ""){
-                    $("#trainee_note").css("border", "0.5px solid red");
+                    $("#trainee_note").addClass("error");
                 }
                 $(".alert").show();
             }
@@ -157,38 +159,41 @@ $(document).ready(function(){
     );
 
     $("body")
-        .on("click", ".cancel_btn", function(){
-            $("#add_trainee_modal").find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter").css("border", "transparent");
-            $("#add_trainee_modal").modal('hide');
+        .on("click", "#add_cancel_btn", function(){
+            let add_trainee_modal = $("#add_trainee_modal");
+            add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter, #trainee_note").removeClass("error");
+            add_trainee_modal.modal('hide');
             $(".alert").hide();
         }
     );
 
     $("body")
         .on("click", ".edit", function(){
+            let edit_trainee_modal = $("#edit_trainee_modal");
             let trainee_id = $(this).closest(".add_trainee_group").attr("id");
             let full_trainee_id = "#"+trainee_id;
 
-            $("#edit_trainee_modal").find("#trainee_id").text(trainee_id);
+            edit_trainee_modal.find("#trainee_id").text(trainee_id);
+            
             let trainee_name = $(full_trainee_id).find("#name").text();
             let trainee_specialization = $(full_trainee_id).find("#specialization").text();
             let trainee_date = $(full_trainee_id).find("#date").text();
             let trainee_status = $(full_trainee_id).find("#status .edit_delete_container span").text();
             let trainee_note = $(full_trainee_id).attr("data-tooltip");
 
-            $("#edit_trainee_modal").find("#trainee_name").val(trainee_name);
-            $("#edit_trainee_modal").find("#trainee_specialization").val(trainee_specialization);
-            $("#edit_trainee_modal").find(".modal_specialization button").attr("title", trainee_specialization);
-            $("#edit_trainee_modal").find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
-            $("#edit_trainee_modal").find("#trainee_date").val(trainee_date);
-            $("#edit_trainee_modal").find("#trainee_status").val(trainee_status);
-            $("#edit_trainee_modal").find(".modal_status .filter-option-inner-inner").text("Trainee");
-            $("#edit_trainee_modal").find("#trainee_note").val(trainee_note);
+            edit_trainee_modal.find("#trainee_name").val(trainee_name);
+            edit_trainee_modal.find("#trainee_specialization").val(trainee_specialization);
+            edit_trainee_modal.find(".modal_specialization button").attr("title", trainee_specialization);
+            edit_trainee_modal.find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
+            edit_trainee_modal.find("#trainee_date").val(trainee_date);
+            edit_trainee_modal.find("#trainee_status").val(trainee_status);
+            edit_trainee_modal.find(".modal_status .filter-option-inner-inner").text(trainee_status);
+            edit_trainee_modal.find("#trainee_note").val(trainee_note);
         }
     );
 
     $("body")
-        .on("click", ".edit_save_btn", function(){
+        .on("click", "#edit_save_btn", function(){
             let edit_modal = $("#edit_trainee_modal");
             let trainee_id = edit_modal.find("#trainee_id").text();
             let trainee_id_selector = $('#' +trainee_id);
@@ -208,38 +213,38 @@ $(document).ready(function(){
                 trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
                 trainee_id_selector.attr("data-tooltip", trainee_note);
 
-                edit_modal.find("#trainee_name, #trainee_date, #trainee_note").css("border", "transparent");
+                edit_modal.find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
                 edit_modal.modal('hide');
                 $("#saved_toast").toast('show');
 
                 if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
-                    trainee_id_selector.find("#status").css("background-color","#f6bb2a");
+                    trainee_id_selector.find("#status").addClass("employed");
                 }
 
                 if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Unemployed"){
-                    trainee_id_selector.find("#status").css("background-color","#c5c5c5", "color", "#333333");
+                    trainee_id_selector.find("#status").addClass("unemployed");
                 }
             }
             else{
 
                 if(trainee_name == ""){
-                    edit_modal.find("#trainee_name").css("border", "0.5px solid red");
+                    edit_modal.find("#trainee_name").addClass("error");
                 }
 
                 if(trainee_specialization == ""){
-                    edit_modal.find("#trainee_specialization").css("border", "0.5px solid red");
+                    edit_modal.find("#trainee_specialization").addClass("error");
                 }
 
                 if(trainee_date == ""){
-                    edit_modal.find("#trainee_date").css("border", "0.5px solid red");
+                    edit_modal.find("#trainee_date").addClass("error");
                 }
 
                 if(trainee_recruiter == ""){    
-                    edit_modal.find("#trainee_status").css("border", "0.5px solid red");
+                    edit_modal.find("#trainee_status").addClass("error");
                 }
 
                 if(trainee_note == ""){
-                    edit_modal.find("#trainee_note").css("border", "0.5px solid red");
+                    edit_modal.find("#trainee_note").addClass("error");
                 }
 
                 $(".alert").show();
@@ -248,8 +253,8 @@ $(document).ready(function(){
     );
 
     $("body")
-        .on("click", ".edit_cancel_btn", function(){
-            $("#edit_trainee_modal").find("#trainee_name, #trainee_date", "#trainee_note").css("border", "transparent");
+        .on("click", "#edit_cancel_btn", function(){
+            $("#edit_trainee_modal").find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
             $("#edit_trainee_modal").modal('hide');
             $(".alert").hide();
         }
@@ -266,7 +271,7 @@ $(document).ready(function(){
         .on("click", ".dm_confirm_btn", function(){
             let trainee_list = $("#add_trainee_list");
             let trainee_id = $("#trainee_id").text();
-            trainee_list.find('li[id ='+trainee_id+']').remove();
+            trainee_list.find("#"+trainee_id).remove();
             $("#deleted_toast").toast('show');
         }
     );

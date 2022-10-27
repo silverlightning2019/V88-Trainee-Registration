@@ -411,6 +411,15 @@
                                     }
                                 }
 
+                                .employed{
+                                    background-color: #f6bb2a;
+                                }
+
+                                .unemployed{
+                                    background-color: #c5c5c5;
+                                    color: #333333;
+                                }
+
                                 // .status:hover{
                                 //     transition: 1s; 
                                 // }
@@ -918,7 +927,7 @@
                             .input_style{
                                 background-color: #EFF7FB;
                                 border-radius: 2px;
-                                border: none;
+                                border: transparent;
                                 color: #999;
                                 display: block;
                                 font: normal 400 14px/17px 'Exo2-Regular';
@@ -929,6 +938,7 @@
                                 text-align: left;
                                 width: 192px;
                             }
+                            
                             
                             .date_picker_container{
                                 position: relative;
@@ -949,7 +959,7 @@
                             select, .select_picker{
                                 background-color: #EFF7FB;
                                 border-radius: 2px;
-                                border: none;
+                                border: transparent;
                                 color: #333333;
                                 display: block;
                                 font: normal 400 14px/17px 'Exo2-Regular';
@@ -972,10 +982,15 @@
                                     }
                                 }
                             }
+                            
                             .btn{
                                 background-color: #EFF7FB;
                                 width: 188px;
                                 height: 36px;
+                            }
+
+                            .error{
+                                border: 0.5px solid red;
                             }
                         }
                     }
@@ -993,7 +1008,7 @@
                         textarea{
                             background-color: #EFF7FB;
                             border-radius: 2px;
-                            border: none;
+                            border: transparent;
                             color: #333333;
                             display: block;
                             font: normal 400 14px/17px 'Exo2-Regular';
@@ -1005,6 +1020,10 @@
                             resize: none;
                             text-align: left;
                             width: 100%;
+                        }
+                        
+                        .error{
+                            border: 0.5px solid red;
                         }
                     }
                 }

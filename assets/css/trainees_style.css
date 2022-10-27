@@ -326,6 +326,13 @@
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button:last-child {
   margin-right: 0px;
 }
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .employed {
+  background-color: #f6bb2a;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .unemployed {
+  background-color: #c5c5c5;
+  color: #333333;
+}
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul #edit_delete_icons {
   align-items: center;
   background-color: #e26139;
@@ -560,7 +567,7 @@
     transform: translateX(75px) translateY(-10px) scale(var(--scale));
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::after {
-    transform: translateX(75px) translateY(20px) scale(var(--scale));
+    transform: translateX(75 px) translateY(20px) scale(var(--scale));
   }
   * body main #add_trainee_section #add_trainee_container h2 {
     margin-top: 90px;
@@ -682,7 +689,7 @@
 * body .modal-dialog .modal-content .modal-body .form_container .form_input .input_style {
   background-color: #EFF7FB;
   border-radius: 2px;
-  border: none;
+  border: transparent;
   color: #999;
   display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
@@ -709,7 +716,7 @@
 * body .modal-dialog .modal-content .modal-body .form_container .form_input .select_picker {
   background-color: #EFF7FB;
   border-radius: 2px;
-  border: none;
+  border: transparent;
   color: #333333;
   display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
@@ -737,6 +744,9 @@
   width: 188px;
   height: 36px;
 }
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .error {
+  border: 0.5px solid red;
+}
 * body .modal-dialog .modal-content .modal-body .alert {
   color: #ff0000;
   display: none;
@@ -749,7 +759,7 @@
 * body .modal-dialog .modal-content .modal-body .redactor textarea {
   background-color: #EFF7FB;
   border-radius: 2px;
-  border: none;
+  border: transparent;
   color: #333333;
   display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
@@ -761,6 +771,9 @@
   resize: none;
   text-align: left;
   width: 100%;
+}
+* body .modal-dialog .modal-content .modal-body .redactor .error {
+  border: 0.5px solid red;
 }
 * body .modal-dialog .modal-content .modal-footer {
   border: none;
