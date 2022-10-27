@@ -6,6 +6,11 @@
 
 $(document).ready(function(){
 
+    jQuery.expr[':'].contains = function(a, i, m) {
+        return jQuery(a).text().toUpperCase()
+            .indexOf(m[3].toUpperCase()) >= 0;
+    };
+
     // //Pagination
     // let number_of_groups = $("#add_trainee_list .add_trainee_group").length;
     // let limit_per_page = 10;
@@ -82,16 +87,26 @@ $(document).ready(function(){
 
     // $("#add_trainee_list .add_trainee_group:gt("+ (limit_per_page-1) +")").hide();
     // //
-
-    $(window)
-        .on('load', function() {
-            $(".add_trainee_group").tooltip();
+    $("#add_trainee_search_input").on("keypress", function(event){
+        let keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+            let value = $(this).val();
+            $("html, body").animate({
+                scrollTop: $("li:contains("+value+")")?.offset()?.top
+            }, 1);
         }
-    );
-
+    });
+    
     $("#add_trainee_search_input")
         .on("input", function(){
             let value = $(this).val();
+
+            // Auto Filter Search
+            // $("#add_trainee_list .add_trainee_group ul").filter(function(){
+            //     $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+            // });
+
+            // Auto Scroll Search
             $("#search_icon").on("click", function (){
                 $("html, body").animate({
                     scrollTop: $("li:contains("+value+")")?.offset()?.top
