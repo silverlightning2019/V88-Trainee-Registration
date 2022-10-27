@@ -369,7 +369,7 @@
                                     padding: 16px 0px 18px 0px;
                                     position: relative;
                                     text-align: center;
-                                    overflow: hidden;
+                                    overflow: clip;
                                     span{
                                         display: block;
                                     }
@@ -409,6 +409,15 @@
                                     button:last-child{
                                         margin-right: 0px;
                                     }
+                                }
+
+                                .employed{
+                                    background-color: #f6bb2a;
+                                }
+
+                                .unemployed{
+                                    background-color: #c5c5c5;
+                                    color: #333333;
                                 }
 
                                 // .status:hover{
@@ -633,6 +642,146 @@
                     }
                 }
 
+                @media only screen and (max-width: 480px){
+
+                    #add_trainee_container{
+                        max-width: 360px;
+                        padding: 0px 23px 25px 23px;
+    
+                        >div{
+    
+                            button{
+                                font: normal bold 10px/12px 'Exo2-Bold';
+                                margin-bottom: 14px;
+                                padding: 4px;
+                                max-width: 78px;
+                            }
+    
+                            #add_trainee_search{
+                                // border-radius: 2px;
+                                border: 2px solid #ffffff;
+                                // color: #ffffff;
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                height: 20px;
+                                // letter-spacing: 0.6px;
+                                max-width: 96px;
+                                
+                                input{
+                                    // background-color: transparent;
+                                    // border: transparent;
+                                    height: 12px;
+                                    padding: 0px;
+                                    width: 75px;
+                                }
+    
+                                button{
+                                    background-color: transparent;
+                                    border: transparent;
+                                    box-shadow: none;
+                                    color: #ffffff;
+                                    margin-bottom: 0px;
+                                    padding: 0px;
+
+                                    &:hover{
+                                        background-color: #8db5ff;
+                                        height: 48px;
+                                        transition: 0.5s;
+                                    }
+    
+                                    .fa-magnifying-glass{
+                                        padding: 0px;
+                                    }
+        
+                                }
+                            }
+                        }
+    
+                        #add_trainee_list{
+    
+                            #add_trainee_group_header{
+                                font: normal bold 10px/12px 'Exo2-Bold';
+                                margin: 0px 21px 14px 23px;
+    
+                                ul{
+    
+                                    .head_name{
+                                        min-width: 135px;
+                                    }
+    
+                                    .head_specialization{
+                                        min-width: 83px;
+                                    }
+    
+                                    .head_status{
+                                        min-width: 75px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+    
+                            .add_trainee_group{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                margin-bottom: 15px;
+                                padding: 0px 0px 0px 23px;
+    
+                                ul{
+    
+                                    .name{
+                                        min-width: 135px;
+                                        padding: 24px 0px 16px 0px;
+                                    }
+    
+                                    .specialization{
+                                        min-width: 83px;
+                                        padding: 24px 0px 16px 0px;
+                                    }
+    
+                                    .status{
+                                        min-height: 62px;
+                                        min-width: 75px;
+                                        padding: 24px 0px 16px 0px;
+    
+                                        &#status{
+
+                                            .edit_delete_container{
+
+                                                #edit_delete_icons{
+                                                    min-width: 75px;
+                                                    width: 75px;
+                                                }
+                                                &:hover{
+                                                    transform: translate(-75px, -24px);
+                                                }
+                                                span{
+                                                    font: normal 400 10px/12px 'Exo2-Regular';
+                                                    min-width: 75px;
+                                                    width: 75px;
+                                                }
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .add_trainee_group::before{
+                                font: normal 400 10px/12px 'Exo2-Regular';
+                                transform: translateX(75px) translateY(-10px) scale(var(--scale)); 
+                            }
+    
+                            .add_trainee_group::after{
+                                transform: translateX(75
+                                px) translateY(20px) scale(var(--scale));
+                            }  
+                        }
+    
+                        h2{
+                            margin-top: 90px;
+                        }
+                    }
+                }
+
+
+
             }
 
             .hidden{
@@ -726,7 +875,7 @@
                         border-radius: 50%;
                         border: solid 10px #5B5B5B ;
                         height: 150px;
-                        overflow: hidden;
+                        overflow: clip;
                         width: 150px;
 
                         .message{
@@ -769,7 +918,7 @@
                             .input_style{
                                 background-color: #EFF7FB;
                                 border-radius: 2px;
-                                border: none;
+                                border: transparent;
                                 color: #999;
                                 font: normal 400 14px/17px 'Exo2-Regular';
                                 height: 40px;
@@ -778,6 +927,7 @@
                                 padding: 0px 10px;
                                 width: 192px;
                             }
+                            
                             
                             .date_picker_container{
                                 position: relative;
@@ -802,7 +952,7 @@
                             select, .select_picker{
                                 background-color: #EFF7FB;
                                 border-radius: 2px;
-                                border: none;
+                                border: transparent;
                                 color: #333333;
                                 font: normal 400 14px/17px 'Exo2-Regular';
                                 height: 40px;
@@ -825,12 +975,16 @@
                                     }
                                 }
                             }
+                            
                             .btn{
                                 background-color: #EFF7FB;
                                 width: 188px;
                                 height: 36px;
                             }
 
+                            .error{
+                                border: 0.5px solid red;
+                            }
                         }
                     }
 
@@ -847,7 +1001,7 @@
                         textarea{
                             background-color: #EFF7FB;
                             border-radius: 2px;
-                            border: none;
+                            border: transparent;
                             color: #333333;
                             display: block;
                             font: normal 400 14px/17px 'Exo2-Regular';
@@ -859,6 +1013,10 @@
                             resize: none;
                             text-align: left;
                             width: 100%;
+                        }
+                        
+                        .error{
+                            border: 0.5px solid red;
                         }
                     }
                 }

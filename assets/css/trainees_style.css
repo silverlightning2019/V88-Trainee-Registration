@@ -291,7 +291,7 @@
   padding: 16px 0px 18px 0px;
   position: relative;
   text-align: center;
-  overflow: hidden;
+  overflow: clip;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status span {
   display: block;
@@ -325,6 +325,13 @@
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button:last-child {
   margin-right: 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .employed {
+  background-color: #f6bb2a;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .unemployed {
+  background-color: #c5c5c5;
+  color: #333333;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul #edit_delete_icons {
   align-items: center;
@@ -473,6 +480,99 @@
     margin-top: 90px;
   }
 }
+@media only screen and (max-width: 480px) {
+  * body main #add_trainee_section #add_trainee_container {
+    max-width: 360px;
+    padding: 0px 23px 25px 23px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div button {
+    font: normal bold 10px/12px 'Exo2-Bold';
+    margin-bottom: 14px;
+    padding: 4px;
+    max-width: 78px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search {
+    border: 2px solid #ffffff;
+    font: normal 400 10px/12px 'Exo2-Regular';
+    height: 20px;
+    max-width: 96px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search input {
+    height: 12px;
+    padding: 0px;
+    width: 75px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search button {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: none;
+    color: #ffffff;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search button:hover {
+    background-color: #8db5ff;
+    height: 48px;
+    transition: 0.5s;
+  }
+  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search button .fa-magnifying-glass {
+    padding: 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header {
+    font: normal bold 10px/12px 'Exo2-Bold';
+    margin: 0px 21px 14px 23px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_name {
+    min-width: 135px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_specialization {
+    min-width: 83px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_status {
+    min-width: 75px;
+    text-align: center;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    margin-bottom: 15px;
+    padding: 0px 0px 0px 23px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .name {
+    min-width: 135px;
+    padding: 24px 0px 16px 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .specialization {
+    min-width: 83px;
+    padding: 24px 0px 16px 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status {
+    min-height: 62px;
+    min-width: 75px;
+    padding: 24px 0px 16px 0px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+    min-width: 75px;
+    width: 75px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+    transform: translate(-75px, -24px);
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    min-width: 75px;
+    width: 75px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::before {
+    font: normal 400 10px/12px 'Exo2-Regular';
+    transform: translateX(75px) translateY(-10px) scale(var(--scale));
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::after {
+    transform: translateX(75 px) translateY(20px) scale(var(--scale));
+  }
+  * body main #add_trainee_section #add_trainee_container h2 {
+    margin-top: 90px;
+  }
+}
 * body main .hidden {
   display: none;
 }
@@ -543,7 +643,7 @@
   border-radius: 50%;
   border: solid 10px #5B5B5B ;
   height: 150px;
-  overflow: hidden;
+  overflow: clip;
   width: 150px;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .message {
@@ -578,7 +678,7 @@
 * body .modal-dialog .modal-content .modal-body .form_container .form_block .input_style {
   background-color: #EFF7FB;
   border-radius: 2px;
-  border: none;
+  border: transparent;
   color: #999;
   font: normal 400 14px/17px 'Exo2-Regular';
   height: 40px;
@@ -606,7 +706,7 @@
 * body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker {
   background-color: #EFF7FB;
   border-radius: 2px;
-  border: none;
+  border: transparent;
   color: #333333;
   font: normal 400 14px/17px 'Exo2-Regular';
   height: 40px;
@@ -634,6 +734,9 @@
   width: 188px;
   height: 36px;
 }
+* body .modal-dialog .modal-content .modal-body .form_container .form_input .error {
+  border: 0.5px solid red;
+}
 * body .modal-dialog .modal-content .modal-body .alert {
   color: #ff0000;
   display: none;
@@ -646,7 +749,7 @@
 * body .modal-dialog .modal-content .modal-body .redactor textarea {
   background-color: #EFF7FB;
   border-radius: 2px;
-  border: none;
+  border: transparent;
   color: #333333;
   display: block;
   font: normal 400 14px/17px 'Exo2-Regular';
@@ -658,6 +761,9 @@
   resize: none;
   text-align: left;
   width: 100%;
+}
+* body .modal-dialog .modal-content .modal-body .redactor .error {
+  border: 0.5px solid red;
 }
 * body .modal-dialog .modal-content .modal-footer {
   border: none;
