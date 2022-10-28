@@ -700,7 +700,6 @@
                                         &#status{
 
                                             .edit_delete_container{
-                                                // transition: 0.5s;
                                                 height: 100%;
                                                 transform: translate(0, -24px);
                                                 width: 240px;
@@ -714,10 +713,18 @@
 
                                                         .edit{
                                                             height: 62px;
+
+                                                            .status_edit_tooltip{
+                                                                top: 5px;
+                                                            }
                                                         }
 
                                                         .delete{
                                                             height: 62px;
+
+                                                            .status_delete_tooltip{
+                                                                top: 5px;
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -849,6 +856,7 @@
                                         min-height: 62px;
                                         min-width: 75px;
                                         padding: 24px 0px 16px 0px;
+                                        overflow-clip-margin: 13px;
     
                                         &#status{
 
@@ -863,10 +871,20 @@
 
                                                         .edit{
                                                             width: 38px;
+
+                                                            .status_edit_tooltip{
+                                                                top: 3px;
+                                                                right: 30px;
+                                                            }
                                                         }
 
                                                         .delete{
                                                             width: 38px;
+
+                                                            .status_delete_tooltip{
+                                                                top: 3px;
+                                                                right: -13px;
+                                                            }
                                                         }
                                                     }
                                                 }
