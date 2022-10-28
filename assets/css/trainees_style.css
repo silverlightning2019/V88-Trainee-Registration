@@ -306,16 +306,37 @@
   align-items: center;
   display: flex;
   position: absolute;
-  transform: translate(0, -16px);
+  transform: translate(0, -35px);
   transition: 0.5s;
   width: 240px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
-  transform: translate(-172px, -16px);
+  transform: translate(-172px, -35px);
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
   min-width: 172px;
   width: 172px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: transparent;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+  background-color: #F6BB2A;
+  width: 86px;
+  height: 62px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+  background-color: #E26139;
+  width: 86px;
+  height: 62px;
+  border-radius: 0px 5px 5px 0px;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover {
+  opacity: 0.9;
+  transition: 0.3s;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
   min-width: 172px;
@@ -323,7 +344,6 @@
   width: 172px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button {
-  background-color: transparent;
   border: none;
   color: #ffffff;
   margin-right: 5px;
@@ -467,6 +487,9 @@
     min-width: 172px;
     width: 172px;
   }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li {
+    margin-top: 1px;
+  }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
     height: 100%;
     transform: translate(-172px, -24px);
@@ -556,12 +579,21 @@
     min-width: 75px;
     padding: 24px 0px 16px 0px;
   }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+    transform: translate(0px, -23px);
+  }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
     min-width: 75px;
     width: 75px;
   }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+    width: 38px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+    width: 38px;
+  }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
-    transform: translate(-75px, -24px);
+    transform: translate(-75px, -23px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
     font: normal 400 10px/12px 'Exo2-Regular';
@@ -586,6 +618,10 @@
   position: fixed;
   bottom: 40px;
   right: 40px;
+  background-color: #FFEB3C;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 * body footer #footer_section #footer_container {
   background-color: #02244F;
