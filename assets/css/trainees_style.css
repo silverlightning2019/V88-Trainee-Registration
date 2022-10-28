@@ -72,6 +72,12 @@
     margin-right: 38px;
   }
 }
+@media screen and (max-width: 877) {
+  * body header > section #navbar_container img {
+    width: 300px;
+    height: 90px;
+  }
+}
 @media screen and (max-width: 568px) {
   * body header > section #navbar_container {
     padding: 0px 23px;
@@ -79,8 +85,8 @@
 }
 @media screen and (max-width: 480px) {
   * body header > section #navbar_container img {
-    width: 113px;
     height: 72.34px;
+    width: 113px;
   }
   * body header > section #navbar_container #navbar_list {
     margin-top: 12px;
