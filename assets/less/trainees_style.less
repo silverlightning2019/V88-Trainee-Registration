@@ -93,6 +93,17 @@
                     }
                 }
 
+                @media screen and (max-width: 877) {
+                    
+                    #navbar_container{
+
+                        img{
+                            width: 300px;
+                            height: 90px;
+                        }
+                    }
+                }
+
                 @media screen and (max-width: 568px) {
 
                     #navbar_container{
@@ -106,8 +117,8 @@
                     #navbar_container{
 
                         img{
-                            width: 113px;
                             height: 72.34px;
+                            width: 113px;
                         }
 
                         #navbar_list{
@@ -385,17 +396,46 @@
                                             align-items: center;
                                             display: flex;
                                             position: absolute;
-                                            transform: translate(0, -16px);
+                                            transform: translate(0, -35px);
                                             transition: 0.5s;
                                             width: 240px;
                                             
                                             &:hover{
-                                                transform: translate(-172px, -16px);
+                                                transform: translate(-172px, -35px);
                                             }
 
                                             #edit_delete_icons{
                                                 min-width: 172px;
                                                 width: 172px;
+                                                border-radius: 0px 5px 5px 0px;
+                                                background-color: transparent;
+
+                                                li{
+                                                    // margin-top: 1px;
+
+                                                    .edit{
+                                                        background-color: #F6BB2A;
+                                                        width: 86px;
+                                                        height: 62px;
+
+                                                        &:hover{
+                                                            opacity: 0.9;
+                                                            transition: 0.3s;
+                                                        }
+                                                    }
+
+                                                    .delete{
+                                                        background-color: #E26139;
+                                                        width: 86px;
+                                                        height: 62px;
+                                                        border-radius: 0px 5px 5px 0px;
+
+                                                        &:hover{
+                                                            opacity: 0.9;
+                                                            transition: 0.3s;
+                                                        }
+                                                    }
+                                                }
                                             }
                                             
                                             span{
@@ -408,7 +448,6 @@
                                     }
 
                                     button{
-                                        background-color: transparent;
                                         border: none;
                                         color: #ffffff;
                                         margin-right: 5px;
@@ -616,6 +655,10 @@
                                                 #edit_delete_icons{
                                                     min-width: 172px;
                                                     width: 172px;
+
+                                                    li{
+                                                        margin-top: 1px;
+                                                    }
                                                 }
                                                 &:hover{
                                                     height: 100%;
@@ -749,13 +792,25 @@
                                         &#status{
 
                                             .edit_delete_container{
+                                                transform: translate(0px, -23px);
 
                                                 #edit_delete_icons{
                                                     min-width: 75px;
                                                     width: 75px;
+
+                                                    li{
+
+                                                        .edit{
+                                                            width: 38px;
+                                                        }
+
+                                                        .delete{
+                                                            width: 38px;
+                                                        }
+                                                    }
                                                 }
                                                 &:hover{
-                                                    transform: translate(-75px, -24px);
+                                                    transform: translate(-75px, -23px);
                                                 }
                                                 span{
                                                     font: normal 400 10px/12px 'Exo2-Regular';
@@ -796,6 +851,12 @@
                 position: fixed;
                 bottom: 40px;
                 right: 40px;
+                // background-color: #02244F;
+                background-color: #FFEB3C;
+                // opacity: 0.9;
+                border: none;
+                border-radius: 50%;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             }
         }
 
