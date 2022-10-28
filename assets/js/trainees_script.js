@@ -147,7 +147,9 @@ $(document).ready(function(){
     
     /* Saves new data on Edit Trainee Modal */
     $("body")
-        .on("click", "#edit_save_btn", function(){
+        .on("click", "#edit_save_btn", function(e){
+            e.preventDefault();
+
             let edit_modal = $("#edit_trainee_modal");
             let trainee_id = edit_modal.find("#trainee_id").text();
             let trainee_id_selector = $("#" +trainee_id);
