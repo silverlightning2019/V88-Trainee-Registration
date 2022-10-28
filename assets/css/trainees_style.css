@@ -319,19 +319,25 @@
   border-radius: 0px 5px 5px 0px;
   background-color: transparent;
 }
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li {
+  margin-top: 3px;
+}
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
   background-color: #F6BB2A;
   width: 86px;
-  height: 62px;
+  height: 58px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover {
   opacity: 0.9;
   transition: 0.3s;
 }
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li #status_edit_tooltip {
+  z-index: 1000;
+}
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
   background-color: #E26139;
   width: 86px;
-  height: 62px;
+  height: 58px;
   border-radius: 0px 5px 5px 0px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover {
@@ -490,6 +496,12 @@
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li {
     margin-top: 1px;
   }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+    height: 62px;
+  }
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+    height: 62px;
+  }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
     height: 100%;
     transform: translate(-172px, -24px);
@@ -580,7 +592,7 @@
     padding: 24px 0px 16px 0px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
-    transform: translate(0px, -23px);
+    transform: translate(0px, -24px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
     min-width: 75px;
@@ -593,7 +605,7 @@
     width: 38px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
-    transform: translate(-75px, -23px);
+    transform: translate(-75px, -24px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
     font: normal 400 10px/12px 'Exo2-Regular';
