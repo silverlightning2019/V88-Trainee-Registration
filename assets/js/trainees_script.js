@@ -173,8 +173,9 @@ $(document).ready(function(){
                 edit_modal.modal('hide');
                 $("#saved_toast").toast('show');
 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
-                    trainee_id_selector.find("#status").removeClass("employed, unemployed");
+                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Trainee"){
+                    trainee_id_selector.find("#status").removeClass("employed");
+                    trainee_id_selector.find("#status").removeClass("unemployed");
                 }
                 
                 if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
