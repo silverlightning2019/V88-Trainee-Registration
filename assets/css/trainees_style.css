@@ -44,8 +44,8 @@
 }
 * body header > section #navbar_container #navbar_list .navbar_item .active {
   color: #ffeb3c;
-  text-decoration: underline;
   text-decoration-thickness: 7px;
+  text-decoration: underline;
 }
 * body header > section #navbar_container #navbar_list #navbar_home {
   margin-right: 38px;
@@ -74,8 +74,8 @@
 }
 @media screen and (max-width: 877) {
   * body header > section #navbar_container img {
-    width: 300px;
     height: 90px;
+    width: 300px;
   }
 }
 @media screen and (max-width: 568px) {
@@ -294,8 +294,8 @@
   color: #ffffff;
   min-height: 58px;
   min-width: 172px;
-  overflow: clip;
   overflow-clip-margin: 10px;
+  overflow: clip;
   padding: 16px 0px 18px 0px;
   position: relative;
   text-align: center;
@@ -318,12 +318,12 @@
   visibility: visible;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
-  min-width: 172px;
-  width: 172px;
-  border-radius: 0px 5px 5px 0px;
   background-color: transparent;
-  visibility: hidden;
+  border-radius: 0px 5px 5px 0px;
+  min-width: 172px;
   position: relative;
+  visibility: hidden;
+  width: 172px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li {
   margin-top: 3px;
@@ -335,24 +335,24 @@
   width: 86px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit .status_edit_tooltip {
+  background-color: #3C3C3C;
+  border-radius: 2px;
+  color: #fff;
+  font: normal 400 10px/14px 'Exo2-Light';
+  height: 14px;
+  height: 15px;
+  letter-spacing: 1px;
   position: absolute;
   right: 77px;
   top: 22px;
-  font: normal 400 10px/14px 'Exo2-Light';
-  color: #fff;
-  letter-spacing: 1px;
-  width: 38px;
-  height: 14px;
   visibility: hidden;
-  background-color: #3C3C3C;
   width: 35px;
-  height: 15px;
-  border-radius: 2px;
+  width: 38px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover {
+  margin: 0px;
   opacity: 0.9;
   transition: 0.3s;
-  margin: 0px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover .status_edit_tooltip {
   visibility: visible;
@@ -365,24 +365,24 @@
   width: 86px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete .status_delete_tooltip {
+  background-color: #3C3C3C;
+  border-radius: 2px;
+  color: #fff;
+  font: normal 400 10px/14px 'Exo2-Light';
+  height: 14px;
+  height: 15px;
+  letter-spacing: 1px;
   position: absolute;
   right: -6px;
   top: 22px;
-  font: normal 400 10px/14px 'Exo2-Light';
-  color: #fff;
-  letter-spacing: 1px;
-  width: 38px;
-  height: 14px;
   visibility: hidden;
-  background-color: #3C3C3C;
+  width: 38px;
   width: 44px;
-  height: 15px;
-  border-radius: 2px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover {
   background-color: #de4517;
-  transition: 0.3s;
   margin: 0px;
+  transition: 0.3s;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover .status_delete_tooltip {
   visibility: visible;
@@ -652,15 +652,15 @@
     width: 38px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit .status_edit_tooltip {
-    top: 3px;
     right: 30px;
+    top: 3px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
     width: 38px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete .status_delete_tooltip {
-    top: 3px;
     right: -13px;
+    top: 3px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
     transform: translate(-75px, -24px);
@@ -685,13 +685,13 @@
   display: none;
 }
 * body main #back_to_top_button {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
   background-color: #FFEB3C;
-  border: none;
   border-radius: 50%;
+  border: none;
+  bottom: 40px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: fixed;
+  right: 40px;
 }
 * body footer #footer_section #footer_container {
   background-color: #02244F;
@@ -1294,7 +1294,6 @@
     width: 100%;
   }
   * body .modal-dialog .modal-content .modal-footer .save_btn {
-    background-color: greenyellow;
     display: block;
     font: normal 400 10px/12px 'Exo2-Regular';
     height: 25px;
