@@ -174,6 +174,10 @@ $(document).ready(function(){
                 $("#saved_toast").toast('show');
 
                 if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
+                    trainee_id_selector.find("#status").removeClass("employed, unemployed");
+                }
+                
+                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
                     trainee_id_selector.find("#status").addClass("employed");
                 }
 
