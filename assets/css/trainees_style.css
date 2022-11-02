@@ -44,8 +44,8 @@
 }
 * body header > section #navbar_container #navbar_list .navbar_item .active {
   color: #ffeb3c;
-  text-decoration-thickness: 7px;
   text-decoration: underline;
+  text-decoration-thickness: 7px;
 }
 * body header > section #navbar_container #navbar_list #navbar_home {
   margin-right: 38px;
