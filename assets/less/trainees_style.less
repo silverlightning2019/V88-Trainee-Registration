@@ -52,8 +52,8 @@
 
                             .active{
                                 color: #ffeb3c;
-                                text-decoration: underline;
                                 text-decoration-thickness: 7px;
+                                text-decoration: underline;
                             }
                         }
         
@@ -97,8 +97,8 @@
                     #navbar_container{
 
                         img{
-                            width: 300px;
                             height: 90px;
+                            width: 300px;
                         }
                     }
                 }
@@ -344,6 +344,7 @@
                             position: relative;
 
                             ul{
+                                // overflow: hidden;
                                 align-items: flex-start;
                                 display: flex;
                                 padding: 0px;
@@ -379,6 +380,7 @@
                                     color: #ffffff;
                                     min-height: 58px;
                                     min-width: 172px;
+                                    overflow-clip-margin: 10px;
                                     overflow: clip;
                                     padding: 16px 0px 18px 0px;
                                     position: relative;
@@ -400,13 +402,19 @@
                                             
                                             &:hover{
                                                 transform: translate(-172px, -35px);
+
+                                                #edit_delete_icons{
+                                                    visibility: visible;
+                                                }
                                             }
 
                                             #edit_delete_icons{
-                                                min-width: 172px;
-                                                width: 172px;
-                                                border-radius: 0px 5px 5px 0px;
                                                 background-color: transparent;
+                                                border-radius: 0px 5px 5px 0px;
+                                                min-width: 172px;
+                                                position: relative;
+                                                visibility: hidden;
+                                                width: 172px;
 
                                                 li{
                                                     margin-top: 3px;
@@ -415,30 +423,70 @@
                                                         background-color: #00a86b;
                                                         width: 86px;
                                                         height: 58px;
+                                                        margin: 0px;
+                                                        width: 86px;
+
+                                                        .status_edit_tooltip{
+                                                            background-color: #3C3C3C;
+                                                            border-radius: 2px;
+                                                            color: #fff;
+                                                            font: normal 400 10px/14px 'Exo2-Light';
+                                                            height: 14px;
+                                                            height: 15px;
+                                                            letter-spacing: 1px;
+                                                            position: absolute;
+                                                            right: 77px;
+                                                            top: 22px;
+                                                            visibility: hidden;
+                                                            width: 35px;
+                                                            width: 38px;
+                                                        }
 
                                                         &:hover{
+                                                            margin: 0px;
                                                             opacity: 0.9;
                                                             transition: 0.3s;
+
+                                                            .status_edit_tooltip{
+                                                                visibility: visible;
+                                                            }
                                                         }
-                                                    }
-                                                    #status_edit_tooltip{
-                                                        z-index: 1000;
-                                                        background-color: red;
-                                                        width: 100px;
-                                                        height: 100px;
                                                     }
 
                                                     .delete{
                                                         background-color: #E26139;
-                                                        width: 86px;
-                                                        height: 58px;
                                                         border-radius: 0px 5px 5px 0px;
+                                                        height: 58px;
+                                                        margin: 0px;
+                                                        width: 86px;
+
+                                                        .status_delete_tooltip{
+                                                            background-color: #3C3C3C;
+                                                            border-radius: 2px;
+                                                            color: #fff;
+                                                            font: normal 400 10px/14px 'Exo2-Light';
+                                                            height: 14px;
+                                                            height: 15px;
+                                                            letter-spacing: 1px;
+                                                            position: absolute;
+                                                            right: -6px;
+                                                            top: 22px;
+                                                            visibility: hidden;
+                                                            width: 38px;
+                                                            width: 44px;
+                                                        }
 
                                                         &:hover{
-                                                            opacity: 0.9;
+                                                            background-color: #de4517;
+                                                            margin: 0px;
                                                             transition: 0.3s;
+
+                                                            .status_delete_tooltip{
+                                                                visibility: visible;
+                                                            }
                                                         }
                                                     }
+
                                                 }
                                             }
                                             
@@ -646,10 +694,18 @@
 
                                                         .edit{
                                                             height: 62px;
+
+                                                            .status_edit_tooltip{
+                                                                top: 5px;
+                                                            }
                                                         }
 
                                                         .delete{
                                                             height: 62px;
+
+                                                            .status_delete_tooltip{
+                                                                top: 5px;
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -776,6 +832,7 @@
                                         min-height: 62px;
                                         min-width: 75px;
                                         padding: 24px 0px 16px 0px;
+                                        overflow-clip-margin: 13px;
     
                                         &#status{
 
@@ -790,10 +847,20 @@
 
                                                         .edit{
                                                             width: 38px;
+
+                                                            .status_edit_tooltip{
+                                                                right: 30px;
+                                                                top: 3px;
+                                                            }
                                                         }
 
                                                         .delete{
                                                             width: 38px;
+
+                                                            .status_delete_tooltip{
+                                                                right: -13px;
+                                                                top: 3px;
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -833,15 +900,15 @@
             }
 
             #back_to_top_button{
-                position: fixed;
-                bottom: 40px;
-                right: 40px;
                 // background-color: #02244F;
-                background-color: #FFEB3C;
                 // opacity: 0.9;
-                border: none;
+                background-color: #FFEB3C;
                 border-radius: 50%;
+                border: none;
+                bottom: 40px;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                position: fixed;
+                right: 40px;
             }
         }
 
@@ -1484,7 +1551,6 @@
                         }
 
                         .save_btn{
-                            background-color: greenyellow;
                             display: block;
                             font: normal 400 10px/12px 'Exo2-Regular';
                             height: 25px;
