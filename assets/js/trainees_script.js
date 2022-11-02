@@ -14,12 +14,7 @@ $(document).ready(function(){
 
     /* Shows button at lower right side when window is scrolled at 20px and above  */
     $(window).scroll(function () {
-        if($(this).scrollTop()>20){
-            $("#back_to_top_button").removeClass("hidden");
-        }
-        else{
-            $("#back_to_top_button").addClass("hidden");
-        }
+        $(this).scrollTop()>20 ? $("#back_to_top_button").removeClass("hidden") : $("#back_to_top_button").addClass("hidden");
     });
 
     /* Scrolls back to the top  */
@@ -91,16 +86,15 @@ $(document).ready(function(){
                 $("#saved_toast").toast('show');
 
                 $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+
+                add_trainee_modal.find(".validate_input").removeClass("error");
             }
             else{
-
                 add_trainee_modal.find(".validate_input").each((index, element) => {
-                    if($(element).val() === ""){
-                        $(element).addClass("error");
-                    }
-                    else{
-                        $(element).removeClass("error");
-                    }
+                    $(element).val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
+                });
+                add_trainee_modal.find(".add_select_validate_input").each((index, element) => {
+                    $(element).find("select").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
                 });
             
                 $(".alert").show();
@@ -112,8 +106,9 @@ $(document).ready(function(){
     $("body")
         .on("click", "#add_cancel_btn", function(){
             let add_trainee_modal = $("#add_trainee_modal");
-            add_trainee_modal.find("#trainee_fullname, .modal_specialization, #trainee_date_started, .modal_recruiter, #trainee_note").removeClass("error");
-            add_trainee_modal.find("input, textarea, select").val("");
+            add_trainee_modal.find(".validate_input").removeClass("error");
+            add_trainee_modal.find(".add_select_validate_input").removeClass("error");
+            add_trainee_modal.find(".validate_input").val("");  
             add_trainee_modal.modal('hide');
             $(".alert").hide();
         }
@@ -179,6 +174,7 @@ $(document).ready(function(){
                 }
                 
                 if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
+                    trainee_id_selector.find("#status").removeClass("unemployed");
                     trainee_id_selector.find("#status").addClass("employed");
                 }
 
@@ -188,13 +184,8 @@ $(document).ready(function(){
             }
             else{
 
-                edit_modal.find(".validate_input").each((index, element) => {
-                    if($(element).val() === ""){
-                        $(element).addClass("error");
-                    }
-                    else{
-                        $(element).removeClass("error");
-                    }
+                edit_modal.find(".edit_validate_input").each((index, element) => {
+                    $(element).not("div").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");    
                 });
             
                 $(".alert").show();
