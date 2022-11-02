@@ -237,8 +237,8 @@
                         }
 
                         #add_trainee_search{
-                            border-radius: 2px;
                             border: 1px solid #ffffff;
+                            border-radius: 2px;
                             color: #ffffff;
                             font: normal 400 20px/24px 'Exo2-Regular';
                             height: 51px;
@@ -735,6 +735,207 @@
     
                         h2{
                             margin-top: 90px;
+                        }
+                    }
+                }
+
+                @media only screen and (max-width: 784px){
+
+                    #add_trainee_container{
+                        max-width: 600px;
+                        padding: 0px 40px 29px 40px;    
+                        >div{
+    
+                            button{
+                                font: normal bold 14px/18px 'Exo2-Bold';
+                            }
+    
+                            #add_trainee_search{
+                                font: normal 400 14px/18px 'Exo2-Regular';
+                            }
+                        }
+    
+                        #add_trainee_list{
+    
+                            #add_trainee_group_header{
+                                font: normal bold 18px/22px 'Exo2-Bold';
+    
+                                ul{
+    
+                                    .head_name{
+                                        min-width: 230px;
+                                    }
+    
+                                    .head_specialization{
+                                        min-width: 155px;
+                                    }
+    
+                                    .head_status{
+                                        min-width: 105px;
+                                    }
+                                }
+                            }
+    
+                            .add_trainee_group{
+                                font: normal 400 14px/18px 'Exo2-Regular';
+                                margin-bottom: 15px;
+                                padding: 0px 0px 0px 30px;
+    
+                                ul{
+    
+                                    .name{
+                                        min-width: 230px;
+                                        padding: 20px 0px;
+                                    }
+    
+                                    .specialization{
+                                        min-width: 155px;
+                                        padding: 20px 0px;
+                                    }
+    
+                                    .status{
+                                        min-height: 58px;
+                                        min-width: 105px;
+                                        padding: 20px 0px;
+    
+                                        &#status{
+
+                                            .edit_delete_container{
+                                                transform: translate(0, -22px);
+                                                width: 105px;
+
+                                                #edit_delete_icons{
+                                                    min-width: 105px;
+                                                    // width: 105px;
+
+                                                    li{
+
+                                                        .edit{
+                                                            height: 58px;
+                                                            min-width: 52px;
+                                                            width: 52px;
+                                                        }
+
+                                                        .delete{
+                                                            height: 58px;
+                                                            min-width: 53px;
+                                                            width: 53px;
+                                                        }
+                                                    }
+                                                }
+                                                &:hover{
+                                                    transform: translate(-105px, -20px);
+                                                }
+                                                span{
+                                                    min-width: 105px;
+                                                    width: 105px;
+                                                }
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @media only screen and (max-width: 622px){
+
+                    #add_trainee_container{
+                        max-width: 480px;
+                        padding: 0px 30px 27px 30px;    
+                        >div{
+    
+                            button{
+                                font: normal bold 12px/14px 'Exo2-Bold';
+                                padding: 10px 32px 10px 29px;
+                            }
+    
+                            #add_trainee_search{
+                                font: normal 400 12px/14px 'Exo2-Regular';
+                            }
+                        }
+    
+                        #add_trainee_list{
+    
+                            #add_trainee_group_header{
+                                font: normal bold 14px/18px 'Exo2-Bold';
+    
+                                ul{
+    
+                                    .head_name{
+                                        min-width: 200px;
+                                    }
+    
+                                    .head_specialization{
+                                        min-width: 135px;
+                                    }
+    
+                                    .head_status{
+                                        min-width: 85px;
+                                    }
+                                }
+                            }
+    
+                            .add_trainee_group{
+                                font: normal 400 12px/14px 'Exo2-Regular';
+                                margin-bottom: 15px;
+                                padding: 0px 0px 0px 30px;
+    
+                                ul{
+    
+                                    .name{
+                                        min-width: 200px;
+                                        padding: 20px 0px;
+                                    }
+    
+                                    .specialization{
+                                        min-width: 135px;
+                                        padding: 20px 0px;
+                                    }
+    
+                                    .status{
+                                        min-height: 58px;
+                                        min-width: 85px;
+                                        padding: 20px 0px;
+    
+                                        &#status{
+
+                                            .edit_delete_container{
+                                                transform: translate(0, -22px);
+                                                width: 105px;
+
+                                                #edit_delete_icons{
+                                                    min-width: 105px;
+                                                    // width: 105px;
+
+                                                    li{
+
+                                                        .edit{
+                                                            height: 58px;
+                                                            min-width: 52px;
+                                                            width: 52px;
+                                                        }
+
+                                                        .delete{
+                                                            height: 58px;
+                                                            min-width: 53px;
+                                                            width: 53px;
+                                                        }
+                                                    }
+                                                }
+                                                &:hover{
+                                                    transform: translate(-105px, -20px);
+                                                }
+                                                span{
+                                                    min-width: 105px;
+                                                    width: 105px;
+                                                }
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
