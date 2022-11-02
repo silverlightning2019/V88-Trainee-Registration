@@ -106,7 +106,7 @@
 * body main #banner_section #banner_container {
   margin: 0px auto;
   max-width: 1440px;
-  padding: 36px 303px 82px 303px;
+  padding: 36px 0px 82px 0px;
 }
 * body main #banner_section #banner_container h1 {
   color: #ffffff;
@@ -494,7 +494,7 @@
     min-width: 291px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_specialization {
-    min-width: 215px;
+    min-width: 212px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header ul .head_recruiter {
     display: none;
@@ -513,7 +513,7 @@
     padding: 24px 0px 16px 0px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .specialization {
-    min-width: 215px;
+    min-width: 212px;
     padding: 24px 0px 16px 0px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .recruiter {
