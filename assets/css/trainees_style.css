@@ -330,7 +330,6 @@
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
   background-color: #00a86b;
-  width: 86px;
   height: 58px;
   margin: 0px;
   width: 86px;
@@ -355,11 +354,8 @@
   opacity: 0.9;
   transition: 0.3s;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li #status_edit_tooltip {
-  z-index: 1000;
-  background-color: red;
-  width: 100px;
-  height: 100px;
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover .status_edit_tooltip {
+  visibility: visible;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
   background-color: #E26139;
