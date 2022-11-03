@@ -422,7 +422,7 @@
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul #edit_delete_icons {
   align-items: center;
   background-color: #e26139;
-  color: #ffffff;
+  color: #fffffff;
   display: flex;
   height: 100%;
   justify-content: space-around;
@@ -1542,16 +1542,10 @@
   width: max-content;
 }
 * .toast .toast_body span {
-  font: normal bold 20px/24px 'Exo2-Bold';
+  font: normal bold 10px/12px 'Exo2-Bold';
   vertical-align: middle;
 }
-* #saved_toast {
-  background-color: #00a86b;
-}
-* #deleted_toast {
-  background-color: #E26139;
-}
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
   * .toast {
     align-items: center;
     border-radius: 7px;
@@ -1568,10 +1562,10 @@
     font: normal bold 10px/12px 'Exo2-Bold';
     vertical-align: middle;
   }
-  * #saved_toast {
-    background-color: #00a86b;
-  }
-  * #deleted_toast {
-    background-color: #E26139;
-  }
+}
+* #saved_toast {
+  background-color: #00a86b;
+}
+* #deleted_toast {
+  background-color: #E26139;
 }
