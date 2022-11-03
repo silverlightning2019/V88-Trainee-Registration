@@ -342,7 +342,6 @@
                             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
                             background-color: #FDFDFD;
                             border-radius: 5px;
-                            // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 24px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
                             font: normal 400 20px/24px 'Exo2-Regular';
                             letter-spacing: 0.006em;
                             list-style: none;
@@ -352,14 +351,12 @@
 
                             &:hover{
                                 background-color: #fff;
-                                // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
                                 box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 0.5px;
                                 opacity: 0.9;
                                 transition: 0.3s;
                             }
 
                             ul{
-                                // overflow: hidden;
                                 align-items: flex-start;
                                 display: flex;
                                 padding: 0px;
@@ -819,7 +816,6 @@
 
                                                 #edit_delete_icons{
                                                     min-width: 105px;
-                                                    // width: 105px;
 
                                                     li{
 
@@ -1102,8 +1098,6 @@
             }
 
             #back_to_top_button{
-                // background-color: #02244F;
-                // opacity: 0.9;
                 background-color: #FFEB3C;
                 border-radius: 50%;
                 border: none;
@@ -1217,8 +1211,6 @@
                         }
 
                         .filethumbnail{
-                            // background-color: #fff;
-                            // background-color: red;
                             width: 100%;
 
                             background-image: url(../img/upload-photo.png);
@@ -1417,7 +1409,6 @@
                         width: 130px;
 
                         &:hover{
-                            // border: solid 0.5px #E26139;
                             background-color: #E26139;
                             border-radius: 2px;
                             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -1835,7 +1826,6 @@
 
     //TOAST
     .toast{
-        // bottom: 0px;
         align-items: center;
         border-radius: 7px;
         color: #ffffff;
@@ -1863,4 +1853,36 @@
     #deleted_toast{
         background-color: #E26139;
     }
+
+    @media only screen and (max-width: 480px){
+        .toast{
+            align-items: center;
+            border-radius: 7px;
+            color: #ffffff;
+            display: flex;
+            padding: 20px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            transition: 0.5s;
+            width: max-content;
+            
+            .toast_body{
+    
+                span{
+                    font: normal bold 10px/12px 'Exo2-Bold';
+                    vertical-align: middle;
+                }
+            }
+        }
+    
+        #saved_toast{
+            background-color: #00a86b;
+        }
+    
+        #deleted_toast{
+            background-color: #E26139;
+        }
+    }
+
 }
