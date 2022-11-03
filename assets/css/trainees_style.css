@@ -399,7 +399,8 @@
   visibility: visible;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-  width: 172px;
+  padding: 17px 25px;
+  min-width: 172px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button {
   border: none;
@@ -638,7 +639,7 @@
     transform: translate(-105px, -20px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-    width: 105px;
+    min-width: 105px;
   }
 }
 @media only screen and (max-width: 622px) {
@@ -685,24 +686,24 @@
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
     transform: translate(0, -22px);
-    width: 105px;
+    width: 85px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
-    min-width: 105px;
+    min-width: 85px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
     height: 58px;
-    width: 52px;
+    width: 43px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
     height: 58px;
-    width: 53px;
+    width: 42px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
-    transform: translate(-105px, -20px);
+    transform: translate(-85px, -20px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-    width: 105px;
+    min-width: 85px;
   }
 }
 @media only screen and (max-width: 480px) {
