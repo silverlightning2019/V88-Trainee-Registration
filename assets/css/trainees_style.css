@@ -1017,6 +1017,7 @@
   background-color: #EFF7FB;
   height: 36px;
   width: 188px;
+  border: none;
 }
 * body .modal-dialog .modal-content .modal-body .form_container .form_block .error {
   border: 0.5px solid red;
