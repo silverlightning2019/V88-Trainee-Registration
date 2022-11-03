@@ -123,7 +123,7 @@ $(document).ready(function(){
             let trainee_id = $(this).closest(".add_trainee_group").attr("id");
             let full_trainee_id = "#"+trainee_id;
 
-            edit_trainee_modal.find("#trainee_id").text(trainee_id);
+            edit_trainee_modal.find(".trainee_id").text(trainee_id);
             
             let trainee_name = $(full_trainee_id).find(".name").text();
             let trainee_specialization = $(full_trainee_id).find(".specialization").text();
@@ -160,7 +160,7 @@ $(document).ready(function(){
 
             $(".alert").hide();
 
-            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_status != "" && trainee_note != ""){
+            if(trainee_name != "" && trainee_specialization != "" && trainee_date != "" && trainee_status != "" && trainee_note != ""){
                 trainee_id_selector.find("#name").text(trainee_name);
                 trainee_id_selector.find("#specialization").text(trainee_specialization);
                 trainee_id_selector.find("#date").text(trainee_date);
@@ -193,6 +193,8 @@ $(document).ready(function(){
 
                 edit_modal.find(".validate_input").removeClass("error");
                 $(".alert").show();
+
+                $("#edit_trainee_modal").find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
             }
         }
     );
