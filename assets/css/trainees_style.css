@@ -38,6 +38,10 @@
   font: normal bold 20px/24px 'Exo2-Bold';
   list-style: none;
 }
+* body header > section #navbar_container #navbar_list .navbar_item:hover a {
+  opacity: 0.8;
+  transition: 0.21s;
+}
 * body header > section #navbar_container #navbar_list .navbar_item a {
   color: #ffffff;
   text-decoration: none;
@@ -253,15 +257,21 @@
   text-align: center;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group {
-  background-color: #ffffff;
-  border-radius: 5px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+  background-color: #FDFDFD;
+  border-radius: 5px;
   font: normal 400 20px/24px 'Exo2-Regular';
   letter-spacing: 0.006em;
   list-style: none;
   margin-bottom: 10px;
   padding: 0px 40px 0px 51px;
   position: relative;
+}
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:hover {
+  background-color: #fff;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 0.5px;
+  opacity: 0.9;
+  transition: 0.3s;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul {
   align-items: flex-start;
