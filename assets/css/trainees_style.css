@@ -311,11 +311,11 @@
   position: relative;
   text-align: center;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status span {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status .trainee_status_text {
   display: block;
   text-align: center;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container {
   align-items: center;
   display: flex;
   position: absolute;
@@ -323,13 +323,13 @@
   transition: 0.5s;
   width: 240px;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container:hover {
   transform: translate(-172px, -35px);
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover #edit_delete_icons {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container:hover .edit_delete_icons {
   visibility: visible;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons {
   background-color: transparent;
   border-radius: 0px 5px 5px 0px;
   min-width: 172px;
@@ -337,65 +337,64 @@
   visibility: hidden;
   width: 172px;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li {
   margin-top: 3px;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit {
   background-color: #00a86b;
   height: 58px;
   margin: 0px;
   width: 86px;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit .status_edit_tooltip {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit .status_edit_tooltip {
   background-color: #3C3C3C;
   border-radius: 2px;
   color: #fff;
   font: normal 400 10px/14px 'Exo2-Light';
   letter-spacing: 1px;
-  overflow: clip;
-  padding: 1px 3px;
+  padding: 2px;
   position: absolute;
-  right: 77px;
+  right: 97px;
   top: 22px;
   visibility: hidden;
+  width: max-content;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit:hover {
   margin: 0px;
   opacity: 0.9;
   transition: 0.3s;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover .status_edit_tooltip {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit:hover .status_edit_tooltip {
   visibility: visible;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete {
   background-color: #E26139;
   border-radius: 0px 5px 5px 0px;
   height: 58px;
   margin: 0px;
   width: 86px;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete .status_delete_tooltip {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete .status_delete_tooltip {
   background-color: #3C3C3C;
   border-radius: 2px;
   color: #fff;
   font: normal 400 10px/14px 'Exo2-Light';
   letter-spacing: 1px;
-  overflow: clip;
-  padding: 1px 3px;
   position: absolute;
   right: -6px;
   top: 22px;
   visibility: hidden;
+  width: max-content;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete:hover {
   background-color: #de4517;
   margin: 0px;
   transition: 0.3s;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover .status_delete_tooltip {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete:hover .status_delete_tooltip {
   visibility: visible;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .trainee_status_text {
   min-width: 172px;
   padding: 17px 25px;
 }
@@ -415,7 +414,7 @@
   background-color: #c5c5c5;
   color: #333333;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul #edit_delete_icons {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .edit_delete_icons {
   align-items: center;
   background-color: #e26139;
   color: #fffffff;
@@ -426,7 +425,7 @@
   padding: 16px 0px 18px 0px;
   transition: 0.5s;
 }
-* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul #edit_delete_icons button i {
+* body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .edit_delete_icons button i {
   color: #ffffff;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::before {
@@ -534,35 +533,35 @@
     min-width: 172px;
     padding: 24px 0px 16px 0px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container {
     height: 100%;
     transform: translate(0, -24px);
     width: 240px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons {
     min-width: 172px;
     width: 172px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li {
     margin-top: 1px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit {
     height: 62px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit .status_edit_tooltip {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit .status_edit_tooltip {
     top: 5px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete {
     height: 62px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete .status_delete_tooltip {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete .status_delete_tooltip {
     top: 5px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container:hover {
     height: 100%;
     transform: translate(-172px, -24px);
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .trainee_status_text {
     padding: 0px;
     width: 172px;
   }
@@ -617,25 +616,25 @@
     min-width: 105px;
     padding: 20px 0px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container {
     transform: translate(0, -22px);
     width: 105px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons {
     min-width: 105px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit {
     height: 58px;
     width: 52px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete {
     height: 58px;
     width: 53px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container:hover {
     transform: translate(-105px, -20px);
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .trainee_status_text {
     min-width: 105px;
   }
 }
@@ -681,25 +680,25 @@
     min-width: 85px;
     padding: 20px 0px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container {
     transform: translate(0, -22px);
     width: 85px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons {
     min-width: 85px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit {
     height: 58px;
     width: 43px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete {
     height: 58px;
     width: 42px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container:hover {
     transform: translate(-85px, -20px);
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .trainee_status_text {
     min-width: 85px;
   }
 }
@@ -764,34 +763,34 @@
     overflow-clip-margin: 13px;
     padding: 24px 0px 16px 0px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container {
     max-width: 75px;
     transform: translate(0px, -24px);
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons {
     height: 62px;
     min-width: 75px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit {
     height: 62px;
     width: 38px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit .status_edit_tooltip {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .edit .status_edit_tooltip {
     right: 30px;
     top: 3px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete {
     height: 62px;
     width: 37px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete .status_delete_tooltip {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons li .delete .status_delete_tooltip {
     right: -13px;
     top: 3px;
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container:hover {
     transform: translate(-75px, -24px);
   }
-  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
+  * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .trainee_status_text {
     font: normal 400 10px/12px 'Exo2-Regular';
     min-width: 75px;
   }
@@ -826,7 +825,7 @@
 }
 * body footer #footer_section #footer_container:hover {
   background-color: #303878;
-  transition: 0.21s;
+  transition: 0.3s;
 }
 * body footer #footer_section #footer_container h2 {
   color: #ffffff;
@@ -1161,8 +1160,8 @@
     cursor: pointer;
   }
   * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    background-image: url(../img/upload-photo-tab.png);
-    font-size: 0px;
+    background-color: #fff;
+    font: normal 700 60px/95px 'Exo2-Bold';
   }
   * body .modal-dialog .modal-content .modal-header #image_upload {
     display: none;
@@ -1258,10 +1257,6 @@
     max-width: 262px;
     padding-top: 50px;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header,
-  * body .modal .modal-dialog .modal-content .edit-modal-header,
-  * body .fade .modal-dialog .modal-content .edit-modal-header,
-  * body .show .modal-dialog .modal-content .edit-modal-header,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header,
   * body .modal .modal-dialog .modal-content .modal-header,
   * body .fade .modal-dialog .modal-content .modal-header,
@@ -1269,10 +1264,6 @@
     display: block;
     height: 46px;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profileImage,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profileImage,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profileImage,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profileImage,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profileImage,
   * body .modal .modal-dialog .modal-content .modal-header #profileImage,
   * body .fade .modal-dialog .modal-content .modal-header #profileImage,
@@ -1280,18 +1271,6 @@
     height: 58px;
     width: 58px;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #edit-profile-container,
-  * body .show .modal-dialog .modal-content .edit-modal-header #edit-profile-container,
-  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #edit-profile-container,
-  * body .modal .modal-dialog .modal-content .modal-header #edit-profile-container,
-  * body .fade .modal-dialog .modal-content .modal-header #edit-profile-container,
-  * body .show .modal-dialog .modal-content .modal-header #edit-profile-container,
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profile-container,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profile-container,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profile-container,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profile-container,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container,
   * body .modal .modal-dialog .modal-content .modal-header #profile-container,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container,
@@ -1301,36 +1280,12 @@
     height: 58px;
     width: 58px;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container .message,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container .message,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #edit-profile-container .message,
-  * body .show .modal-dialog .modal-content .edit-modal-header #edit-profile-container .message,
-  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #edit-profile-container .message,
-  * body .modal .modal-dialog .modal-content .modal-header #edit-profile-container .message,
-  * body .fade .modal-dialog .modal-content .modal-header #edit-profile-container .message,
-  * body .show .modal-dialog .modal-content .modal-header #edit-profile-container .message,
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profile-container .message,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profile-container .message,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profile-container .message,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profile-container .message,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container .message,
   * body .modal .modal-dialog .modal-content .modal-header #profile-container .message,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container .message,
   * body .show .modal-dialog .modal-content .modal-header #profile-container .message {
     display: none;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container img,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container img,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #edit-profile-container img,
-  * body .show .modal-dialog .modal-content .edit-modal-header #edit-profile-container img,
-  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #edit-profile-container img,
-  * body .modal .modal-dialog .modal-content .modal-header #edit-profile-container img,
-  * body .fade .modal-dialog .modal-content .modal-header #edit-profile-container img,
-  * body .show .modal-dialog .modal-content .modal-header #edit-profile-container img,
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profile-container img,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profile-container img,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profile-container img,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profile-container img,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container img,
   * body .modal .modal-dialog .modal-content .modal-header #profile-container img,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container img,
@@ -1338,57 +1293,19 @@
     height: 50px;
     width: 50px;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container #profile_image,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container #profile_image,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #edit-profile-container #profile_image,
-  * body .show .modal-dialog .modal-content .edit-modal-header #edit-profile-container #profile_image,
-  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #edit-profile-container #profile_image,
-  * body .modal .modal-dialog .modal-content .modal-header #edit-profile-container #profile_image,
-  * body .fade .modal-dialog .modal-content .modal-header #edit-profile-container #profile_image,
-  * body .show .modal-dialog .modal-content .modal-header #edit-profile-container #profile_image,
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profile-container #profile_image,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profile-container #profile_image,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profile-container #profile_image,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profile-container #profile_image,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container #profile_image,
   * body .modal .modal-dialog .modal-content .modal-header #profile-container #profile_image,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container #profile_image,
   * body .show .modal-dialog .modal-content .modal-header #profile-container #profile_image {
     cursor: pointer;
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container .filethumbnail,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #edit-profile-container .filethumbnail,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #edit-profile-container .filethumbnail,
-  * body .show .modal-dialog .modal-content .edit-modal-header #edit-profile-container .filethumbnail,
-  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #edit-profile-container .filethumbnail,
-  * body .modal .modal-dialog .modal-content .modal-header #edit-profile-container .filethumbnail,
-  * body .fade .modal-dialog .modal-content .modal-header #edit-profile-container .filethumbnail,
-  * body .show .modal-dialog .modal-content .modal-header #edit-profile-container .filethumbnail,
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .show .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    font: normal 700 30px/40px 'Exo2-Bold';
+    background-color: #fff;
+    font: normal 700 30px/41px 'Exo2-Bold';
   }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body .show .modal-dialog .modal-content .edit-modal-header #profile-container .filethumbnail,
-  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
-  * body .modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
-  * body .fade .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
-  * body .show .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    background-image: url(../img/upload-photo-mob.png);
-    font-size: 0px;
-  }
-  * body #delete_trainee_modal .modal-dialog .modal-content .edit-modal-header #image_upload,
-  * body .modal .modal-dialog .modal-content .edit-modal-header #image_upload,
-  * body .fade .modal-dialog .modal-content .edit-modal-header #image_upload,
-  * body .show .modal-dialog .modal-content .edit-modal-header #image_upload,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #image_upload,
   * body .modal .modal-dialog .modal-content .modal-header #image_upload,
   * body .fade .modal-dialog .modal-content .modal-header #image_upload,
@@ -1590,6 +1507,9 @@
 * body #delete_trainee_modal .modal-dialog .modal-content .modal-body #trainee_id {
   display: none;
 }
+* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer {
+  margin: 0px 47px;
+}
 * body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_confirm_btn {
   background-color: transparent;
   border-radius: 0px 0px 0px 23px;
@@ -1598,15 +1518,7 @@
   display: inline-block;
   font: normal 400 14px/17px 'Exo2-Regular';
   letter-spacing: 0.6px;
-  margin: 0px auto;
-  padding: 20px 0px 20px 0px;
-  text-align: center;
-  width: 49.1%;
-}
-* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_confirm_btn:hover {
-  background-color: #0ACF83;
-  color: #fff;
-  transition: 0.21s;
+  padding: 20px 36px 20px 0px;
 }
 * body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_cancel_btn {
   background-color: transparent;

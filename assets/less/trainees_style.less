@@ -398,12 +398,12 @@
                                     position: relative;
                                     text-align: center;
 
-                                    span{
+                                    .trainee_status_text{
                                         display: block;
                                         text-align: center;
                                     }
 
-                                    &#status{
+                                    &.status{
 
                                         .edit_delete_container{
                                             align-items: center;
@@ -416,12 +416,12 @@
                                             &:hover{
                                                 transform: translate(-172px, -35px);
 
-                                                #edit_delete_icons{
+                                                .edit_delete_icons{
                                                     visibility: visible;
                                                 }
                                             }
 
-                                            #edit_delete_icons{
+                                            .edit_delete_icons{
                                                 background-color: transparent;
                                                 border-radius: 0px 5px 5px 0px;
                                                 min-width: 172px;
@@ -444,12 +444,12 @@
                                                             color: #fff;
                                                             font: normal 400 10px/14px 'Exo2-Light';
                                                             letter-spacing: 1px;
-                                                            overflow: clip;
-                                                            padding: 1px 3px;
+                                                            padding: 2px;
                                                             position: absolute;
-                                                            right: 77px;
+                                                            right: 97px;
                                                             top: 22px;
                                                             visibility: hidden;
+                                                            width: max-content;
                                                         }
 
                                                         &:hover{
@@ -476,12 +476,11 @@
                                                             color: #fff;
                                                             font: normal 400 10px/14px 'Exo2-Light';
                                                             letter-spacing: 1px;
-                                                            overflow: clip;
-                                                            padding: 1px 3px;
                                                             position: absolute;
                                                             right: -6px;
                                                             top: 22px;
                                                             visibility: hidden;
+                                                            width: max-content;
                                                         }
 
                                                         &:hover{
@@ -498,7 +497,8 @@
                                                 }
                                             }
                                             
-                                            span{
+                                            .trainee_status_text{
+                                                padding: 17px 25px;
                                                 min-width: 172px;
                                                 padding: 17px 25px;
                                             }
@@ -527,7 +527,7 @@
                                     color: #333333;
                                 }
 
-                                #edit_delete_icons{
+                                .edit_delete_icons{
                                     align-items: center;
                                     background-color: #e26139;
                                     color: #fffffff;
@@ -685,14 +685,14 @@
                                         min-width: 172px;
                                         padding: 24px 0px 16px 0px;
     
-                                        &#status{
+                                        &.status{
 
                                             .edit_delete_container{
                                                 height: 100%;
                                                 transform: translate(0, -24px);
                                                 width: 240px;
 
-                                                #edit_delete_icons{
+                                                .edit_delete_icons{
                                                     min-width: 172px;
                                                     width: 172px;
 
@@ -720,7 +720,7 @@
                                                     height: 100%;
                                                     transform: translate(-172px, -24px);
                                                 }
-                                                span{
+                                                .trainee_status_text{
                                                     padding: 0px;
                                                     width: 172px;
                                                 }
@@ -804,13 +804,13 @@
                                         min-width: 105px;
                                         padding: 20px 0px;
     
-                                        &#status{
+                                        &.status{
 
                                             .edit_delete_container{
                                                 transform: translate(0, -22px);
                                                 width: 105px;
 
-                                                #edit_delete_icons{
+                                                .edit_delete_icons{
                                                     min-width: 105px;
 
                                                     li{
@@ -829,7 +829,7 @@
                                                 &:hover{
                                                     transform: translate(-105px, -20px);
                                                 }
-                                                span{
+                                                .trainee_status_text{
                                                     min-width: 105px;
                                                 }
                                             }  
@@ -901,13 +901,13 @@
                                         min-width: 85px;
                                         padding: 20px 0px;
     
-                                        &#status{
+                                        &.status{
 
                                             .edit_delete_container{
                                                 transform: translate(0, -22px);
                                                 width: 85px;
 
-                                                #edit_delete_icons{
+                                                .edit_delete_icons{
                                                     min-width: 85px;
                                                     
                                                     li{
@@ -926,7 +926,7 @@
                                                 &:hover{
                                                     transform: translate(-85px, -20px);
                                                 }
-                                                span{
+                                                .trainee_status_text{
                                                     min-width: 85px;
                                                 }
                                             }  
@@ -1026,13 +1026,13 @@
                                         overflow-clip-margin: 13px;
                                         padding: 24px 0px 16px 0px;
     
-                                        &#status{
+                                        &.status{
 
                                             .edit_delete_container{
                                                 max-width: 75px;
                                                 transform: translate(0px, -24px);
 
-                                                #edit_delete_icons{
+                                                .edit_delete_icons{
                                                     height: 62px;
                                                     min-width: 75px;
 
@@ -1062,7 +1062,7 @@
                                                 &:hover{
                                                     transform: translate(-75px, -24px);
                                                 }
-                                                span{
+                                                .trainee_status_text{
                                                     font: normal 400 10px/12px 'Exo2-Regular';
                                                     min-width: 75px;
                                                 }
@@ -1116,7 +1116,7 @@
 
                     &:hover{
                         background-color: #303878;
-                        transition: 0.21s;
+                        transition: 0.3s;
                     }
                     
                     h2{
@@ -1522,9 +1522,10 @@
                             #profile_image{
                                 cursor: pointer;
                             }
+
                             .filethumbnail{
-                                background-image: url(../img/upload-photo-tab.png);
-                                font-size: 0px;
+                                background-color: #fff;
+                                font: normal 700 60px/95px 'Exo2-Bold';
                             }
                         }
     
@@ -1646,7 +1647,7 @@
         
                     .modal-content{
     
-                        .edit-modal-header, .modal-header{
+                        .modal-header{
                             display: block;
                             height: 46px;
         
@@ -1655,7 +1656,7 @@
                                 width: 58px;
                             }
         
-                            #edit-profile-container, #profile-container{
+                            #profile-container{
                                 border: solid 4px #5B5B5B;
                                 font-size: 35px;
                                 height: 58px;
@@ -1673,15 +1674,10 @@
                                 #profile_image{
                                     cursor: pointer;
                                 }
+
                                 .filethumbnail{
-                                   font: normal 700 30px/40px 'Exo2-Bold';
-                                }
-                            }
-                            
-                            #profile-container{
-                                .filethumbnail{
-                                    background-image: url(../img/upload-photo-mob.png);
-                                    font-size: 0px;
+                                    background-color: #fff;
+                                    font: normal 700 30px/41px 'Exo2-Bold';
                                 }
                             }
         
@@ -1863,6 +1859,7 @@
 
                     }
                     .delete-modal-footer{
+                        margin: 0px 47px;
 
                         .dm_confirm_btn{
                             background-color: transparent;
@@ -1872,16 +1869,7 @@
                             display: inline-block;
                             font: normal 400 14px/17px 'Exo2-Regular';
                             letter-spacing: 0.6px;
-                            margin: 0px auto;
-                            padding: 20px 0px 20px 0px;
-                            text-align: center;
-                            width: 49.1%;
-
-                            &:hover{
-                                background-color: #0ACF83;
-                                color: #fff;
-                                transition: 0.21s;
-                            }
+                            padding: 20px 36px 20px 0px;
                         }
 
                         .dm_cancel_btn{

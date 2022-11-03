@@ -53,14 +53,14 @@ $(document).ready(function(){
 
     /* Adds a new trainee to the trainee list */
     $("body")
-        .on("click", ".save_btn", function(e){
-            e.preventDefault();
+        .on("submit", ".save_btn", function(add){
+            add.preventDefault();
 
-            let trainee_name = $("#trainee_fullname").val();
-            let trainee_specialization = $("#trainee_specialization").val();
-            let trainee_date_started = $("#trainee_date_started").val();
-            let trainee_recruiter = $("#trainee_recruiter").val();
-            let trainee_note = $("#trainee_note").val();
+            let trainee_name = $(".trainee_fullname").val();
+            let trainee_specialization = $(".trainee_specialization").val();
+            let trainee_date_started = $(".trainee_date_started").val();
+            let trainee_recruiter = $(".trainee_recruiter").val();
+            let trainee_note = $(".trainee_note").val();
             let data_id = $("#add_trainee_list .add_trainee_group").length;
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
@@ -73,7 +73,7 @@ $(document).ready(function(){
                 trainee_item_clone.find(".specialization").text(trainee_specialization);
                 trainee_item_clone.find(".date").text(trainee_date_started);
                 trainee_item_clone.find(".recruiter").text(trainee_recruiter);
-                trainee_item_clone.find(".status span").text("Trainee");
+                trainee_item_clone.find(".status .trainee_status_text").text("Trainee");
                 $("#add_trainee_list").append(trainee_item_clone);
 
                 trainee_item_clone.attr({'data-tooltip':trainee_note, 'data-id':data_id, 'id':trainee_id});
@@ -96,9 +96,11 @@ $(document).ready(function(){
                 add_trainee_modal.find(".add_select_validate_input").each((index, element) => {
                     $(element).find("select").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
                 });
-            
+                add_trainee_modal.find(".validate_input").removeClass("error");
+                add_trainee_modal.find(".add_select_validate_input").removeClass("error");
                 $(".alert").show();
             }
+            return false;
         }
     );
     
@@ -123,37 +125,38 @@ $(document).ready(function(){
 
             edit_trainee_modal.find("#trainee_id").text(trainee_id);
             
-            let trainee_name = $(full_trainee_id).find("#name").text();
-            let trainee_specialization = $(full_trainee_id).find("#specialization").text();
-            let trainee_date = $(full_trainee_id).find("#date").text();
-            let trainee_status = $(full_trainee_id).find("#status .edit_delete_container span").text();
+            let trainee_name = $(full_trainee_id).find(".name").text();
+            let trainee_specialization = $(full_trainee_id).find(".specialization").text();
+            let trainee_date = $(full_trainee_id).find(".date").text();
+            let trainee_status = $(full_trainee_id).find(".status .edit_delete_container .trainee_status_text").text();
             let trainee_note = $(full_trainee_id).attr("data-tooltip");
 
-            edit_trainee_modal.find("#trainee_name").val(trainee_name);
-            edit_trainee_modal.find("#trainee_specialization").val(trainee_specialization);
+            edit_trainee_modal.find(".trainee_name").val(trainee_name);
+            edit_trainee_modal.find(".trainee_specialization").val(trainee_specialization);
             edit_trainee_modal.find(".modal_specialization button").attr("title", trainee_specialization);
             edit_trainee_modal.find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
-            edit_trainee_modal.find("#trainee_date").val(trainee_date);
-            edit_trainee_modal.find("#trainee_status").val(trainee_status);
+            edit_trainee_modal.find(".trainee_date").val(trainee_date);
+            edit_trainee_modal.find(".trainee_status").val(trainee_status);
             edit_trainee_modal.find(".modal_status .filter-option-inner-inner").text(trainee_status);
-            edit_trainee_modal.find("#trainee_note").val(trainee_note);
+            edit_trainee_modal.find(".trainee_note").val(trainee_note);
+
+            console.log("#" +trainee_id);
         }
     );
     
     /* Saves new data on Edit Trainee Modal */
     $("body")
-        .on("click", "#edit_save_btn", function(e){
-            e.preventDefault();
+        .on("click", "#edit_save_btn", function(edit){
+            edit.preventDefault();
 
             let edit_modal = $("#edit_trainee_modal");
-            let trainee_id = edit_modal.find("#trainee_id").text();
-            let trainee_id_selector = $("#" +trainee_id);
-
-            let trainee_name = edit_modal.find("#trainee_name").val();
-            let trainee_specialization = edit_modal.find("#trainee_specialization").val();
-            let trainee_date = edit_modal.find("#trainee_date").val();
-            let trainee_status = edit_modal.find("#trainee_status").val();
-            let trainee_note = edit_modal.find("#trainee_note").val();  
+            let trainee_id = edit_modal.find(".trainee_id").text();
+            let trainee_id_selector = $('#' +trainee_id);
+            let trainee_name = edit_modal.find(".trainee_name").val();
+            let trainee_specialization = edit_modal.find(".trainee_specialization").val();
+            let trainee_date = edit_modal.find(".trainee_date").val();
+            let trainee_status = edit_modal.find(".trainee_status").val();
+            let trainee_note = edit_modal.find(".trainee_note").val();  
 
             $(".alert").hide();
 
@@ -161,24 +164,24 @@ $(document).ready(function(){
                 trainee_id_selector.find("#name").text(trainee_name);
                 trainee_id_selector.find("#specialization").text(trainee_specialization);
                 trainee_id_selector.find("#date").text(trainee_date);
-                trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
+                trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text(trainee_status);
                 trainee_id_selector.attr("data-tooltip", trainee_note);
 
                 edit_modal.find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
                 edit_modal.modal('hide');
                 $("#saved_toast").toast('show');
 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Trainee"){
+                if(trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text() == "Trainee"){
                     trainee_id_selector.find("#status").removeClass("employed");
                     trainee_id_selector.find("#status").removeClass("unemployed");
                 }
                 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
+                if(trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text() == "Employed"){
                     trainee_id_selector.find("#status").removeClass("unemployed");
                     trainee_id_selector.find("#status").addClass("employed");
                 }
 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Unemployed"){
+                if(trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text() == "Unemployed"){
                     trainee_id_selector.find("#status").addClass("unemployed");
                 }
             }
@@ -187,7 +190,8 @@ $(document).ready(function(){
                 edit_modal.find(".edit_validate_input").each((index, element) => {
                     $(element).not("div").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");    
                 });
-            
+
+                edit_modal.find(".validate_input").removeClass("error");
                 $(".alert").show();
             }
         }
