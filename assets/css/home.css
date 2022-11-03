@@ -39,6 +39,10 @@
   letter-spacing: 0.6px;
   list-style: none;
 }
+* body header #navbar_section #navbar_container #navbar_list .navbar_item:hover a {
+  opacity: 0.8;
+  transition: 0.21s;
+}
 * body header #navbar_section #navbar_container #navbar_list .navbar_item a {
   color: #ffffff;
   text-decoration: none;
