@@ -49,8 +49,8 @@
 }
 * body header #navbar_section #navbar_container #navbar_list .navbar_item .active {
   color: #ffeb3c;
-  text-decoration: underline;
   text-decoration-thickness: 7px;
+  text-decoration: underline;
 }
 * body header #navbar_section #navbar_container #navbar_list #navbar_home {
   margin-right: 38px;
@@ -166,13 +166,13 @@
   vertical-align: top;
 }
 * body #meet_trainees_section #meet_trainees_container #trainee_list .trainee_item:hover {
-  transition: 0.32s;
   transform: rotate(6.27rad);
+  transition: 0.32s;
 }
 @media screen and (max-width: 1300px) {
   * body #meet_trainees_section #meet_trainees_container {
-    max-width: 1300px;
     margin: 0px auto;
+    max-width: 1300px;
   }
   * body #meet_trainees_section #meet_trainees_container #trainee_list {
     padding: 117px 0px;
@@ -183,8 +183,8 @@
 }
 @media screen and (max-width: 1128px) {
   * body #meet_trainees_section #meet_trainees_container {
-    max-width: 1300px;
     margin: 0px auto;
+    max-width: 1300px;
   }
   * body #meet_trainees_section #meet_trainees_container #trainee_list {
     padding: 117px 0px;
