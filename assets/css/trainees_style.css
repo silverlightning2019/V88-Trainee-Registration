@@ -417,7 +417,7 @@
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .edit_delete_icons {
   align-items: center;
   background-color: #e26139;
-  color: #ffffff;
+  color: #fffffff;
   display: flex;
   height: 100%;
   justify-content: space-around;
@@ -1016,6 +1016,7 @@
   background-color: #EFF7FB;
   height: 36px;
   width: 188px;
+  border: none;
 }
 * body .modal-dialog .modal-content .modal-body .form_container .form_block .error {
   border: 0.5px solid red;

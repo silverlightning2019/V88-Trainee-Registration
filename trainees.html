@@ -23,6 +23,7 @@
     <script src="./assets/js/trainees_script.js"></script>
     <script src="./assets/js/letter_profile.js"></script>
     <script src="./assets/js/vendor/UnoDropZone.js"></script>
+    <script src="./assets/js/add_edit_modal.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
@@ -46,7 +47,7 @@
         <section id="add_trainee_section">
             <div id="add_trainee_container">
                 <div>
-                    <button data-toggle="modal" data-target="#add_trainee_modal" data-bs-placement="top" title="Example" class="example">Add Trainee</button>
+                    <button data-toggle="modal" data-target="#add_trainee_modal" data-bs-placement="top" title="Example" class="example" id="add_trainee_btn_modal">Add Trainee</button>
                     <div id="add_trainee_search">
                         <input id="add_trainee_search_input" type="search" placeholder="Search">
                         <button id="search_icon">
@@ -74,7 +75,7 @@
                                     <span class="trainee_status_text">Trainee</span>
                                     <ul class="edit_delete_icons">
                                         <li>
-                                            <button class="edit" data-toggle="modal" data-target="#edit_trainee_modal">
+                                            <button class="edit" data-toggle="modal" data-target="#add_trainee_modal" id="edit_trainee_btn_modal">
                                                 <i class="fa-solid fa-pen-to-square">
                                                     <span class="status_edit_tooltip">Edit</span>
                                                 </i>
@@ -1308,6 +1309,77 @@
                                     <i class="fa-solid fa-calendar date_icon"></i>
                                 </div>
                             </div>
+                            <div class="form_block" id="recruiter_block">
+                                <label for="recruiter">Recruiter</label>
+                                <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter add_select_validate_input" data-live-search="true" >
+                                    <option data-icon="fa-heart" value="" hidden></option>
+                                    <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
+                                    <option value="Mario Narvaez Jr." data-subtext="Mid Software Engineer">Mario Narvaez Jr.</option>
+                                    <option value="Demy Balanza" data-subtext="Front-End Developer">Demy Balanza</option>
+                                    <option value="Jaybee John Balog" data-subtext="Mid Software Engineer">Jaybee John Balog</option>
+                                    <option value="Jerwin Fernandez" data-subtext="Lead Front-End Engineer">Jerwin Fernandez</option>
+                                    <option value="Jan Dreau Ganggangan"data-subtext="Software Engineer">Jan Dreau Ganggangan</option>
+                                    <option value="Online"data-subtext="Online Adverisement">Online</option>
+                                </select>
+                            </div>
+                            <div class="form_block" id="status_block">
+                                <label for="status">Status</label> 
+                                <select name="status" id="trainee_status" class="selectpicker select_picker modal_status">
+                                    <option value="" hidden></option>
+                                    <option value="Trainee">Trainee</option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="redactor">
+                            <textarea placeholder="Note :" maxlength="150" id="trainee_note" class="validate_input"></textarea>
+                        </div>
+                        <div class="alert" id="fullname_alert">Please fill up all the needed information.</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="add_cancel_btn" class="cancel_btn" data-dismiss="modal" type="reset">Cancel</button>
+                        <button type="submit" class="save_btn" type="button">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="add_trainee_modal" tabindex="-1" aria-labelledby="add_trainee_modal_content" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="#">
+                    <div class="modal-header">
+                        <div id="profile-container" class="file-upload" data-input-name="input1">
+                            <div class="drop-click-zone">
+                                <div class="filethumbnail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form_container">
+                            <div class="form_block">
+                                <label for="fullname">Fullname</label>
+                                <input type="text" name="fullname" id="trainee_fullname" class="input_style validate_input">
+                            </div>
+                            <div class="form_block">
+                                <label for="specialization">Specialization</label>
+                                <select name="specialization" id="trainee_specialization" class="selectpicker select_picker modal_specialization add_select_validate_input">
+                                    <option value="" hidden></option>
+                                    <option value="Front-End" class="">Front-End</option>
+                                    <option value="Back-End">Back-End</option>
+                                    <option value="Fullstack">Fullstack</option>
+                                </select>
+                            </div>
+                            <div class="form_block">
+                                <label for="date">Date Started</label>
+                                <div class="date_picker_container">
+                                    <input type="text" id="trainee_date_started" class="input_style validate_input" placeholder="mm/dd/yyyy">
+                                    <i class="fa-solid fa-calendar date_icon"></i>
+                                </div>
+                            </div>
                             <div class="form_block">
                                 <label for="add_recruiter">Recruiter</label>
                                 <select id="add_recruiter" class="selectpicker show-trick select_picker trainee_recruiter modal_recruiter add_select_validate_input" data-live-search="true" >
@@ -1333,10 +1405,10 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Edit Modal -->
-    <div class="modal fade" id="edit_trainee_modal" tabindex="-1" aria-hidden="true">
+    <!-- <div class="modal fade" id="edit_trainee_modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form id="save_profile_form" action="#">
@@ -1388,7 +1460,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>  -->
 
     <!-- Delete Modal -->
     <div class="modal fade" id="delete_trainee_modal" tabindex="-1" aria-hidden="true">
