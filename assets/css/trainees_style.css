@@ -12,6 +12,7 @@
 }
 * {
   margin: 0px;
+  scroll-behavior: smooth;
 }
 * body {
   background-image: url("../img/full_background.png");
@@ -900,7 +901,8 @@
   cursor: pointer;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-  background-color: #fff;
+  width: 100%;
+  background-image: url(../img/upload-photo.png);
   font: normal 700 80px/105px 'Exo2-Bold';
 }
 * body .modal-dialog .modal-content .modal-header #image_upload {
