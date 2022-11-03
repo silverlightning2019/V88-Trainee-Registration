@@ -388,6 +388,7 @@
 
                                     span{
                                         display: block;
+                                        text-align: center;
                                     }
 
                                     &#status{
@@ -421,7 +422,6 @@
 
                                                     .edit{
                                                         background-color: #00a86b;
-                                                        width: 86px;
                                                         height: 58px;
                                                         margin: 0px;
                                                         width: 86px;
@@ -491,8 +491,7 @@
                                             }
                                             
                                             span{
-                                                min-width: 172px;
-                                                padding: 17px 25px;
+                                                // padding: 17px 25px;
                                                 width: 172px;
                                             }
                                         }
@@ -714,7 +713,6 @@
                                                     transform: translate(-172px, -24px);
                                                 }
                                                 span{
-                                                    min-width: 172px;
                                                     padding: 0px;
                                                     width: 172px;
                                                 }
@@ -812,13 +810,11 @@
 
                                                         .edit{
                                                             height: 58px;
-                                                            min-width: 52px;
                                                             width: 52px;
                                                         }
 
                                                         .delete{
                                                             height: 58px;
-                                                            min-width: 53px;
                                                             width: 53px;
                                                         }
                                                     }
@@ -827,7 +823,6 @@
                                                     transform: translate(-105px, -20px);
                                                 }
                                                 span{
-                                                    min-width: 105px;
                                                     width: 105px;
                                                 }
                                             }  
@@ -913,13 +908,11 @@
 
                                                         .edit{
                                                             height: 58px;
-                                                            min-width: 52px;
                                                             width: 52px;
                                                         }
 
                                                         .delete{
                                                             height: 58px;
-                                                            min-width: 53px;
                                                             width: 53px;
                                                         }
                                                     }
@@ -928,7 +921,6 @@
                                                     transform: translate(-105px, -20px);
                                                 }
                                                 span{
-                                                    min-width: 105px;
                                                     width: 105px;
                                                 }
                                             }  
@@ -959,30 +951,23 @@
                                 border: 2px solid #ffffff;
                                 font: normal 400 10px/12px 'Exo2-Regular';
                                 height: 20px;
-                                max-width: 96px;
+
                                 
                                 input{
-                                    height: 12px;
-                                    padding: 0px;
-                                    width: 75px;
+                                    height: 16px;
+                                    padding: 0px 0px 2px 5px;
+                                    width: 70px;
                                 }
     
                                 button{
-                                    background-color: transparent;
-                                    border: transparent;
-                                    box-shadow: none;
-                                    color: #ffffff;
-                                    margin-bottom: 0px;
-                                    padding: 0px;
 
                                     &:hover{
-                                        background-color: #8db5ff;
-                                        height: 48px;
-                                        transition: 0.5s;
+                                        height: 16px;
                                     }
     
                                     .fa-magnifying-glass{
-                                        padding: 0px;
+                                        border-left: none;
+                                        padding: 0px 3px 0px 3px;
                                     }
         
                                 }
@@ -1030,8 +1015,8 @@
                                     }
     
                                     .status{
-                                        min-height: 62px;
-                                        min-width: 75px;
+                                        height: 62px;
+                                        width: 75px;
                                         padding: 24px 0px 16px 0px;
                                         overflow-clip-margin: 13px;
     
@@ -1041,13 +1026,14 @@
                                                 transform: translate(0px, -24px);
 
                                                 #edit_delete_icons{
-                                                    min-width: 75px;
-                                                    width: 75px;
+                                                    height: 62px;
+                                                    min-width: 85px;
 
                                                     li{
 
                                                         .edit{
-                                                            width: 38px;
+                                                            height: 62px;
+                                                            width: 43px;
 
                                                             .status_edit_tooltip{
                                                                 right: 30px;
@@ -1056,7 +1042,8 @@
                                                         }
 
                                                         .delete{
-                                                            width: 38px;
+                                                            height: 62px;
+                                                            width: 42px;
 
                                                             .status_delete_tooltip{
                                                                 right: -13px;
@@ -1066,12 +1053,11 @@
                                                     }
                                                 }
                                                 &:hover{
-                                                    transform: translate(-75px, -24px);
+                                                    transform: translate(-85px, -24px);
                                                 }
                                                 span{
                                                     font: normal 400 10px/12px 'Exo2-Regular';
-                                                    min-width: 75px;
-                                                    width: 75px;
+                                                    min-width: 85px;
                                                 }
                                             }  
                                         }
@@ -1588,7 +1574,7 @@
                 .modal-dialog{
                     margin: 0px auto;
                     max-width: 262px;
-                    padding-top: 150px;
+                    padding-top: 50px;
         
                     .modal-content{
     
@@ -1736,7 +1722,7 @@
             .modal-dialog{
                 margin: 0px auto;
                 max-width: 262px;
-                padding-top: 150px;
+                padding-top: 50px;
     
                 .modal-content{
 

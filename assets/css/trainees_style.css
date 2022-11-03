@@ -302,6 +302,7 @@
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status span {
   display: block;
+  text-align: center;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container {
   align-items: center;
@@ -388,8 +389,6 @@
   visibility: visible;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-  min-width: 172px;
-  padding: 17px 25px;
   width: 172px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status button {
@@ -556,7 +555,6 @@
     transform: translate(-172px, -24px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-    min-width: 172px;
     padding: 0px;
     width: 172px;
   }
@@ -620,19 +618,16 @@
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
     height: 58px;
-    min-width: 52px;
     width: 52px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
     height: 58px;
-    min-width: 53px;
     width: 53px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
     transform: translate(-105px, -20px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-    min-width: 105px;
     width: 105px;
   }
 }
@@ -687,19 +682,16 @@
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
     height: 58px;
-    min-width: 52px;
     width: 52px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
     height: 58px;
-    min-width: 53px;
     width: 53px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
     transform: translate(-105px, -20px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
-    min-width: 105px;
     width: 105px;
   }
 }
@@ -718,28 +710,18 @@
     border: 2px solid #ffffff;
     font: normal 400 10px/12px 'Exo2-Regular';
     height: 20px;
-    max-width: 96px;
   }
   * body main #add_trainee_section #add_trainee_container > div #add_trainee_search input {
-    height: 12px;
-    padding: 0px;
-    width: 75px;
-  }
-  * body main #add_trainee_section #add_trainee_container > div #add_trainee_search button {
-    background-color: transparent;
-    border: transparent;
-    box-shadow: none;
-    color: #ffffff;
-    margin-bottom: 0px;
-    padding: 0px;
+    height: 16px;
+    padding: 0px 0px 2px 5px;
+    width: 70px;
   }
   * body main #add_trainee_section #add_trainee_container > div #add_trainee_search button:hover {
-    background-color: #8db5ff;
-    height: 48px;
-    transition: 0.5s;
+    height: 16px;
   }
   * body main #add_trainee_section #add_trainee_container > div #add_trainee_search button .fa-magnifying-glass {
-    padding: 0px;
+    border-left: none;
+    padding: 0px 3px 0px 3px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list #add_trainee_group_header {
     font: normal bold 10px/12px 'Exo2-Bold';
@@ -769,8 +751,8 @@
     padding: 24px 0px 16px 0px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status {
-    min-height: 62px;
-    min-width: 75px;
+    height: 62px;
+    width: 75px;
     padding: 24px 0px 16px 0px;
     overflow-clip-margin: 13px;
   }
@@ -778,30 +760,31 @@
     transform: translate(0px, -24px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons {
-    min-width: 75px;
-    width: 75px;
+    height: 62px;
+    min-width: 85px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit {
-    width: 38px;
+    height: 62px;
+    width: 43px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit .status_edit_tooltip {
     right: 30px;
     top: 3px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete {
-    width: 38px;
+    height: 62px;
+    width: 42px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete .status_delete_tooltip {
     right: -13px;
     top: 3px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container:hover {
-    transform: translate(-75px, -24px);
+    transform: translate(-85px, -24px);
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container span {
     font: normal 400 10px/12px 'Exo2-Regular';
-    min-width: 75px;
-    width: 75px;
+    min-width: 85px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::before {
     font: normal 400 10px/12px 'Exo2-Regular';
@@ -1214,7 +1197,7 @@
   * body .show .modal-dialog {
     margin: 0px auto;
     max-width: 262px;
-    padding-top: 150px;
+    padding-top: 50px;
   }
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header,
   * body .modal .modal-dialog .modal-content .modal-header,
@@ -1414,7 +1397,7 @@
   * body .modal-dialog {
     margin: 0px auto;
     max-width: 262px;
-    padding-top: 150px;
+    padding-top: 50px;
   }
   * body .modal-dialog .modal-content .modal-footer {
     display: block;
