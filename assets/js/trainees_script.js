@@ -146,7 +146,7 @@ $(document).ready(function(){
     
     /* Saves new data on Edit Trainee Modal */
     $("body")
-        .on("click", "#edit_save_btn", function(edit){
+        .on("submit", "#edit_save_btn", function(edit){
             edit.preventDefault();
 
             let edit_modal = $("#edit_trainee_modal");
