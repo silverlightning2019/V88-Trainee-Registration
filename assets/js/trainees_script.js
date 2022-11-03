@@ -73,7 +73,7 @@ $(document).ready(function(){
                 trainee_item_clone.find(".specialization").text(trainee_specialization);
                 trainee_item_clone.find(".date").text(trainee_date_started);
                 trainee_item_clone.find(".recruiter").text(trainee_recruiter);
-                trainee_item_clone.find(".status span").text("Trainee");
+                trainee_item_clone.find(".status .trainee_status_text").text("Trainee");
                 $("#add_trainee_list").append(trainee_item_clone);
 
                 trainee_item_clone.attr({'data-tooltip':trainee_note, 'data-id':data_id, 'id':trainee_id});
@@ -96,7 +96,8 @@ $(document).ready(function(){
                 add_trainee_modal.find(".add_select_validate_input").each((index, element) => {
                     $(element).find("select").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
                 });
-            
+                add_trainee_modal.find(".validate_input").removeClass("error");
+                add_trainee_modal.find(".add_select_validate_input").removeClass("error");
                 $(".alert").show();
             }
         }
@@ -126,7 +127,7 @@ $(document).ready(function(){
             let trainee_name = $(full_trainee_id).find("#name").text();
             let trainee_specialization = $(full_trainee_id).find("#specialization").text();
             let trainee_date = $(full_trainee_id).find("#date").text();
-            let trainee_status = $(full_trainee_id).find("#status .edit_delete_container span").text();
+            let trainee_status = $(full_trainee_id).find("#status .edit_delete_container .trainee_status_text").text();
             let trainee_note = $(full_trainee_id).attr("data-tooltip");
 
             edit_trainee_modal.find("#trainee_name").val(trainee_name);
@@ -161,24 +162,24 @@ $(document).ready(function(){
                 trainee_id_selector.find("#name").text(trainee_name);
                 trainee_id_selector.find("#specialization").text(trainee_specialization);
                 trainee_id_selector.find("#date").text(trainee_date);
-                trainee_id_selector.find("#status .edit_delete_container span").text(trainee_status);
+                trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text(trainee_status);
                 trainee_id_selector.attr("data-tooltip", trainee_note);
 
                 edit_modal.find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
                 edit_modal.modal('hide');
                 $("#saved_toast").toast('show');
 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Trainee"){
+                if(trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text() == "Trainee"){
                     trainee_id_selector.find("#status").removeClass("employed");
                     trainee_id_selector.find("#status").removeClass("unemployed");
                 }
                 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Employed"){
+                if(trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text() == "Employed"){
                     trainee_id_selector.find("#status").removeClass("unemployed");
                     trainee_id_selector.find("#status").addClass("employed");
                 }
 
-                if(trainee_id_selector.find("#status .edit_delete_container span").text() == "Unemployed"){
+                if(trainee_id_selector.find("#status .edit_delete_container .trainee_status_text").text() == "Unemployed"){
                     trainee_id_selector.find("#status").addClass("unemployed");
                 }
             }
@@ -187,7 +188,8 @@ $(document).ready(function(){
                 edit_modal.find(".edit_validate_input").each((index, element) => {
                     $(element).not("div").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");    
                 });
-            
+
+                edit_modal.find(".validate_input").removeClass("error");
                 $(".alert").show();
             }
         }
