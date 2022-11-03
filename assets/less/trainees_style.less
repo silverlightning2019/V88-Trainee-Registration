@@ -443,15 +443,13 @@
                                                             border-radius: 2px;
                                                             color: #fff;
                                                             font: normal 400 10px/14px 'Exo2-Light';
-                                                            height: 14px;
-                                                            height: 15px;
                                                             letter-spacing: 1px;
+                                                            overflow: clip;
+                                                            padding: 1px 3px;
                                                             position: absolute;
                                                             right: 77px;
                                                             top: 22px;
                                                             visibility: hidden;
-                                                            width: 35px;
-                                                            width: 38px;
                                                         }
 
                                                         &:hover{
@@ -477,15 +475,13 @@
                                                             border-radius: 2px;
                                                             color: #fff;
                                                             font: normal 400 10px/14px 'Exo2-Light';
-                                                            height: 14px;
-                                                            height: 15px;
                                                             letter-spacing: 1px;
+                                                            overflow: clip;
+                                                            padding: 1px 3px;
                                                             position: absolute;
                                                             right: -6px;
                                                             top: 22px;
                                                             visibility: hidden;
-                                                            width: 38px;
-                                                            width: 44px;
                                                         }
 
                                                         &:hover{
@@ -1119,7 +1115,7 @@
                     text-align: center;
                     &:hover{
                         background-color: #303878;
-                        transition: 0.3s;
+                        transition: 0.21s;
                     }
                     
                     h2{
@@ -1516,10 +1512,9 @@
                             #profile_image{
                                 cursor: pointer;
                             }
-
                             .filethumbnail{
-                                background-color: #fff;
-                                font: normal 700 60px/95px 'Exo2-Bold';
+                                background-image: url(../img/upload-photo-tab.png);
+                                font-size: 0px;
                             }
                         }
     
@@ -1641,7 +1636,7 @@
         
                     .modal-content{
     
-                        .modal-header{
+                        .edit-modal-header, .modal-header{
                             display: block;
                             height: 46px;
         
@@ -1650,7 +1645,7 @@
                                 width: 58px;
                             }
         
-                            #profile-container{
+                            #edit-profile-container, #profile-container{
                                 border: solid 4px #5B5B5B;
                                 font-size: 35px;
                                 height: 58px;
@@ -1668,10 +1663,15 @@
                                 #profile_image{
                                     cursor: pointer;
                                 }
-
                                 .filethumbnail{
-                                    background-color: #fff;
-                                    font: normal 700 30px/41px 'Exo2-Bold';
+                                   font: normal 700 30px/40px 'Exo2-Bold';
+                                }
+                            }
+                            
+                            #profile-container{
+                                .filethumbnail{
+                                    background-image: url(../img/upload-photo-mob.png);
+                                    font-size: 0px;
                                 }
                             }
         
@@ -1853,7 +1853,7 @@
 
                     }
                     .delete-modal-footer{
-                        margin: 0px 47px;
+                        // margin: 0px 47px;
 
                         .dm_confirm_btn{
                             background-color: transparent;
@@ -1861,15 +1861,38 @@
                             color: #0ACF83;
                             font: normal 400 14px/17px 'Exo2-Regular';
                             letter-spacing: 0.6px;
-                            padding: 20px 36px 20px 0px;
+                            width: 49.1%;
+                            padding: 20px 0px 20px 0px;
+                            border-radius: 0px 0px 0px 23px;
+                            text-align: center;
+                            margin: 0px auto;
+                            display: inline-block;
+
+                            &:hover{
+                                background-color: #0ACF83;
+                                color: #fff;
+                                transition: 0.21s;
+                            }
                         }
 
                         .dm_cancel_btn{
                             background-color: transparent;
                             border: none;
-                            color: #EF5353;
                             font: normal 400 14px/17px 'Exo2-Regular';
                             letter-spacing: 0.6px;
+                            width: 49.14%;
+                            padding: 20px 0px 20px 0px;
+                            border-radius: 0px 0px 23px 0px;
+                            color: #EF5353;
+                            text-align: center;
+                            margin: 0px auto;
+                            display: inline-block;
+
+                            &:hover{
+                                background-color: #EF5353;
+                                color: #fff;
+                                transition: 0.21s;
+                            }
                         }      
                     }
                 }
