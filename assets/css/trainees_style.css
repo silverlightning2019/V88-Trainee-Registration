@@ -351,15 +351,13 @@
   border-radius: 2px;
   color: #fff;
   font: normal 400 10px/14px 'Exo2-Light';
-  height: 14px;
-  height: 15px;
   letter-spacing: 1px;
+  overflow: clip;
+  padding: 1px 3px;
   position: absolute;
   right: 77px;
   top: 22px;
   visibility: hidden;
-  width: 35px;
-  width: 38px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .edit:hover {
   margin: 0px;
@@ -381,15 +379,13 @@
   border-radius: 2px;
   color: #fff;
   font: normal 400 10px/14px 'Exo2-Light';
-  height: 14px;
-  height: 15px;
   letter-spacing: 1px;
+  overflow: clip;
+  padding: 1px 3px;
   position: absolute;
   right: -6px;
   top: 22px;
   visibility: hidden;
-  width: 38px;
-  width: 44px;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status#status .edit_delete_container #edit_delete_icons li .delete:hover {
   background-color: #de4517;
