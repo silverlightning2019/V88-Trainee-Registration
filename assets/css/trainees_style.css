@@ -976,7 +976,7 @@
   width: 188px;
   border: none;
 }
-* body .modal-dialog .modal-content .modal-body .form_container .form_block .error {
+* body .modal-dialog .modal-content .modal-body .form_container .form_block .input_error {
   border: 0.5px solid red;
 }
 * body .modal-dialog .modal-content .modal-body .alert {
@@ -1004,7 +1004,7 @@
   text-align: left;
   width: 100%;
 }
-* body .modal-dialog .modal-content .modal-body .redactor .error {
+* body .modal-dialog .modal-content .modal-body .redactor .input_error {
   border: 0.5px solid red;
 }
 * body .modal-dialog .modal-content .modal-footer {
