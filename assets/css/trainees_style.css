@@ -906,7 +906,7 @@
   font: normal 700 80px/105px 'Exo2-Bold';
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .font_size {
-  font-size: 0px;
+  font-size: 80px;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon {
   background-image: url("../img/upload-photo.png");

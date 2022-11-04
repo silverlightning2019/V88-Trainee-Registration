@@ -17,13 +17,6 @@ $(document).ready(function(){
         $("#image_upload").click();
     });
     
-    function fasterPreview( uploader ) {
-        if ( uploader.files && uploader.files[0] ){
-            $('#profile_image').attr('src', 
-            window.URL.createObjectURL(uploader.files[0]) );
-        }
-    }
-    
     $("#image_upload").change(function(){
         fasterPreview( this );
     });
@@ -148,37 +141,6 @@ function submitTraineeModal(e){
     }
 
     return false;
-    // 
-
-    //     if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != "" && trainee_note != ""){
-    //         
-    //     }
-    //     else{
-    //         trainee_modal.find(".validate_input").each((index, element) => {
-    //             $(element).val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
-    //         });
-    //         trainee_modal.find(".select_validate_input").each((index, element) => {
-    //             $(element).find("select").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
-    //         });
-            
-    //         $(".alert").show();
-    //     }
-    // }
-    // else{
-    //     
-
-    //     if(trainee_name != "" && trainee_specialization != "" && trainee_date != "" && trainee_status != "" && trainee_note != ""){
-    //         
-    //     }
-    //     else{
-
-    //         trainee_modal.find(".validate_input").each((index, element) => {
-    //             $(element).val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
-    //         });
-            
-    //         $(".alert").show();
-    //     }
-    // }
 }
 
 /* DOCU: Opens Trainee Modal for editing <br />
@@ -190,11 +152,6 @@ function openTraineeModalForEdit(e){
     let trainee_modal = $("#trainee_modal");
     let trainee_id = $(this).closest(".add_trainee_group").attr("id");
     let full_trainee_id = "#"+trainee_id;
-    let filethumbnail = $(".filethumbnail");
-    let firstName = $('#trainee_name').val();
-    let intials = firstName.charAt(0);
-    let profileimage = filethumbnail.text(intials);
-
     trainee_modal.find(".trainee_id").text(trainee_id);
     
     let trainee_name = $(full_trainee_id).find(".name").text();
@@ -217,6 +174,11 @@ function openTraineeModalForEdit(e){
     trainee_modal.find(".modal_status button").attr("title", trainee_status);
     trainee_modal.find(".modal_status .filter-option-inner-inner").text(trainee_status);
     trainee_modal.find("#trainee_note").val(trainee_note);
+    
+    let filethumbnail = trainee_modal.find(".filethumbnail");
+    let firstName = trainee_modal.find("#trainee_name").val();
+    let intials = firstName.charAt(0);
+    let profileimage = filethumbnail.text(intials);
     
     filethumbnail.removeClass("font_size");
     filethumbnail.removeClass("upload_image_icon");
@@ -300,3 +262,11 @@ function addsAutoScrollOnSearchBar(){
         }
     );
 }
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+        $('#profile_image').attr('src', 
+        window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
