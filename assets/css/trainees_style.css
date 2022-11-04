@@ -937,7 +937,8 @@
   width: 150px;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .message {
-  display: none;
+  display: block;
+  font: normal 700 60px/95px 'Exo2-Bold';
 }
 * body .modal-dialog .modal-content .modal-header #profile-container img {
   height: 130px;
@@ -1159,8 +1160,8 @@
     cursor: pointer;
   }
   * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    background-color: #fff;
-    font: normal 700 60px/95px 'Exo2-Bold';
+    background-image: url(../img/upload-photo-tab.png);
+    font-size: 0px;
   }
   * body .modal-dialog .modal-content .modal-header #image_upload {
     display: none;
@@ -1302,8 +1303,8 @@
   * body .modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .show .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    background-color: #fff;
-    font: normal 700 30px/41px 'Exo2-Bold';
+    background-image: url(../img/upload-photo-mob.png);
+    font-size: 0px;
   }
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #image_upload,
   * body .modal .modal-dialog .modal-content .modal-header #image_upload,
