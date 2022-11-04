@@ -1473,9 +1473,6 @@
 * body #delete_trainee_modal .modal-dialog .modal-content .modal-body #trainee_id {
   display: none;
 }
-* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer {
-  margin: 0px 47px;
-}
 * body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_confirm_btn {
   background-color: transparent;
   border-radius: 0px 0px 0px 23px;
@@ -1484,7 +1481,13 @@
   display: inline-block;
   font: normal 400 14px/17px 'Exo2-Regular';
   letter-spacing: 0.6px;
-  padding: 20px 36px 20px 0px;
+  padding: 20px 0px;
+  width: 49.12%;
+}
+* body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_confirm_btn:hover {
+  background-color: #0ACF83;
+  color: #fff;
+  transition: 0.21s;
 }
 * body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_cancel_btn {
   background-color: transparent;
@@ -1495,9 +1498,9 @@
   font: normal 400 14px/17px 'Exo2-Regular';
   letter-spacing: 0.6px;
   margin: 0px auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px;
   text-align: center;
-  width: 49.14%;
+  width: 49.12%;
 }
 * body #delete_trainee_modal .modal-dialog .modal-content .delete-modal-footer .dm_cancel_btn:hover {
   background-color: #EF5353;
