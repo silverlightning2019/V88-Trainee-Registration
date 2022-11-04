@@ -1,9 +1,16 @@
 $(document).ready(function(){
+
+    /* Sets contains() to be case insensitive.  */
     jQuery.expr[':'].contains = function(a, i, m) {
         return jQuery(a).text().toUpperCase()
             .indexOf(m[3].toUpperCase()) >= 0;
     };
-    
+
+    /* Shows button at lower right side when window is scrolled at 20px and above  */
+    $(window).scroll(function () {
+        $(this).scrollTop()>20 ? $("#back_to_top_button").removeClass("hidden") : $("#back_to_top_button").addClass("hidden");
+    });
+
     $("body")
         .on("submit", "#trainee_modal", submitTraineeModal)
         .on("click", ".edit", openTraineeModalForEdit)
@@ -11,6 +18,13 @@ $(document).ready(function(){
         .on("click", ".delete", openDeleteModal)
         .on("click", ".dm_confirm_btn", deleteTrainee)
         .on("click", "#back_to_top_button", scrollBackToTop)
+});
+
+$(document).ready(function(){
+
+    $("#add_trainee_search_input")
+        .on("keypress", addsKeypressEventOnSearchBar)
+        .on("input", addsAutoScrollOnSeachBar)
 });
 
 /* DOCU: Submits Trainee Modal <br />
@@ -193,38 +207,33 @@ function scrollBackToTop(){
     }, 1);
 }
 
-$(document).ready(function(){
+/* DOCU: Adds keypress event to search bar <br />
+ * Triggered by: .on("keypress", addsKeypressEventOnSearchBar) <br />
+ * Last Updated Date: November 4, 2022
+ * @author: Silver  
+ */
+function addsKeypressEventOnSearchBar(){
+    let keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        let value = $(this).val();
+        $("html, body").animate({
+            scrollTop: $("li:contains("+value+")")?.offset()?.top
+        }, 1);
+    }
+}
 
-    /* Sets contains() to be case insensitive.  */
-    
-
-    /* Shows button at lower right side when window is scrolled at 20px and above  */
-    $(window).scroll(function () {
-        $(this).scrollTop()>20 ? $("#back_to_top_button").removeClass("hidden") : $("#back_to_top_button").addClass("hidden");
-    });
-
-    /* Adds keypress event on search bar  */
-    $("#add_trainee_search_input").on("keypress", function(event){
-        let keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
-            let value = $(this).val();
+/* DOCU: Adds auto scroll search feature on search bar <br />
+ * Triggered by: .on("input", addsAutoScrollOnSeachBar) <br />
+ * Last Updated Date: November 4, 2022
+ * @author: Silver  
+ */
+function addsKeypressEventOnSearchBar(){
+    let value = $(this).val();
+    $("#search_icon")
+        .on("click", function (){
             $("html, body").animate({
                 scrollTop: $("li:contains("+value+")")?.offset()?.top
             }, 1);
         }
-    });
-    
-    /* Adds auto scroll search feature on search bar.  */
-    $("#add_trainee_search_input")
-        .on("input", function(){
-            let value = $(this).val();
-            $("#search_icon")
-                .on("click", function (){
-                    $("html, body").animate({
-                        scrollTop: $("li:contains("+value+")")?.offset()?.top
-                    }, 1);
-                }
-            );
-        }
     );
-});
+}
