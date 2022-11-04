@@ -13,24 +13,6 @@ $(document).ready(function(){
         $(this).scrollTop()>20 ? $("#back_to_top_button").removeClass("hidden") : $("#back_to_top_button").addClass("hidden");
     });
 
-    $("body")
-        .on("click", "#trainee_btn_modal", openTraineeModalForAdd)
-        .on("submit", "#trainee_modal", submitTraineeModal)
-        .on("click", ".edit", openTraineeModalForEdit)
-        .on("click", "#cancel_btn", closeTraineeModal)
-        .on("click", ".delete", openDeleteModal)
-        .on("click", ".dm_confirm_btn", deleteTrainee)
-        .on("click", "#back_to_top_button", scrollBackToTop)
-});
-
-$(document).ready(function(){
-
-    $("#add_trainee_search_input")
-        .on("keypress", addsKeypressEventOnSearchBar)
-        .on("input", addsAutoScrollOnSearchBar)
-});
-
-$(document).ready(function(){
     $("#profile_image").click(function(e) {
         $("#image_upload").click();
     });
@@ -46,7 +28,18 @@ $(document).ready(function(){
         fasterPreview( this );
     });
     UnoDropZone.init();
-})
+
+    $("body")
+        .on("click", "#trainee_btn_modal", openTraineeModalForAdd)
+        .on("submit", "#trainee_form", submitTraineeModal)
+        .on("click", ".edit", openTraineeModalForEdit)
+        .on("click", "#cancel_btn", closeTraineeModal)
+        .on("click", ".delete", openDeleteModal)
+        .on("click", ".dm_confirm_btn", deleteTrainee)
+        .on("click", "#back_to_top_button", scrollBackToTop)
+        .on("keypress", "#add_trainee_search_input", addsKeypressEventOnSearchBar)
+        .on("input", "#add_trainee_search_input", addsAutoScrollOnSearchBar)
+});
 
 /* DOCU: Opens Trainee Modal for adding <br />
  * Triggered by: .on("click", "#trainee_btn_modal", openTraineeModalForAdd) <br />
@@ -255,7 +248,7 @@ function scrollBackToTop(){
 }
 
 /* DOCU: Adds keypress event to search bar <br />
- * Triggered by: .on("keypress", addsKeypressEventOnSearchBar) <br />
+ * Triggered by: .on("keypress", "#add_trainee_search_input", addsKeypressEventOnSearchBar) <br />
  * Last Updated Date: November 4, 2022
  * @author: Silver  
  */
@@ -270,7 +263,7 @@ function addsKeypressEventOnSearchBar(){
 }
 
 /* DOCU: Adds auto scroll search feature on search bar <br />
- * Triggered by: .on("input", addsAutoScrollOnSeachBar) <br />
+ * Triggered by: .on("input", "#add_trainee_search_input", addsAutoScrollOnSeachBar) <br />
  * Last Updated Date: November 4, 2022
  * @author: Silver  
  */
