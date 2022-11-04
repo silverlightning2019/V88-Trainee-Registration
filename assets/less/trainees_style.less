@@ -1157,62 +1157,6 @@
             max-width: 390px;
 
             .modal-content{
-                .edit-modal-header{
-                    background-color: #5BA3FF;
-                    display: block;
-                    height: 115px;
-                    padding: 15px;
-
-                    #profileImage {
-                        background: #512DA8;
-                        border-radius: 50%;
-                        color: #fff;
-                        font-size: 35px;
-                        height: 150px;
-                        line-height: 150px;
-                        margin: 0px auto;
-                        text-align: center;
-                        width: 150px;
-                    }
-
-                    #edit-profile-container{
-                        -moz-border-radius: 50%;
-                        -ms-border-radius: 50%;
-                        -o-border-radius: 50%;
-                        -webkit-border-radius: 50%;
-                        border-radius: 50%;
-                        border: solid 10px #5B5B5B ;
-                        color: #5B5B5B;
-                        font-size: 35px;
-                        height: 150px;
-                        margin: 0px auto;
-                        overflow: clip;
-                        text-align: center;
-                        width: 150px;
-
-                        .message{
-                            display: none;
-                        }
-
-                        img{
-                            height: 130px;
-                            width: 130px;
-                        }
-
-                        #profile_image{
-                            cursor: pointer;
-                        }
-
-                        .filethumbnail{
-                            background-color: #fff;
-                            font: normal 700 80px/105px 'Exo2-Bold';
-                        }
-                    }
-
-                    #image_upload{
-                        display: none;
-                    }
-                }
                 .modal-header{
                     background-color: #5BA3FF;
                     display: block;
@@ -1230,6 +1174,10 @@
                         width: 150px;
                     }
 
+                    .upload_icon{
+                        background-image: url("../img/upload-photo.png");
+                    }
+
                     #profile-container{
                         -moz-border-radius: 50%;
                         -ms-border-radius: 50%;
@@ -1242,14 +1190,13 @@
                         height: 150px;
                         margin: 0px auto;
                         overflow: clip;
-                        // pointer-events: none;
                         text-align: center;
                         width: 150px;
 
                         .message{
-                            // display: none;
-                            display: block;
-                            font: normal 700 60px/95px 'Exo2-Bold';
+                            display: none;
+                            // display: block;
+                            // font: normal 700 60px/95px 'Exo2-Bold';
                         }
 
                         img{
@@ -1262,7 +1209,16 @@
                         }
 
                         .filethumbnail{
-                            font-size: 80px;
+                            background-color: #fff;
+                            font: normal 700 80px/105px 'Exo2-Bold';
+                        }
+
+                        .font_size{
+                            font-size: 0px;
+                        }
+
+                        .upload_image_icon{
+                            background-image: url("../img/upload-photo.png");
                         }
                     }
 
@@ -1527,10 +1483,12 @@
                             }
 
                             .filethumbnail{
-                                background-image: url(../img/upload-photo-tab.png);
-                                font-size: 0px; 
-                                // background-color: #fff;
-                                // font: normal 700 60px/95px 'Exo2-Bold';
+                                background-color: #fff;
+                                font: normal 700 60px/95px 'Exo2-Bold';
+                            }
+
+                            .upload_image_icon{
+                                background-image: url("../img/upload-photo-tab.png");
                             }
                         }
     
@@ -1681,10 +1639,12 @@
                                 }
 
                                 .filethumbnail{
-                                    background-image: url(../img/upload-photo-mob.png);
-                                    font-size: 0px; 
-                                    // background-color: #fff;
-                                    // font: normal 700 30px/41px 'Exo2-Bold';
+                                    background-color: #fff;
+                                    font: normal 700 30px/41px 'Exo2-Bold';
+                                }
+
+                                .upload_image_icon{
+                                    background-image: url("../img/upload-photo-mob.png");
                                 }
                             }
         
