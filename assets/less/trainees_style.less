@@ -23,6 +23,7 @@
         background-size: cover;
         height: 1px;
 
+
         header{
 
             >section{
@@ -447,7 +448,7 @@
                                                             letter-spacing: 1px;
                                                             padding: 1px 3px;
                                                             position: absolute;
-                                                            right: 92px;
+                                                            right: 82px;
                                                             top: 22px;
                                                             visibility: hidden;
                                                             width: max-content;
@@ -1155,272 +1156,279 @@
         }
 
         // ADD & EDIT MODAL //
-        .modal-dialog{
-            margin-top: 100px;
-            max-width: 390px;
+        .modal{
+            // position: absolute;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%, -50%);
 
-            .modal-content{
-                .modal-header{
-                    background-color: #5BA3FF;
-                    display: block;
-                    height: 115px;
-
-                    #profileImage {
-                        background: #512DA8;
-                        border-radius: 50%;
-                        color: #fff;
-                        font-size: 35px;
-                        height: 150px;
-                        line-height: 150px;
-                        margin: 0px auto;
-                        text-align: center;
-                        width: 150px;
-                    }
-
-                    .upload_icon{
-                        background-image: url("../img/upload-photo.png");
-                    }
-
-                    #profile-container{
-                        -moz-border-radius: 50%;
-                        -ms-border-radius: 50%;
-                        -o-border-radius: 50%;
-                        -webkit-border-radius: 50%;
-                        border-radius: 50%;
-                        border: solid 10px #5B5B5B ;
-                        color: #5B5B5B;
-                        font-size: 35px;
-                        height: 150px;
-                        margin: 0px auto;
-                        overflow: clip;
-                        text-align: center;
-                        width: 150px;
-
-                        .message{
-                            display: none;
-                            // display: block;
-                            // font: normal 700 60px/95px 'Exo2-Bold';
+            .modal-dialog{
+                // margin-top: 100px;
+                max-width: 390px;
+    
+                .modal-content{
+                    .modal-header{
+                        background-color: #5BA3FF;
+                        display: block;
+                        height: 115px;
+    
+                        #profileImage {
+                            background: #512DA8;
+                            border-radius: 50%;
+                            color: #fff;
+                            font-size: 35px;
+                            height: 150px;
+                            line-height: 150px;
+                            margin: 0px auto;
+                            text-align: center;
+                            width: 150px;
                         }
-
-                        img{
-                            height: 130px;
-                            width: 130px;
-                        }
-
-                        #profile_image{
-                            cursor: pointer;
-                        }
-
-                        .filethumbnail{
-                            background-color: #fff;
-                            font: normal 700 80px/105px 'Exo2-Bold';
-                        }
-
-                        .font_size{
-                            font-size: 0px;
-                        }
-
-                        .upload_image_icon{
+    
+                        .upload_icon{
                             background-image: url("../img/upload-photo.png");
                         }
-                    }
-
-                    #image_upload{
-                        display: none;
-                    }
-                }
-
-                .modal-body{
-                    padding: 66px 35px 0px 35px;
-
-                    .form_container{
-
-                        .form_block{
-                            display: flex;
-                            justify-content: space-between;
-
-                            label{
-                                color: #7C7D7D;
-                                font: normal 400 14px/41px 'Exo2-Regular';
-                                letter-spacing: 0.6px;
+    
+                        #profile-container{
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            border-radius: 50%;
+                            border: solid 10px #5B5B5B ;
+                            color: #5B5B5B;
+                            font-size: 35px;
+                            height: 150px;
+                            margin: 0px auto;
+                            overflow: clip;
+                            text-align: center;
+                            width: 150px;
+    
+                            .message{
+                                display: none;
+                                // display: block;
+                                // font: normal 700 60px/95px 'Exo2-Bold';
                             }
-
-                            .input_style{
-                                background-color: #EFF7FB;
-                                border-radius: 2px;
-                                border: transparent;
-                                color: #999;
-                                font: normal 400 14px/17px 'Exo2-Regular';
-                                height: 40px;
-                                letter-spacing: 0.6px;
-                                margin-bottom: 10px;
-                                padding: 0px 10px;
-                                width: 192px;
+    
+                            img{
+                                height: 130px;
+                                width: 130px;
                             }
-                            
-                            
-                            .date_picker_container{
-                                display: inline-block;
-                                position: relative;
-
-                                .date_icon{
-                                    color: #999;
-                                    font-size: 10px;
-                                    height: 5px;
-                                    position: absolute;
-                                    right: 21px;
-                                    top: 11px;
-                                    width: 5px;
+    
+                            #profile_image{
+                                cursor: pointer;
+                            }
+    
+                            .filethumbnail{
+                                background-color: #fff;
+                                font: normal 700 80px/105px 'Exo2-Bold';
+                            }
+    
+                            .font_size{
+                                font-size: 0px;
+                            }
+    
+                            .upload_image_icon{
+                                background-image: url("../img/upload-photo.png");
+                            }
+                        }
+    
+                        #image_upload{
+                            display: none;
+                        }
+                    }
+    
+                    .modal-body{
+                        padding: 66px 35px 0px 35px;
+    
+                        .form_container{
+    
+                            .form_block{
+                                display: flex;
+                                justify-content: space-between;
+    
+                                label{
+                                    color: #7C7D7D;
+                                    font: normal 400 14px/41px 'Exo2-Regular';
+                                    letter-spacing: 0.6px;
                                 }
-                            }
-
     
-                            #datepicker{
-                                color: #999;
-                            }
-    
-                            select, .select_picker{
-                                background-color: #EFF7FB;
-                                border-radius: 2px;
-                                border: transparent;
-                                color: #333333;
-                                font: normal 400 14px/17px 'Exo2-Regular';
-                                height: 40px;
-                                letter-spacing: 0.6px;
-                                margin-bottom: 10px;
-                                padding: 0px;
-                                text-align: left;
-                                width: 192px;
-
-                                .filter-option-inner-inner{
+                                .input_style{
+                                    background-color: #EFF7FB;
+                                    border-radius: 2px;
+                                    border: transparent;
                                     color: #999;
                                     font: normal 400 14px/17px 'Exo2-Regular';
+                                    height: 40px;
+                                    letter-spacing: 0.6px;
+                                    margin-bottom: 10px;
+                                    padding: 0px 10px;
+                                    width: 192px;
+                                }
+                                
+                                
+                                .date_picker_container{
+                                    display: inline-block;
+                                    position: relative;
+    
+                                    .date_icon{
+                                        color: #999;
+                                        font-size: 10px;
+                                        height: 5px;
+                                        position: absolute;
+                                        right: 21px;
+                                        top: 11px;
+                                        width: 5px;
+                                    }
+                                }
+    
+        
+                                #datepicker{
+                                    color: #999;
+                                }
+        
+                                select, .select_picker{
+                                    background-color: #EFF7FB;
+                                    border-radius: 2px;
+                                    border: transparent;
+                                    color: #333333;
+                                    font: normal 400 14px/17px 'Exo2-Regular';
+                                    height: 40px;
+                                    letter-spacing: 0.6px;
+                                    margin-bottom: 10px;
+                                    padding: 0px;
+                                    text-align: left;
+                                    width: 192px;
+    
+                                    .filter-option-inner-inner{
+                                        color: #999;
+                                        font: normal 400 14px/17px 'Exo2-Regular';
+                                    }
+                                }
+                                
+                                .btn{
+                                    background-color: #EFF7FB;
+                                    height: 36px;
+                                    width: 188px;
+                                    border: none;
+                                }
+    
+                                .input_error{
+                                    border: 0.5px solid red;
                                 }
                             }
-                            
-                            .btn{
+                        }
+    
+                        .alert{
+                            color: #ff0000;
+                            display: none;
+                            font: normal 50 14px/17px 'Exo2-Regular';
+                            padding: 0px;	
+                        }
+    
+                        .redactor{
+                            display: block;
+    
+                            textarea{
                                 background-color: #EFF7FB;
-                                height: 36px;
-                                width: 188px;
-                                border: none;
+                                border-radius: 2px;
+                                border: transparent;
+                                color: #999;
+                                display: block;
+                                font: normal 400 14px/17px 'Exo2-Regular';
+                                height: 100px;
+                                letter-spacing: 0.6px;
+                                margin-bottom: 10px;
+                                overflow: auto;
+                                padding: 10px 10px;
+                                resize: none;
+                                text-align: left;
+                                width: 100%;
                             }
-
+                            
                             .input_error{
                                 border: 0.5px solid red;
                             }
                         }
                     }
-
-                    .alert{
-                        color: #ff0000;
-                        display: none;
-                        font: normal 50 14px/17px 'Exo2-Regular';
-                        padding: 0px;	
-                    }
-
-                    .redactor{
-                        display: block;
-
-                        textarea{
-                            background-color: #EFF7FB;
-                            border-radius: 2px;
-                            border: transparent;
-                            color: #999;
-                            display: block;
-                            font: normal 400 14px/17px 'Exo2-Regular';
-                            height: 100px;
+    
+                    .modal-footer{
+                        border: none;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 22px 35px 35px 35px;
+    
+                        .cancel_btn{
+                            background-color: #ffffff;
+                            border: none;
+                            color: #EF5353;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            height: 36px;
                             letter-spacing: 0.6px;
-                            margin-bottom: 10px;
-                            overflow: auto;
-                            padding: 10px 10px;
-                            resize: none;
-                            text-align: left;
-                            width: 100%;
-                        }
-                        
-                        .input_error{
-                            border: 0.5px solid red;
-                        }
-                    }
-                }
-
-                .modal-footer{
-                    border: none;
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 22px 35px 35px 35px;
-
-                    .cancel_btn{
-                        background-color: #ffffff;
-                        border: none;
-                        color: #EF5353;
-                        font: normal 400 14px/8px 'Exo2-Regular';
-                        height: 36px;
-                        letter-spacing: 0.6px;
-                        margin: 0px;
-                        transition: 0.3s;
-                        width: 130px;
-
-                        &:hover{
-                            background-color: #E26139;
-                            border-radius: 2px;
-                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                            color: #ffffff;
-                        }
-                    }
-
-                    .save_btn{
-                        background-color: #0085FF;
-                        border-radius: 2px;
-                        border: none;
-                        color: #ffffff;
-                        font: normal 400 14px/8px 'Exo2-Regular';
-                        height: 36px;
-                        letter-spacing: 0.6px;
-                        margin: 0px;
-                        width: 130px;
-
-                        &:hover{
-                            background-color: #0059FF;
-                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            margin: 0px;
                             transition: 0.3s;
+                            width: 130px;
+    
+                            &:hover{
+                                background-color: #E26139;
+                                border-radius: 2px;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                                color: #ffffff;
+                            }
                         }
-                    }
-
-                    .edit_save_btn{
-                        background-color: #0085FF;
-                        border-radius: 2px;
-                        border: none;
-                        color: #ffffff;
-                        font: normal 400 14px/8px 'Exo2-Regular';
-                        height: 36px;
-                        letter-spacing: 0.6px;
-                        margin: 0px;
-                        width: 130px;
-
-                        &:hover{
-                            background-color: #0059FF;
-                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                            transition: 0.3s;
-                        }
-                    }
-
-                    .edit_cancel_btn{
-                        background-color: #ffffff;
-                        border: none;
-                        color: #EF5353;
-                        font: normal 400 14px/8px 'Exo2-Regular';
-                        height: 36px;
-                        letter-spacing: 0.6px;
-                        margin: 0px 50px 0px 0px;
-                        transition: 0.3s;
-                        width: 130px;
-
-                        &:hover{
-                            background-color: #E26139;
+    
+                        .save_btn{
+                            background-color: #0085FF;
                             border-radius: 2px;
-                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            border: none;
                             color: #ffffff;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            height: 36px;
+                            letter-spacing: 0.6px;
+                            margin: 0px;
+                            width: 130px;
+    
+                            &:hover{
+                                background-color: #0059FF;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                                transition: 0.3s;
+                            }
+                        }
+    
+                        .edit_save_btn{
+                            background-color: #0085FF;
+                            border-radius: 2px;
+                            border: none;
+                            color: #ffffff;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            height: 36px;
+                            letter-spacing: 0.6px;
+                            margin: 0px;
+                            width: 130px;
+    
+                            &:hover{
+                                background-color: #0059FF;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                                transition: 0.3s;
+                            }
+                        }
+    
+                        .edit_cancel_btn{
+                            background-color: #ffffff;
+                            border: none;
+                            color: #EF5353;
+                            font: normal 400 14px/8px 'Exo2-Regular';
+                            height: 36px;
+                            letter-spacing: 0.6px;
+                            margin: 0px 50px 0px 0px;
+                            transition: 0.3s;
+                            width: 130px;
+    
+                            &:hover{
+                                background-color: #E26139;
+                                border-radius: 2px;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                                color: #ffffff;
+                            }
                         }
                     }
                 }
