@@ -57,8 +57,8 @@ function openTraineeModalForAdd(){
     let filethumbnail = $(".filethumbnail");
     filethumbnail.addClass("upload_image_icon");
     filethumbnail.addClass("font_size");
-    $("#recruiter_block").show();
-    $("#status_block").hide();
+    $("#recruiter_block").removeClass("hidden");
+    $("#status_block").addClass("hidden");
 }
 
 /* DOCU: Submits Trainee Modal <br />
@@ -73,7 +73,6 @@ function submitTraineeModal(e){
     let trainee_specialization = $("#trainee_specialization").val();
     let trainee_date_started = $("#trainee_date").val();
     let trainee_recruiter = $("#trainee_recruiter").val();
-    let trainee_status = $("#trainee_status").val();
     let trainee_note = $("#trainee_note").val();
     let data_id = $("#add_trainee_list .add_trainee_group").length;
     let new_trainee_id = "trainee_" + data_id;
@@ -135,6 +134,7 @@ function submitTraineeModal(e){
             trainee_id_selector.attr("data-tooltip", trainee_note);
 
             trainee_modal.find("#trainee_name, #trainee_date, #trainee_note").removeClass("error");
+            trainee_modal.find("input, textarea").val("");
             trainee_modal.modal('hide');
 
             $("#saved_toast").toast('show');
@@ -194,15 +194,17 @@ function openTraineeModalForEdit(e){
     trainee_modal.find(".modal_specialization .filter-option-inner-inner").text(trainee_specialization);
     trainee_modal.find("#trainee_date").val(trainee_date);
     trainee_modal.find(".modal_recruiter").val(trainee_recruiter);
+    trainee_modal.find(".modal_recruiter button").attr("title", trainee_recruiter);
     trainee_modal.find(".modal_recruiter .filter-option-inner-inner").text(trainee_recruiter);
     trainee_modal.find("#trainee_status").val(trainee_status);
+    trainee_modal.find(".modal_status button").attr("title", trainee_status);
     trainee_modal.find(".modal_status .filter-option-inner-inner").text(trainee_status);
     trainee_modal.find("#trainee_note").val(trainee_note);
     
     filethumbnail.removeClass("font_size");
     filethumbnail.removeClass("upload_image_icon");
-    $("#recruiter_block").hide();
-    $("#status_block").show();
+    $("#recruiter_block").addClass("hidden");
+    $("#status_block").removeClass("hidden");
 }
 
 /* DOCU: Closes Trainee Modal <br />
