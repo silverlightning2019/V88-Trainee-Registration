@@ -947,8 +947,7 @@
   cursor: pointer;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-  background-image: url(../img/upload-photo.png);
-  font-size: 0px;
+  font-size: 80px;
 }
 * body .modal-dialog .modal-content .modal-header #image_upload {
   display: none;
