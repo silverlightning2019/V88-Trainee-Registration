@@ -21,9 +21,9 @@
     <script src="./assets/js/date_picker.js"></script>
     <script src="./assets/js/profile_image_upload.js"></script>
     <script src="./assets/js/trainees_script.js"></script>
+    <script src="./assets/js/add_edit_modal.js"></script>
     <script src="./assets/js/letter_profile.js"></script>
     <script src="./assets/js/vendor/UnoDropZone.js"></script>
-    <script src="./assets/js/add_edit_modal.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
@@ -1252,7 +1252,6 @@
                                             </i>
                                         </button>
                                     </li>
-                                    
                                     <li>
                                         <button class="delete" data-toggle="modal" data-target="#delete_trainee_modal">
                                             <i class="fa-solid fa-trash">
@@ -1281,11 +1280,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <form>
+                    <!-- <div class="edit-modal-header">
+                        <div id="edit-profile-container" class="file-upload" data-input-name="input1"></div>
+                    </div> -->
                     <div class="modal-header">
                         <div id="profile-container" class="file-upload" data-input-name="input1">
                             <div class="drop-click-zone">
                                 <div class="filethumbnail">
                                 </div>
+                                <h3>hi!</h3>>   
                             </div>
                         </div>
                     </div>
@@ -1294,6 +1297,7 @@
                             <div class="form_block">
                                 <label for="add_fullname">Fullname</label>
                                 <input type="text" name="fullname" id="add_fullname" class="trainee_fullname input_style validate_input">
+                                <div class="trainee_name">Vince</div>
                             </div>
                             <div class="form_block">
                                 <label for="add_specialization">Specialization</label>
