@@ -47,15 +47,13 @@ $(document).ready(function(){
  * @author: Silver  
  */
 function openTraineeModalForAdd(){
-    let filethumbnail = $(".filethumbnail");
-    filethumbnail.addClass("upload_image_icon");
-    filethumbnail.addClass("font_size");
+    $(".filethumbnail").addClass("upload_image_icon font_size");
     $("#recruiter_block").removeClass("hidden");
     $("#status_block").addClass("hidden");
 }
 
 /* DOCU: Submits Trainee Modal <br />
- * Triggered by: .on("submit", "#trainee_modal", submitTraineeModal) <br />
+ * Triggered by: .on("submit", "#trainee_form", submitTraineeModal) <br />
  * Last Updated Date: November 4, 2022 
  * @author: Silver  
  */
@@ -230,9 +228,8 @@ function openDeleteModal(){
  * @author: Silver  
  */
 function deleteTrainee(){
-    let trainee_list = $("#add_trainee_list");
     let trainee_id = $("#trainee_id").text();
-    trainee_list.find("#"+trainee_id).remove();
+    $("#add_trainee_list").find("#"+trainee_id).remove();
     $("#deleted_toast").toast('show');
 }
 
