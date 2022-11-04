@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     $("#add_trainee_search_input")
         .on("keypress", addsKeypressEventOnSearchBar)
-        .on("input", addsAutoScrollOnSeachBar)
+        .on("input", addsAutoScrollOnSearchBar)
 });
 
 /* DOCU: Submits Trainee Modal <br />
@@ -227,7 +227,7 @@ function addsKeypressEventOnSearchBar(){
  * Last Updated Date: November 4, 2022
  * @author: Silver  
  */
-function addsKeypressEventOnSearchBar(){
+function addsAutoScrollOnSearchBar(){
     let value = $(this).val();
     $("#search_icon")
         .on("click", function (){
