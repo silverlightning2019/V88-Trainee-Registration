@@ -856,55 +856,6 @@
   margin-top: 150px;
   max-width: 390px;
 }
-* body .modal-dialog .modal-content .edit-modal-header {
-  background-color: #5BA3FF;
-  display: block;
-  height: 115px;
-  padding: 15px;
-}
-* body .modal-dialog .modal-content .edit-modal-header #profileImage {
-  background: #512DA8;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 35px;
-  height: 150px;
-  line-height: 150px;
-  margin: 0px auto;
-  text-align: center;
-  width: 150px;
-}
-* body .modal-dialog .modal-content .edit-modal-header #edit-profile-container {
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: solid 10px #5B5B5B ;
-  color: #5B5B5B;
-  font-size: 35px;
-  height: 150px;
-  margin: 0px auto;
-  overflow: clip;
-  text-align: center;
-  width: 150px;
-}
-* body .modal-dialog .modal-content .edit-modal-header #edit-profile-container .message {
-  display: none;
-}
-* body .modal-dialog .modal-content .edit-modal-header #edit-profile-container img {
-  height: 130px;
-  width: 130px;
-}
-* body .modal-dialog .modal-content .edit-modal-header #edit-profile-container #profile_image {
-  cursor: pointer;
-}
-* body .modal-dialog .modal-content .edit-modal-header #edit-profile-container .filethumbnail {
-  background-color: #fff;
-  font: normal 700 80px/105px 'Exo2-Bold';
-}
-* body .modal-dialog .modal-content .edit-modal-header #image_upload {
-  display: none;
-}
 * body .modal-dialog .modal-content .modal-header {
   background-color: #5BA3FF;
   display: block;
@@ -920,6 +871,9 @@
   margin: 0px auto;
   text-align: center;
   width: 150px;
+}
+* body .modal-dialog .modal-content .modal-header .upload_icon {
+  background-image: url("../img/upload-photo.png");
 }
 * body .modal-dialog .modal-content .modal-header #profile-container {
   -moz-border-radius: 50%;
@@ -937,8 +891,7 @@
   width: 150px;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .message {
-  display: block;
-  font: normal 700 60px/95px 'Exo2-Bold';
+  display: none;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container img {
   height: 130px;
@@ -948,7 +901,14 @@
   cursor: pointer;
 }
 * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-  font-size: 80px;
+  background-color: #fff;
+  font: normal 700 80px/105px 'Exo2-Bold';
+}
+* body .modal-dialog .modal-content .modal-header #profile-container .font_size {
+  font-size: 0px;
+}
+* body .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon {
+  background-image: url("../img/upload-photo.png");
 }
 * body .modal-dialog .modal-content .modal-header #image_upload {
   display: none;
@@ -1160,8 +1120,11 @@
     cursor: pointer;
   }
   * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    background-image: url(../img/upload-photo-tab.png);
-    font-size: 0px;
+    background-color: #fff;
+    font: normal 700 60px/95px 'Exo2-Bold';
+  }
+  * body .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon {
+    background-image: url("../img/upload-photo-tab.png");
   }
   * body .modal-dialog .modal-content .modal-header #image_upload {
     display: none;
@@ -1303,8 +1266,14 @@
   * body .modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .fade .modal-dialog .modal-content .modal-header #profile-container .filethumbnail,
   * body .show .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
-    background-image: url(../img/upload-photo-mob.png);
-    font-size: 0px;
+    background-color: #fff;
+    font: normal 700 30px/41px 'Exo2-Bold';
+  }
+  * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon,
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon,
+  * body .fade .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon,
+  * body .show .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon {
+    background-image: url("../img/upload-photo-mob.png");
   }
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-header #image_upload,
   * body .modal .modal-dialog .modal-content .modal-header #image_upload,
