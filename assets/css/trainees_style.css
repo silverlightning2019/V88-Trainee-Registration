@@ -457,8 +457,8 @@
   width: max-content;
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group::after {
-  border-left-color: #faff00;
   border: 10px solid transparent;
+  border-left-color: #faff00;
   content: '';
 }
 * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group:hover::before,
