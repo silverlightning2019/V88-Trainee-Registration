@@ -75,14 +75,14 @@
                                         <span class="trainee_status_text">Trainee</span>
                                         <ul class="edit_delete_icons">
                                             <li>
-                                                <button class="edit" data-toggle="modal" data-target="#trainee_modal" data-target="#trainee_modal" id="edit_trainee_btn_modal">
+                                                <button class="edit" data-toggle="modal" data-target="#trainee_modal" data-target="#trainee_modal">
                                                     <i class="fa-solid fa-pen-to-square">
                                                         <span class="status_edit_tooltip">Edit</span>
                                                     </i>
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="delete" data-toggle="modal" data-target="#trainee_modal" data-target="#delete_trainee_modal">
+                                                <button class="delete" data-toggle="modal" data-target="#delete_trainee_modal" data-target="#delete_trainee_modal">
                                                     <i class="fa-solid fa-trash">
                                                         <span class="status_delete_tooltip">Delete</span>
                                                     </i>
@@ -1275,8 +1275,8 @@
             </section>
         </footer>
 
-        <!--Add Modal -->
-        <div class="modal fade" id="trainee_modal" tabindex="-1" aria-hidden="true">
+        <!--Trainee Modal -->
+        <div class="modal fade" id="trainee_modal" tabindex="-1" aria-hidden="true" data-keyboard="false" data-backdrop="static">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form>
@@ -1290,6 +1290,10 @@
                         </div>
                         <div class="modal-body">
                             <div class="form_container">
+                                <div class="form_block hidden">
+                                    <label for="trainee_id">Trainee ID</label>
+                                    <input type="text" id="trainee_id" class="input_style">
+                                </div>
                                 <div class="form_block">
                                     <label for="trainee_name">Fullname</label>
                                     <input type="text" name="fullname" id="trainee_name" class="input_style validate_input">
