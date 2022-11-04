@@ -108,6 +108,9 @@
     display: none;
   }
 }
+* body main {
+  overflow: clip;
+}
 * body main #banner_section #banner_container {
   margin: 0px auto;
   max-width: 1440px;
@@ -352,9 +355,9 @@
   color: #fff;
   font: normal 400 10px/14px 'Exo2-Light';
   letter-spacing: 1px;
-  padding: 2px;
+  padding: 1px 3px;
   position: absolute;
-  right: 94px;
+  right: 82px;
   top: 22px;
   visibility: hidden;
   width: max-content;
@@ -380,7 +383,7 @@
   color: #fff;
   font: normal 400 10px/14px 'Exo2-Light';
   letter-spacing: 1px;
-  padding: 2px;
+  padding: 1px 3px;
   position: absolute;
   right: -6px;
   top: 22px;
@@ -618,7 +621,7 @@
     padding: 20px 0px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container {
-    transform: translate(0, -22px);
+    transform: translate(0, -20px);
     width: 105px;
   }
   * body main #add_trainee_section #add_trainee_container #add_trainee_list .add_trainee_group ul .status.status .edit_delete_container .edit_delete_icons {
