@@ -30,6 +30,24 @@ $(document).ready(function(){
         .on("input", addsAutoScrollOnSearchBar)
 });
 
+$(document).ready(function(){
+    $("#profile_image").click(function(e) {
+        $("#image_upload").click();
+    });
+    
+    function fasterPreview( uploader ) {
+        if ( uploader.files && uploader.files[0] ){
+            $('#profile_image').attr('src', 
+            window.URL.createObjectURL(uploader.files[0]) );
+        }
+    }
+    
+    $("#image_upload").change(function(){
+        fasterPreview( this );
+    });
+    UnoDropZone.init();
+})
+
 /* DOCU: Opens Trainee Modal for adding <br />
  * Triggered by: .on("click", "#trainee_btn_modal", openTraineeModalForAdd) <br />
  * Last Updated Date: November 4, 2022 
@@ -156,6 +174,9 @@ function openTraineeModalForEdit(e){
     let trainee_id = $(this).closest(".add_trainee_group").attr("id");
     let full_trainee_id = "#"+trainee_id;
     let filethumbnail = $(".filethumbnail");
+    let firstName = $('#trainee_name').val();
+    let intials = firstName.charAt(0);
+    let profileimage = filethumbnail.text(intials);
 
     trainee_modal.find(".trainee_id").text(trainee_id);
     
