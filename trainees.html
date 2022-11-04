@@ -1296,7 +1296,8 @@
                                 </div>
                                 <div class="form_block">
                                     <label for="add_specialization">Specialization</label>
-                                    <select name="specialization" id="add_specialization" class="selectpicker select_picker trainee_specialization modal_specialization add_select_validate_input">
+                                    <select name="specialization" id="add_specialization" class="selectpicker select_picker modal_specialization add_select_validate_input">
+                                        <option value="" label="Select Specialization" hidden></option>
                                         <option value="Front-End" class="">Front-End</option>
                                         <option value="Back-End">Back-End</option>
                                         <option value="Fullstack">Fullstack</option>
@@ -1305,13 +1306,13 @@
                                 <div class="form_block">
                                     <label for="add_date">Date Started</label>
                                     <div class="date_picker_container">
-                                        <input type="text" id="add_date" class="trainee_date_started input_style validate_input" placeholder="mm/dd/yyyy">
+                                        <input type="text" id="add_date" class=" input_style validate_input" placeholder="mm/dd/yyyy">
                                         <i class="fa-solid fa-calendar date_icon"></i>
                                     </div>
                                 </div>
                                 <div class="form_block" id="recruiter_block">
                                     <label for="trainee_recruiter">Recruiter</label>
-                                    <select id="trainee_recruiter" class="trainee_recruiter selectpicker show-trick select_picker modal_recruiter add_select_validate_input" data-live-search="true" >
+                                    <select id="trainee_recruiter" class="selectpicker show-trick select_picker modal_recruiter add_select_validate_input" data-live-search="true" >
                                         <option data-icon="fa-heart" value="" label="Select Recruiter" hidden></option>
                                         <option class="option_style" value="Jhaver Jan Gurtiza" data-subtext="Designer, Front-End">Jhaver Jan Gurtiza</option>
                                         <option value="Mario Narvaez Jr." data-subtext="Mid Software Engineer">Mario Narvaez Jr.</option>
@@ -1324,7 +1325,7 @@
                                 </div>
                                 <div class="form_block" id="status_block">
                                     <label for="trainee_status">Status</label> 
-                                    <select name="status" id="trainee_status" class="selectpicker select_picker modal_status">
+                                    <select name="status" id="trainee_status" class="selectpicker select_picker modal_status add_select_validate_input">
                                         <option value="" label="Select Trainee Status" hidden></option>
                                         <option value="Trainee">Trainee</option>
                                         <option value="Employed">Employed</option>
