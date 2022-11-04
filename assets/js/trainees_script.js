@@ -55,24 +55,24 @@ $(document).ready(function(){
     $("body")
         .on("submit", "#add_trainee_modal", function(e){            
             e.preventDefault();
-            let trainee_name = $(".trainee_fullname").val();
-            let trainee_specialization = $(".trainee_specialization").val();
-            let trainee_date_started = $(".trainee_date_started").val();
-            let trainee_recruiter = $(".trainee_recruiter").val();
-            let trainee_note = $(".trainee_note").val();
+            let trainee_name = $("#add_fullname").val();
+            let trainee_specialization = $("#add_specialization").val();
+            let trainee_date_started = $("#add_date").val();
+            let trainee_recruiter = $("#trainee_recruiter").val();
+            let trainee_status = $("#trainee_status").val();
+            let trainee_note = $("#trainee_note").val();
             let data_id = $("#add_trainee_list .add_trainee_group").length;
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
             let add_trainee_modal = $("#add_trainee_modal");    
-
             $(".alert").hide();
 
-            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != "" && trainee_note != ""){
+            if(trainee_name != "" && trainee_specialization != "" && trainee_date_started != "" && trainee_recruiter != "" && trainee_status != "" && trainee_note != ""){
                 trainee_item_clone.find(".name").text(trainee_name);
                 trainee_item_clone.find(".specialization").text(trainee_specialization);
                 trainee_item_clone.find(".date").text(trainee_date_started);
                 trainee_item_clone.find(".recruiter").text(trainee_recruiter);
-                trainee_item_clone.find(".status .trainee_status_text").text("Trainee");
+                trainee_item_clone.find(".status .trainee_status_text").text(trainee_status);
                 $("#add_trainee_list").append(trainee_item_clone);
 
                 trainee_item_clone.attr({'data-tooltip':trainee_note, 'data-id':data_id, 'id':trainee_id});
@@ -87,6 +87,7 @@ $(document).ready(function(){
                 $("html, body").animate({ scrollTop: $(document).height() }, 1000);
 
                 add_trainee_modal.find(".validate_input").removeClass("error");
+                add_trainee_modal.find(".add_select_validate_input").removeClass("error");
             }
             else{
                 add_trainee_modal.find(".validate_input").each((index, element) => {
@@ -95,8 +96,7 @@ $(document).ready(function(){
                 add_trainee_modal.find(".add_select_validate_input").each((index, element) => {
                     $(element).find("select").val() === "" ? $(element).addClass("error") : $(element).removeClass("error");
                 });
-                add_trainee_modal.find(".validate_input").removeClass("error");
-                add_trainee_modal.find(".add_select_validate_input").removeClass("error");
+               
                 $(".alert").show();
             }
         }
