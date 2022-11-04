@@ -53,9 +53,8 @@ $(document).ready(function(){
 
     /* Adds a new trainee to the trainee list */
     $("body")
-        .on("submit", ".save_btn", function(add){
-            add.preventDefault();
-
+        .on("submit", "#add_trainee_modal", function(e){            
+            e.preventDefault();
             let trainee_name = $(".trainee_fullname").val();
             let trainee_specialization = $(".trainee_specialization").val();
             let trainee_date_started = $(".trainee_date_started").val();
@@ -64,7 +63,7 @@ $(document).ready(function(){
             let data_id = $("#add_trainee_list .add_trainee_group").length;
             let trainee_id = "trainee_" + data_id;
             let trainee_item_clone = $("#hidden_trainee_clone .add_trainee_group").clone();
-            let add_trainee_modal = $("#add_trainee_modal");
+            let add_trainee_modal = $("#add_trainee_modal");    
 
             $(".alert").hide();
 
@@ -100,7 +99,6 @@ $(document).ready(function(){
                 add_trainee_modal.find(".add_select_validate_input").removeClass("error");
                 $(".alert").show();
             }
-            return false;
         }
     );
     
