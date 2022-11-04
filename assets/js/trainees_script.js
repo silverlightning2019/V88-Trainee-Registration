@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    /* Triggers Date Picker Plugin */
+    $( "#trainee_date_started , #trainee_date").datepicker();
 
     /* Sets contains() to be case insensitive.  */
     jQuery.expr[':'].contains = function(a, i, m) {
@@ -12,6 +14,7 @@ $(document).ready(function(){
     });
 
     $("body")
+        .on("click", "#trainee_btn_modal", openTraineeModalForAdd)
         .on("submit", "#trainee_modal", submitTraineeModal)
         .on("click", ".edit", openTraineeModalForEdit)
         .on("click", "#cancel_btn", closeTraineeModal)
@@ -26,6 +29,19 @@ $(document).ready(function(){
         .on("keypress", addsKeypressEventOnSearchBar)
         .on("input", addsAutoScrollOnSearchBar)
 });
+
+/* DOCU: Opens Trainee Modal for adding <br />
+ * Triggered by: .on("click", "#trainee_btn_modal", openTraineeModalForAdd) <br />
+ * Last Updated Date: November 4, 2022 
+ * @author: Silver  
+ */
+function openTraineeModalForAdd(){
+    let filethumbnail = $(".filethumbnail");
+    filethumbnail.addClass("upload_image_icon");
+    filethumbnail.addClass("font_size");
+    $("#recruiter_block").show();
+    $("#status_block").hide();
+}
 
 /* DOCU: Submits Trainee Modal <br />
  * Triggered by: .on("submit", "#trainee_modal", submitTraineeModal) <br />
@@ -139,6 +155,7 @@ function openTraineeModalForEdit(e){
     let trainee_modal = $("#trainee_modal");
     let trainee_id = $(this).closest(".add_trainee_group").attr("id");
     let full_trainee_id = "#"+trainee_id;
+    let filethumbnail = $(".filethumbnail");
 
     trainee_modal.find(".trainee_id").text(trainee_id);
     
@@ -160,6 +177,11 @@ function openTraineeModalForEdit(e){
     trainee_modal.find("#trainee_status").val(trainee_status);
     trainee_modal.find(".modal_status .filter-option-inner-inner").text(trainee_status);
     trainee_modal.find("#trainee_note").val(trainee_note);
+    
+    filethumbnail.removeClass("font_size");
+    filethumbnail.removeClass("upload_image_icon");
+    $("#recruiter_block").hide();
+    $("#status_block").show();
 }
 
 /* DOCU: Closes Trainee Modal <br />
