@@ -1082,19 +1082,19 @@
   color: #ffffff;
 }
 @media screen and (max-width: 860px) {
-  * body .modal-dialog {
+  * body .modal .modal-dialog {
     max-width: 352.91px;
   }
-  * body .modal-dialog .modal-content .modal-header {
+  * body .modal .modal-dialog .modal-content .modal-header {
     background-color: #5BA3FF;
     display: block;
     height: 104.06px;
   }
-  * body .modal-dialog .modal-content .modal-header #profileImage {
+  * body .modal .modal-dialog .modal-content .modal-header #profileImage {
     height: 134.49px;
     width: 134.49px;
   }
-  * body .modal-dialog .modal-content .modal-header #profile-container {
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
@@ -1109,97 +1109,85 @@
     text-align: center;
     width: 134.49px;
   }
-  * body .modal-dialog .modal-content .modal-header #profile-container .message {
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container .message {
     display: none;
   }
-  * body .modal-dialog .modal-content .modal-header #profile-container img {
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container img {
     height: 114.49px;
     width: 114.49px;
   }
-  * body .modal-dialog .modal-content .modal-header #profile-container #profile_image {
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container #profile_image {
     cursor: pointer;
   }
-  * body .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container .filethumbnail {
     background-color: #fff;
     font: normal 700 60px/95px 'Exo2-Bold';
   }
-  * body .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon {
+  * body .modal .modal-dialog .modal-content .modal-header #profile-container .upload_image_icon {
     background-image: url("../img/upload-photo-tab.png");
   }
-  * body .modal-dialog .modal-content .modal-header #image_upload {
+  * body .modal .modal-dialog .modal-content .modal-header #image_upload {
     display: none;
   }
-  * body .modal-dialog .modal-content .modal-body {
+  * body .modal .modal-dialog .modal-content .modal-body {
     padding: 62px 31px 0px 31px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block label {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block label {
     font: normal 400 12px/41px 'Exo2-Regular';
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block .input_style {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .input_style {
     font: normal 400 12px/14px 'Exo2-Regular';
     height: 36.2px;
     width: 173px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container {
     display: inline-block;
     position: relative;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .date_picker_container .date_icon {
     color: #999;
     position: absolute;
     right: 15px;
     top: 11px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block #datepicker {
     color: #999;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block select,
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block select,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker {
     font: normal 400 12px/14px 'Exo2-Regular';
     height: 36.2px;
     width: 173.74px;
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block select .filter-option-inner-inner,
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .select_picker .filter-option-inner-inner {
     font: normal 400 12px/14px 'Exo2-Regular';
   }
-  * body .modal-dialog .modal-content .modal-body .form_container .form_block .btn {
+  * body .modal .modal-dialog .modal-content .modal-body .form_container .form_block .btn {
     background-color: #EFF7FB;
     height: 36.2px;
     width: 173.74px;
   }
-  * body .modal-dialog .modal-content .modal-body .alert {
+  * body .modal .modal-dialog .modal-content .modal-body .alert {
     font: normal 50 12px/14px 'Exo2-Regular';
   }
-  * body .modal-dialog .modal-content .modal-body .redactor {
+  * body .modal .modal-dialog .modal-content .modal-body .redactor {
     display: block;
   }
-  * body .modal-dialog .modal-content .modal-body .redactor textarea {
+  * body .modal .modal-dialog .modal-content .modal-body .redactor textarea {
     font: normal 400 12px/14px 'Exo2-Regular';
     height: 80px;
   }
-  * body .modal-dialog .modal-content .modal-footer {
+  * body .modal .modal-dialog .modal-content .modal-footer {
     border: none;
     display: flex;
     justify-content: space-between;
     padding: 18px 31px 32px 31px;
   }
-  * body .modal-dialog .modal-content .modal-footer .cancel_btn {
-    font: normal 400 12px/8px 'Exo2-Regular';
-    height: 32.58px;
-    width: 117.64px;
-  }
-  * body .modal-dialog .modal-content .modal-footer .save_btn {
-    font: normal 400 12px/8px 'Exo2-Regular';
-    height: 32.58px;
-    width: 117.64px;
-  }
-  * body .modal-dialog .modal-content .modal-footer .edit_save_btn {
-    font: normal 400 12px/8px 'Exo2-Regular';
-    height: 32.58px;
-    width: 117.64px;
-  }
-  * body .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
+  * body .modal .modal-dialog .modal-content .modal-footer .cancel_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .save_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .edit_save_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
     font: normal 400 12px/8px 'Exo2-Regular';
     height: 32.58px;
     width: 117.64px;
@@ -1390,27 +1378,15 @@
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .cancel_btn,
   * body .modal .modal-dialog .modal-content .modal-footer .cancel_btn,
   * body .fade .modal-dialog .modal-content .modal-footer .cancel_btn,
-  * body .show .modal-dialog .modal-content .modal-footer .cancel_btn {
-    font: normal 400 10px/12px 'Exo2-Regular';
-    height: 25px;
-    width: 69px;
-  }
+  * body .show .modal-dialog .modal-content .modal-footer .cancel_btn,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .save_btn,
   * body .modal .modal-dialog .modal-content .modal-footer .save_btn,
   * body .fade .modal-dialog .modal-content .modal-footer .save_btn,
-  * body .show .modal-dialog .modal-content .modal-footer .save_btn {
-    font: normal 400 10px/12px 'Exo2-Regular';
-    height: 25px;
-    width: 69px;
-  }
+  * body .show .modal-dialog .modal-content .modal-footer .save_btn,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .edit_save_btn,
   * body .modal .modal-dialog .modal-content .modal-footer .edit_save_btn,
   * body .fade .modal-dialog .modal-content .modal-footer .edit_save_btn,
-  * body .show .modal-dialog .modal-content .modal-footer .edit_save_btn {
-    font: normal 400 10px/12px 'Exo2-Regular';
-    height: 25px;
-    width: 69px;
-  }
+  * body .show .modal-dialog .modal-content .modal-footer .edit_save_btn,
   * body #delete_trainee_modal .modal-dialog .modal-content .modal-footer .edit_cancel_btn,
   * body .modal .modal-dialog .modal-content .modal-footer .edit_cancel_btn,
   * body .fade .modal-dialog .modal-content .modal-footer .edit_cancel_btn,
@@ -1421,34 +1397,19 @@
   }
 }
 @media screen and (max-width: 230px) {
-  * body .modal-dialog {
+  * body .modal .modal-dialog {
     margin: 0px auto;
     max-width: 262px;
     padding-top: 50px;
   }
-  * body .modal-dialog .modal-content .modal-footer {
+  * body .modal .modal-dialog .modal-content .modal-footer {
     display: block;
     padding: 18px 36px 32px 36px;
   }
-  * body .modal-dialog .modal-content .modal-footer .cancel_btn {
-    display: block;
-    font: normal 400 10px/12px 'Exo2-Regular';
-    height: 25px;
-    width: 100%;
-  }
-  * body .modal-dialog .modal-content .modal-footer .save_btn {
-    display: block;
-    font: normal 400 10px/12px 'Exo2-Regular';
-    height: 25px;
-    width: 100%;
-  }
-  * body .modal-dialog .modal-content .modal-footer .edit_save_btn {
-    display: block;
-    font: normal 400 10px/12px 'Exo2-Regular';
-    height: 25px;
-    width: 100%;
-  }
-  * body .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
+  * body .modal .modal-dialog .modal-content .modal-footer .cancel_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .save_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .edit_save_btn,
+  * body .modal .modal-dialog .modal-content .modal-footer .edit_cancel_btn {
     display: block;
     font: normal 400 10px/12px 'Exo2-Regular';
     height: 25px;
