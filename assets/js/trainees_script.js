@@ -192,8 +192,10 @@ function openDeleteModal(){
  * @author: Silver  
  */
 function deleteTrainee(){
-    let trainee_id = $(this).closest(".add_trainee_group").attr("id");
-    $("#trainee_id").text(trainee_id);
+    let trainee_list = $("#add_trainee_list");
+    let trainee_id = $("#trainee_id").text();
+    trainee_list.find("#"+trainee_id).remove();
+    $("#deleted_toast").toast('show');
 }
 
 /* DOCU: Scrolls screen back to the top <br />
