@@ -886,7 +886,7 @@
   font-size: 35px;
   height: 150px;
   margin: 0px auto;
-  overflow: clip;
+  overflow: hidden;
   text-align: center;
   width: 150px;
 }
