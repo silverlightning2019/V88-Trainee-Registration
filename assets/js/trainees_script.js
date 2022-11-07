@@ -102,7 +102,6 @@ function submitTraineeModal(e){
         else{
 
             let trainee_id = trainee_modal.find("#trainee_id").val();
-            console.log(trainee_id);
             let trainee_id_selector = $('#' +trainee_id);
             let trainee_name = trainee_modal.find("#trainee_name").val();
             let trainee_specialization = trainee_modal.find("#trainee_specialization").val();
